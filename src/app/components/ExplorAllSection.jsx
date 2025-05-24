@@ -3,7 +3,7 @@ import Button from './Button'
 import Heading from './Heading';
 import IconButton from './IconButton';
 import { Search } from 'lucide-react';
-import Services from './services'
+import Services from './Services'
 
 const ExplorAllSection = () => {
   return (
