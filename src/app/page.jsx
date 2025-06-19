@@ -12,61 +12,142 @@ import BigCard from './components/BigCard'
 import ImgSection from './components/ImgSection'
 import BlogCard from './components/BlogCard'
 import LastSection from './components/LastSection'
+import FadeUp from './components/FadeUp'
 
 const page = () => {
 
  const archievmentDesc = "We ensure the successful completion of projects with precision,efficiency, and a commitment"
   
+ const aboutKeyPoints = [
+   {
+     title: "Expert eCommerce Store Development",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: "SEO & Paid Ads That Convert",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: "Creative Branding & Graphic Design",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: "Results-Focused Digital Strategy",
+     icon: "/assets/icon.png",
+   },
+ ];
+ const chooseusKeyPoints = [
+   {
+     title: "High-Converting eCommerce Stores",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: " Result-Driven SEO & Ad Campaigns",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: "Impactful Branding & Design",
+     icon: "/assets/icon.png",
+   },
+   {
+     title: "Strategic, Data-Led Growth Plans",
+     icon: "/assets/icon.png",
+   },
+ ];
+
+ const stats = [
+   {
+     number: "300",
+     desc: "eCommerce Stores Launched",
+   },
+   {
+     number: "4M",
+     desc: "Products Processed",
+   },
+   {
+     number: "20",
+     desc: "Countries Served",
+   },
+   {
+     number: "150%",
+     desc: "Avg. Growth Within 90 Days",
+   },
+ ];
  
  return (
-   <div className="max-w-6xl mx-auto">
-     <MainSection />
-     <Slidder />
-     <ExplorAllSection />
-     <LeftTextRightImage
-       buttonText="About Us"
-       headingTitle="Expert Business Consulting"
-       headingHighlight="Agency"
-       paragraph="With experience across various economic cycles, our team excels at identifying the best opportunities, whether in times of growth or uncertainty. Our success over the years stems from our ability to seamlessly integrate"
-       imageSrc="/assets/image1.jpeg"
-       imageClassName="w-full h-full"
-     />
-     <div className="text-center my-20">
-       <Button text="Innovative Services" />
-       <Heading
-         title="Always Ready for"
-         highlight="Challenges"
-         className="text-[48px] max-w-[45%] my-3"
+   <div className="max-w-6xl mx-auto px-5">
+     <FadeUp>
+       <MainSection />
+     </FadeUp>
+     <FadeUp>
+       <Slidder />
+     </FadeUp>
+     <FadeUp>
+       <ExplorAllSection />
+     </FadeUp> 
+     <FadeUp>
+       <LeftTextRightImage
+         buttonText="About Us"
+         headingTitle="Your Trusted Global eCommerce"
+         headingHighlight="Partner"
+         paragraph="We help brands grow faster and smarter across Shopify, eBay, TikTok Shop, and more. With years of experience in digital marketing, SEO, design, and web development, our team delivers real results for businesses in the UK, USA, Europe, and Australia."
+         imageSrc="/assets/image1.jpeg"
+         imageClassName="w-full h-full"
+         keyPoints={aboutKeyPoints}
        />
-       <div className="flex justify-center">
-         <p className="text-[18px] text-[#71717A] max-w-[45%]">
-           Empowering global business growth with top-tier, innovative features
-           designed to enhance efficiency, streamline processes, and drive
-           measurable success
-         </p>
-       </div>
-     </div>
-     <Video />
-     <LeftTextRightImage
-       buttonText="Why us"
-       headingTitle="Why “our” Consulting"
-       headingHighlight="Agency?"
-       paragraph="Discover what sets Finsa Business Agency apart—expertise, innovative solutions, and a commitment to driving your business success."
-       imageSrc="/assets/image2.svg"
-       imageClassName="w-[360px] h-[380px]"
-     />
-     <div className="flex justify-between items-center gap-20 my-10">
-       {[1, 2, 3].map((v, i) => (
-         <div className="" key={i}>
-           <AchievementHighlights number={300} />
+     </FadeUp>
+     <FadeUp>
+       <div className="text-center my-20">
+         <Button text="Innovative Services" />
+         <Heading
+           title="Smart Solutions for Modern"
+           highlight="eCommerce"
+           className="text-[35px] lg:text-[48px] max-w-[65%] md:max-w-[55%] lg:max-w-[45%] my-3"
+         />
+         <div className="flex justify-center">
+           <p className="text-[16px] md:text-[18px] text-[#71717A] max-w-[65%] md:max-w-[55%] lg:max-w-[45%]">
+             We build stores, design brands, boost visibility, and drive sales
+             across Shopify, TikTok Shop, eBay, and more—powered by SEO, Ads,
+             and stunning design.
+           </p>
          </div>
-       ))}
-     </div>
-     <LeftContentRightCard />
-     <BigCard />
-     <ImgSection />
-     <BlogCard />
-     <LastSection />
+       </div>
+     </FadeUp>
+     <FadeUp>
+       <LeftTextRightImage
+         buttonText="Why Choose Us"
+         headingTitle="Where Strategy Meets"
+         headingHighlight="Execution"
+         paragraph="We’re not just another agency—we're your growth partner. From setting up high-converting stores to driving traffic and building brands, we deliver real results."
+         imageSrc="/assets/image2.svg"
+         imageClassName="w-[360px] h-[380px]"
+         keyPoints={chooseusKeyPoints}
+       />
+     </FadeUp>
+     <FadeUp>
+       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-10">
+         {stats.map((v, i) => (
+           <div key={i}>
+             <AchievementHighlights desc={v.desc} number={v.number} />
+           </div>
+         ))}
+       </div>
+     </FadeUp>
+     <FadeUp>
+       <LeftContentRightCard />
+     </FadeUp>
+     <FadeUp>
+       <BigCard />
+     </FadeUp>
+     <FadeUp>
+       <ImgSection />
+     </FadeUp>
+     <FadeUp>
+       <BlogCard />
+     </FadeUp>
+     <FadeUp>
+       <LastSection />
+     </FadeUp>
    </div>
  );
 }

@@ -12,6 +12,12 @@
 .buttoncss {
   @apply rounded-lg hover:bg-[#302CFF] hover:text-white transition-all duration-1000 hover:scale-95 cursor-pointer font-bold px-6 py-4 text-black flex justify-center items-center gap-2 border text-[16px]
 }
+@media (max-width: 640px) {
+  .buttoncss {
+    padding: 8px 16px;
+    font-weight: 600;
+  }
+}
 
 
 @theme inline {

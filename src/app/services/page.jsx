@@ -1,12 +1,10 @@
 import React from "react";
-import Button from "./Button";
-import Heading from "./Heading";
-import IconButton from "./IconButton";
-import { Search } from "lucide-react";
-import Services from "./Services";
+import Button from "../components/Button";
+import Heading from "../components/Heading";
+import Services from "../components/Services";
 import Link from "next/link";
 
-const ExplorAllSection = () => {
+const page = () => {
   const services = [
     {
       image: "/assets/ecommerce.png",
@@ -40,29 +38,23 @@ const ExplorAllSection = () => {
     },
   ];
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <div className="text-center pb-10">
-        <Button text="Innovative Services" />
         <Heading
           title="Smart eCommerce"
           highlight="Solutions"
-          className="max-w-[90%] sm:max-w-[80%] lg:max-w-[40%] text-4xl sm:text-6xl my-7"
+          className="max-w-[40%] text-5xl my-7"
         />
-        <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 sm:max-w-[60%] lg:max-w-[40%] mx-auto">
+        <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 max-w-[40%] mx-auto">
           Empowering global sellers with scalable strategies across Shopify,
           eBay, Vinted, and TikTok Shop.
         </p>
-        <div className="flex justify-center items-center">
-          <Link href={"/services"}>
-            <IconButton text="Explore All Services" Icon={Search} />
-          </Link>
-        </div>
       </div>
 
-      <div className=" bg-white h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className=" bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {services.map((v, i) => (
-          <Link key={i} href={`/services/${v.slug}`} className="block h-full">
-            <div className="my-8 h-full flex cursor-pointer">
+          <Link key={i} href={`/services/${v.slug}`}>
+            <div className="my-8 cursor-pointer">
               <Services service={v} />
             </div>
           </Link>
@@ -72,4 +64,4 @@ const ExplorAllSection = () => {
   );
 };
 
-export default ExplorAllSection;
+export default page;

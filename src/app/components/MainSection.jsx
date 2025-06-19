@@ -12,7 +12,7 @@ const MainSection = () => {
   const icons = [Twitter, Facebook, Linkedin];
   return (
     <div className="text-center">
-      <div className="bg-white pt-36 flex justify-between max-w-6xl mx-auto items-end">
+      <div className="bg-white pt-16 sm:pt-32 flex justify-between max-w-6xl mx-auto items-end">
         <motion.div
           initial={{ y: 0 }}
           animate={{ y: [0, -40, 0] }}
@@ -22,7 +22,7 @@ const MainSection = () => {
             ease: ["easeOut", "easeIn", "easeOut", "easeIn"],
             repeat: Infinity,
           }}
-          className=""
+          className="md:block hidden"
         >
           <Image
             className="rounded-4xl transform -rotate-[15deg] origin-top-left"
@@ -33,20 +33,20 @@ const MainSection = () => {
           />
         </motion.div>
         <div className="text-center">
-          <Button text="Innovative Strategies" />
+          {/* <Button text="Innovative Strategies" /> */}
           <Heading
-            title="Leading Global Business"
-            highlight="Solutions"
-            className=" mt-5 max-w-[70%] text-6xl"
+            title="Smart Solutions for Global "
+            highlight="eCommerce"
+            className=" mt-5 max-w-[95%] sm:max-w-[90%] md:lg-w-[70%] text-4xl sm:text-6xl"
           />
           <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 max-w-[75%] mx-auto">
-            Empowering businesses worldwide with innovative solutions, strategic
-            insights, and expert guidance to drive global success.
+            Scale your business with expert Shopify, eBay, Vinted, TikTok Shop,
+            web dev, SEO, and ad services.
           </p>
-          <div className="flex items-center pt-2 justify-center gap-5">
-            <IconButton text="Explore Features" Icon={Search} />
+          <div className="flex items-center pt-2 justify-center gap-3">
+            <IconButton text="Explore Services" Icon={Search} />
             <button className="buttoncss">
-              Request Demo <Send className="w-4" />
+              Get Free Demo <Send className="w-4" />
             </button>
           </div>
         </div>
@@ -59,6 +59,7 @@ const MainSection = () => {
             ease: ["easeOut", "easeIn", "easeOut", "easeIn"],
             repeat: Infinity,
           }}
+          className="md:block hidden"
         >
           <Image
             className="rounded-4xl transform rotate-[15deg] origin-top-left"

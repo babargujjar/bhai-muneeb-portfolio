@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import Heading from "./Heading";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const cardData = [
@@ -42,6 +42,18 @@ const cardData = [
 
 const BigCard = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // check once on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
     if (slideIndex < cardData.length - 2) {
@@ -64,10 +76,10 @@ const BigCard = () => {
         <Heading
           title="Trusted by Clients"
           highlight="Worldwide"
-          className="text-[48px] max-w-[45%] my-3"
+          className="text-[35px] lg:text-[48px] max-w-[65%] md:max-w-[55%] lg:max-w-[45%] my-3"
         />
         <div className="flex justify-center">
-          <p className="text-[18px] text-[#71717A] max-w-[50%]">
+          <p className="text-[16px] lg:text-[18px] text-[#71717A] max-w-[70%] md:max-w-[60%] lg:max-w-[50%]">
             Experience proven success through our expert consultancy services,
             designed to deliver tailored solutions that drive business growth
             and excellence
@@ -77,13 +89,13 @@ const BigCard = () => {
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{
-          transform: `translateX(-${slideIndex * 50}%)`,
+          transform: `translateX(-${slideIndex * (isMobile ? 100 : 50)}%)`,
         }}
       >
         {Array.from({ length: cardData.length + 2 }).map((_, i) => {
           const card = getCard(i);
           return (
-            <div key={i} className="min-w-[50%] px-2">
+            <div key={i} className="min-w-[100%] md:min-w-[50%] px-2">
               <div className="border border-[#CDCDCD] p-10 rounded-2xl h-full bg-white">
                 <h2 className="text-[20px] font-semibold text-black mb-5">
                   {card.title}

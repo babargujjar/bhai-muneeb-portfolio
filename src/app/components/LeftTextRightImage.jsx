@@ -15,7 +15,9 @@ const LeftTextRightImage = ({
   ctaIcon,
   imageSrc,
   imageClassName,
+  keyPoints
 }) => {
+
   return (
     <div className="grid grid-cols-2 items-center h-full lg:gap-20 max-w-6xl mx-auto gap-10 mt-15 py-14">
       <div className="md:col-span-1  col-span-2">
@@ -23,16 +25,16 @@ const LeftTextRightImage = ({
         <Heading
           title={headingTitle}
           highlight={headingHighlight}
-          className="text-[48px]"
+          className="text-[35px] lg:text-[48px]"
         />
-        <p className="text-[18px] text-[#71717A]">{paragraph}</p>
+        <p className="text-[16px] md:text-[18px] text-[#71717A]">{paragraph}</p>
         <div>
           <div className="my-7">
-            {[1, 2, 3].map((v, i) => (
+            {keyPoints.map((v, i) => (
               <div key={i} className="flex gap-4 mb-4 items-center ">
-                <Image src="/assets/icon.png" width={20} height={15} alt="" />
-                <p className="text-[18px] text-[#71717A]">
-                  Bsiness And Consulting Agency
+                <Image src={v.icon} width={20} height={15} alt="" />
+                <p className="text-[16px] md:text-[18px] text-[#71717A]">
+                  {v.title}
                 </p>
               </div>
             ))}
@@ -41,7 +43,7 @@ const LeftTextRightImage = ({
         </div>
       </div>
       <div className="md:col-span-1 col-span-2">
-        <div className="w-[550px] h-[700px] rounded-3xl flex bg-[#D8E6FF] justify-center items-center">
+        <div className="w-full h-[700px] rounded-3xl flex bg-[#D8E6FF] justify-center items-center">
           <img
             src={imageSrc}
             className={`rounded-3xl ${imageClassName}`}

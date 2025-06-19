@@ -7,12 +7,12 @@ const IconButton = ({ text, Icon }) => {
             rounded-xl
             hover:bg-white hover:text-black
             transition-all duration-1000 hover:scale-95
-            cursor-pointer font-bold
-            px-6 py-4
+            cursor-pointer sm:font-bold font-semibold
+            sm:px-6 sm:py-4 px-4 py-2
             tracking-wider
-            flex items-center gap-2
+            flex items-center gap-1
             text-white bg-[#302CFF]
-            border text-[18px]
+            border text-[14px] sm:text-[18px]
           "
     >
       {text}

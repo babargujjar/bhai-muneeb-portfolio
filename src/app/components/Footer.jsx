@@ -1,28 +1,32 @@
-import React from 'react'
+import React from "react";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="max-w-6xl mx-auto py-10">
-      <div className="flex justify-between py-8 border-b border-b-[#CDCDCD]">
-        <h2 className="text-[30px] font-semibold text-black">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      {/* Contact Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-8 border-b border-b-[#CDCDCD]">
+        <h2 className="text-[24px] md:text-[30px] font-semibold text-black text-center md:text-left">
           Contact Us Today
         </h2>
-        <div className="relative overflow-hidden">
+        <div className="relative w-full max-w-md">
           <input
             placeholder="Enter Email"
-            className="p-3 border pr-15 border-[#CDCDCD] rounded-lg"
+            className="w-full p-3 pr-28 border border-[#CDCDCD] rounded-lg"
             type="text"
           />
-          <button className="rounded-lg absolute cursor-pointer right-0 bg-[#302CFF] py-[13px] px-4 text-white">
+          <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-[#302CFF] py-[10px] px-4 text-white text-sm rounded-lg">
             SUBMIT
           </button>
         </div>
       </div>
-      <div className="py-8 border-b w-full flex justify-between gap-5 border-b-[#CDCDCD]">
-        <div className="flex w-[50%] flex-col justify-between gap-5">
-          <h2>logo</h2>
-          <p className="w-[50%] text-[#71717A] text-[18px]">
+
+      {/* Main Footer Content */}
+      <div className="py-10 border-b border-b-[#CDCDCD] flex flex-col md:flex-row justify-between gap-10">
+        {/* Left: Logo and Description */}
+        <div className="md:w-1/2 flex flex-col gap-5">
+          <h2 className="text-[24px] font-semibold">logo</h2>
+          <p className="text-[#71717A] text-[16px] max-w-md">
             Stay connected with us for expert consulting solutions that drive
             growth and success.
           </p>
@@ -38,34 +42,28 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-[50%] justify-between gap-4">
-          <div className="flex flex-col justify-between gap-3 ">
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-          </div>
-          <div className="flex flex-col justify-between gap-3 ">
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-          </div>
-          <div className="flex flex-col justify-between gap-3 ">
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-            <h2 className="text-black text-[18px]">Home One</h2>
-          </div>
+
+        {/* Right: Links */}
+        <div className="md:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-6">
+          {[1, 2, 3].map((_, i) => (
+            <div key={i} className="flex flex-col gap-3">
+              <h2 className="text-black text-[16px]">Home One</h2>
+              <h2 className="text-black text-[16px]">Home One</h2>
+              <h2 className="text-black text-[16px]">Home One</h2>
+              <h2 className="text-black text-[16px]">Home One</h2>
+            </div>
+          ))}
         </div>
       </div>
-      <h2 className="pt-8 text-center text-[18px] text-black">
+
+      {/* Bottom Note */}
+      <h2 className="pt-8 text-center text-[14px] md:text-[16px] text-black">
         Copyright © Guidora | Designed by{" "}
-        <span className="text-[#71717A]">Theme-Sleek</span> - Powered by
+        <span className="text-[#71717A]">Theme-Sleek</span> - Powered by{" "}
         <span className="text-[#71717A]">Webflow.</span>
       </h2>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
