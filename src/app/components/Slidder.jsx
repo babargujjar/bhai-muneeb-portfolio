@@ -53,9 +53,13 @@ export default function SmoothCarousel() {
 
     const scroll = () => {
       if (scrollContainer) {
-        scrollContainer.scrollLeft += 0.5; // speed control here
-        // Looping
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollLeft += 0.5;
+
+        // FIX: Reset scroll if end is reached
+        if (
+          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+          scrollContainer.scrollWidth
+        ) {
           scrollContainer.scrollLeft = 0;
         }
       }
@@ -65,6 +69,7 @@ export default function SmoothCarousel() {
     animationFrameId = requestAnimationFrame(scroll);
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
+  
 
   // Duplicate items for infinite effect
   const infiniteCompanies = [...companies, ...companies];

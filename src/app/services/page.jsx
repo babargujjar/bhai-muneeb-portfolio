@@ -43,9 +43,9 @@ const page = () => {
         <Heading
           title="Smart eCommerce"
           highlight="Solutions"
-          className="max-w-[40%] text-5xl my-7"
+          className="max-w-[90%] sm:max-w-[80%] lg:max-w-[40%] text-4xl sm:text-6xl my-7"
         />
-        <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 max-w-[40%] mx-auto">
+        <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 sm:max-w-[60%] lg:max-w-[40%] mx-auto">
           Empowering global sellers with scalable strategies across Shopify,
           eBay, Vinted, and TikTok Shop.
         </p>
