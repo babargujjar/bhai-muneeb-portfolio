@@ -63,7 +63,7 @@ const Navbar = () => {
           <div>logo</div>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex gap-8 text-[18px] font-normal">
+          <div className="hidden md:flex gap-5 lg:gap-8 text-[16px] lg:text-[18px] font-normal">
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href}>
                 <h2>{link.label}</h2>
