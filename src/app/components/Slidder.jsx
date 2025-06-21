@@ -3,44 +3,32 @@ import React, { useEffect, useRef } from "react";
 
 const companies = [
   {
-    name: "Apple",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-  },
-  {
-    name: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-  },
-  {
-    name: "Facebook",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-  },
-  {
     name: "Amazon",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    logo: "/assets/amazon.png",
   },
   {
-    name: "Microsoft",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    name: "Depop",
+    logo: "/assets/depop.png",
   },
   {
-    name: "Netflix",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    name: "ebay",
+    logo: "/assets/ebay.png",
   },
   {
-    name: "Tesla",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg",
+    name: "Etsy",
+    logo: "/assets/etsy.jpeg",
   },
   {
-    name: "Adobe",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/31/Adobe_Systems_logo_2017.svg",
+    name: "OnBuy",
+    logo: "/assets/onbuy.png",
   },
   {
-    name: "Intel",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg",
+    name: "TiktokShop",
+    logo: "/assets/tiktokshop.png",
   },
   {
-    name: "Samsung",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    name: "Vinted",
+    logo: "/assets/vinted.png",
   },
 ];
 
