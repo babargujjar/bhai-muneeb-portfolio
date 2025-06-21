@@ -6,18 +6,17 @@ import LeftTextRightImage from './components/LeftTextRightImage'
 import Video from './components/Video'
 import Button from './components/Button'
 import Heading from './components/Heading'
-import AchievementHighlights from './components/AchievementHighlights'
 import LeftContentRightCard from './components/LeftContentRightCard'
 import BigCard from './components/BigCard'
 import ImgSection from './components/ImgSection'
 import BlogCard from './components/BlogCard'
 import LastSection from './components/LastSection'
 import FadeUp from './components/FadeUp'
+import Stats from './components/Stats'
 
 const page = () => {
 
- const archievmentDesc = "We ensure the successful completion of projects with precision,efficiency, and a commitment"
-  
+
  const aboutKeyPoints = [
    {
      title: "Expert eCommerce Store Development",
@@ -55,24 +54,7 @@ const page = () => {
    },
  ];
 
- const stats = [
-   {
-     number: "300",
-     desc: "eCommerce Stores Launched",
-   },
-   {
-     number: "4M",
-     desc: "Products Processed",
-   },
-   {
-     number: "20",
-     desc: "Countries Served",
-   },
-   {
-     number: "150%",
-     desc: "Avg. Growth Within 90 Days",
-   },
- ];
+
  
  return (
    <div className="max-w-6xl mx-auto px-5">
@@ -125,13 +107,7 @@ const page = () => {
        />
      </FadeUp>
      <FadeUp>
-       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-10">
-         {stats.map((v, i) => (
-           <div key={i}>
-             <AchievementHighlights desc={v.desc} number={v.number} />
-           </div>
-         ))}
-       </div>
+       <Stats />
      </FadeUp>
      <FadeUp>
        <LeftContentRightCard />

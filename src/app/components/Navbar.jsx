@@ -57,63 +57,67 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="relative max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto">
-      <div className="font-[var(--font-outfit)] shadow-md mb-5 shadow-gray-100 rounded-lg bg-white mt-3 md:mt-8 border-[#CDCDCD] border">
-        <div className="flex justify-between items-center p-3">
-          <div>logo</div>
+    <div className="relative shadow-md">
+      <div className=" max-w-6xl px-5 mx-auto">
+        <div className="font-[var(--font-outfit)]  mb-5 shadow-gray-100 bg-white border-[#CDCDCD]">
+          <div className="flex justify-between items-center p-3">
+            <div>
+              <Link href={"/"}>Betelbee</Link>
+            </div>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex gap-5 lg:gap-8 text-[16px] lg:text-[18px] font-normal">
-            {navLinks.map((link) => (
-              <Link key={link.label} href={link.href}>
-                <h2>{link.label}</h2>
-              </Link>
-            ))}
-          </div>
+            {/* Desktop Links */}
+            <div className="hidden md:flex gap-5 lg:gap-8 text-[16px] lg:text-[18px] font-normal">
+              {navLinks.map((link) => (
+                <Link key={link.label} href={link.href}>
+                  <h2>{link.label}</h2>
+                </Link>
+              ))}
+            </div>
 
-          {/* Contact Button (always visible) */}
-          <div className="hidden md:block">
-            <IconButton text="Contact" Icon={Send} />
-          </div>
-
-          {/* Mobile Menu Toggle Button */}
-          <div className="md:hidden">
-            <motion.button
-              onClick={() => setIsOpen(!isOpen)}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-md cursor-pointer focus:outline-none"
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </motion.button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="md:hidden border border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-              >
-                <div className=" pb-2">{link.label}</div>
-              </Link>
-            ))}
-            <div className="pt-2">
+            {/* Contact Button (always visible) */}
+            <div className="hidden md:block">
               <IconButton text="Contact" Icon={Send} />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            {/* Mobile Menu Toggle Button */}
+            <div className="md:hidden">
+              <motion.button
+                onClick={() => setIsOpen(!isOpen)}
+                whileTap={{ scale: 0.9 }}
+                className="p-2 rounded-md cursor-pointer focus:outline-none"
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </motion.button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="md:hidden border border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className=" pb-2">{link.label}</div>
+                </Link>
+              ))}
+              <div className="pt-2">
+                <IconButton text="Contact" Icon={Send} />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };

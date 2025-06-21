@@ -71,26 +71,27 @@ import React from "react";
 import Button from "./Button";
 import Heading from "./Heading";
 import Image from "next/image";
+import { HugeiconsIcon, MentoringIcon } from "@hugeicons/react";
 
 const LeftContentRightCard = () => {
   const card = [
     {
-      img: "/assets/cardimg.svg",
+      img: "/assets/consulting.png",
       title: "Free consulting with every service",
       desc: "Get expert advice before you spend a single rupee or dollar.",
     },
     {
-      img: "/assets/cardimg.svg",
+      img: "/assets/growth.png",
       title: "Platform-Specific Growth Plans",
       desc: "Custom strategies tailored for Shopify, eBay, TikTok Shop, and more.",
     },
     {
-      img: "/assets/cardimg.svg",
+      img: "/assets/dashboard.png",
       title: "Real-Time Analytics Dashboards",
       desc: "Track your performance live—see what’s working, fix what’s not.",
     },
     {
-      img: "/assets/cardimg.svg",
+      img: "/assets/support.png",
       title: "Ongoing Optimization & Support",
       desc: "We don’t stop after launch—our team ensures your business keeps improving.",
     },
@@ -118,7 +119,7 @@ const LeftContentRightCard = () => {
           {card.map((v, i) => (
             <div
               key={i}
-              className="border rounded-2xl p-8 md:p-10 border-[#CDCDCD]"
+              className="border rounded-2xl p-8 md:p-10 border-[rgb(205,205,205)]"
             >
               <Image
                 className="mb-10"

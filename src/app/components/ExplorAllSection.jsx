@@ -59,10 +59,10 @@ const ExplorAllSection = () => {
         </div>
       </div>
 
-      <div className=" bg-white h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
         {services.map((v, i) => (
-          <Link key={i} href={`/services/${v.slug}`} className="block h-full">
-            <div className="my-8 h-full flex cursor-pointer">
+          <Link key={i} href={`/services/${v.slug}`} className="block">
+            <div className="flex flex-col h-full">
               <Services service={v} />
             </div>
           </Link>
