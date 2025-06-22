@@ -73,7 +73,7 @@ const page = () => {
          headingTitle="Your Trusted Global eCommerce"
          headingHighlight="Partner"
          paragraph="We help brands grow faster and smarter across Shopify, eBay, TikTok Shop, and more. With years of experience in digital marketing, SEO, design, and web development, our team delivers real results for businesses in the UK, USA, Europe, and Australia."
-         imageSrc="/assets/image1.jpeg"
+         imageSrc="/assets/image1.jpg"
          imageClassName="w-full h-full"
          keyPoints={aboutKeyPoints}
        />
