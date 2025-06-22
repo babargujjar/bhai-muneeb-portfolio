@@ -35,7 +35,7 @@ const LeftContentRightCard = () => {
         <Heading
           title="Expert Digital Commerce"
           highlight="Solutions"
-          className="text-[36px] lg:text-[48px] my-3"
+          className="text-[36px] lg:text-[48px] mb-3"
         />
         <p className="text-[16px] lg:text-[18px] text-[#71717A]">
           We design systems that sell while you sleep — through platforms,

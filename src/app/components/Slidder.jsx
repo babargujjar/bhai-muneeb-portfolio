@@ -16,7 +16,7 @@ const companies = [
   },
   {
     name: "Etsy",
-    logo: "/assets/etsy.jpeg",
+    logo: "/assets/etsy.png",
   },
   {
     name: "OnBuy",
@@ -63,7 +63,7 @@ export default function SmoothCarousel() {
   const infiniteCompanies = [...companies, ...companies];
 
   return (
-    <div className="max-w-5xl mx-auto py-[180px] px-4">
+    <div className="max-w-5xl mx-auto py-[90px] px-4">
       <div
         ref={scrollRef}
         className="flex overflow-hidden whitespace-nowrap scroll-smooth"
