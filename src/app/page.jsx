@@ -13,6 +13,7 @@ import BlogCard from './components/BlogCard'
 import LastSection from './components/LastSection'
 import FadeUp from './components/FadeUp'
 import Stats from './components/Stats'
+import LeftTextRightImageWithName from './components/LeftContentRightImageWithName'
 
 const page = () => {
 
@@ -96,13 +97,12 @@ const page = () => {
        </div>
      </FadeUp>
      <FadeUp>
-       <LeftTextRightImage
+       <LeftTextRightImageWithName
          buttonText="Why Choose Us"
          headingTitle="Where Strategy Meets"
          headingHighlight="Execution"
          paragraph="We’re not just another agency—we're your growth partner. From setting up high-converting stores to driving traffic and building brands, we deliver real results."
-         imageSrc="/assets/image2.svg"
-         imageClassName="w-[360px] h-[380px]"
+         imageSrc="/assets/muneeb.jpg"
          keyPoints={chooseusKeyPoints}
        />
      </FadeUp>
