@@ -36,6 +36,12 @@ const page = () => {
       title: "Graphic Design & Branding",
       desc: "Professional, eye-catching visuals and identity design that sets your brand apart.",
     },
+    {
+      image: "/assets/social.png",
+      slug: "social-media-marketing",
+      title: "Social Media & Marketing",
+      desc: "Grow your audience and drive engagement through data-backed campaigns across all major platforms.",
+    },
   ];
   return (
     <div className="max-w-6xl mx-auto">
