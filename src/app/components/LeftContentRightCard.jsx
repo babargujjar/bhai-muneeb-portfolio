@@ -28,7 +28,7 @@ const LeftContentRightCard = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row w-full py-20 gap-10">
+    <div className="flex flex-col lg:flex-row w-full py-10 gap-10">
       {/* Left Content */}
       <div className="w-full lg:w-[45%]">
         <Button text="Core Features" />

@@ -71,7 +71,7 @@ const BigCard = () => {
 
   return (
     <div className="relative w-full max-w-6xl overflow-hidden mx-auto">
-      <div className="text-center my-20">
+      <div className="text-center mb-8">
         <Button text="Our Testimonial" />
         <Heading
           title="Trusted by Clients"

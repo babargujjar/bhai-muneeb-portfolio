@@ -14,7 +14,7 @@ const LeftTextRightImageWithName = ({
   keyPoints,
 }) => {
   return (
-    <div className="grid grid-cols-2 items-center h-full lg:gap-20 max-w-6xl mx-auto gap-10 mt-15 py-14">
+    <div className="grid grid-cols-2 items-center h-full lg:gap-20 max-w-6xl mx-auto gap-10 py-12">
       <div className="md:col-span-1  col-span-2">
         <Button text={buttonText} />
         <Heading

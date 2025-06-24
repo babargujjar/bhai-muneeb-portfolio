@@ -12,7 +12,7 @@ const MainSection = () => {
   const icons = [Twitter, Facebook, Linkedin];
   return (
     <div className="text-center">
-      <div className=" pt-16 sm:pt-32 flex justify-between max-w-6xl mx-auto items-end">
+      <div className=" pt-10 sm:pt-16 flex justify-between max-w-6xl mx-auto items-end">
         <motion.div
           initial={{ y: 0 }}
           animate={{ y: [0, -40, 0] }}

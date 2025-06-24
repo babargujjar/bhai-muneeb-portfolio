@@ -6,7 +6,7 @@ import { Facebook, Linkedin, Twitter } from 'lucide-react';
 
 const ImgSection = () => {
   return (
-    <div className="my-36">
+    <div className="my-15">
       <div className=" text-center">
         <Button text="Our Team Member’s" />
         <Heading

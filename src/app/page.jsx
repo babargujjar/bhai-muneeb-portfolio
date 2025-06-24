@@ -80,7 +80,7 @@ const page = () => {
        />
      </FadeUp>
      <FadeUp>
-       <div className="text-center my-20">
+       <div className="text-center">
          <Button text="Innovative Services" />
          <Heading
            title="Smart Solutions for Modern"
