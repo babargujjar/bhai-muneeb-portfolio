@@ -38,7 +38,7 @@ const LeftTextRightImageWithName = ({
         </div>
       </div>
       <div className="md:col-span-1 col-span-2">
-        <div className="w-full h-[700px] rounded-3xl flex bg-[#D8E6FF] justify-center items-center">
+        <div className="w-full h-[700px] rounded-3xl flex bg-[#FFF3DB] justify-center items-center">
           <div className="w-[360px] flex gap-2 flex-col items-center justify-center bg-white rounded-3xl h-[380px]">
             <img
               className="w-[250px] object-cover h-[280px] rounded-xl"

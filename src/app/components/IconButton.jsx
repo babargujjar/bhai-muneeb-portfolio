@@ -5,13 +5,13 @@ const IconButton = ({ text, Icon }) => {
     <button
       className="
             rounded-xl
-            hover:bg-white hover:text-black
+            hover:bg-white hover:text-[#feb436]
             transition-all duration-1000 hover:scale-95
             cursor-pointer sm:font-bold font-semibold
             sm:px-6 sm:py-4 px-4 py-2
             tracking-wider
             flex items-center gap-1
-            text-white bg-[#302CFF]
+            text-white bg-[#feb436]
             border text-[14px] sm:text-[18px]
           "
     >

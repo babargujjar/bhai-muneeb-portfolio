@@ -10,7 +10,7 @@
 }
 
 .buttoncss {
-  @apply rounded-lg hover:bg-[#302CFF] hover:text-white transition-all duration-1000 hover:scale-95 cursor-pointer font-bold px-6 py-4 text-black flex justify-center items-center gap-2 border text-[16px]
+  @apply rounded-lg hover:bg-[#feb436] hover:text-white transition-all duration-1000 hover:scale-95 cursor-pointer font-bold px-6 py-4 text-[#feb436] flex justify-center items-center gap-2 border border-[#feb436] text-[16px]
 }
 @media (max-width: 640px) {
   .buttoncss {

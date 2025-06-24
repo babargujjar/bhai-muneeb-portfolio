@@ -72,8 +72,10 @@ const Navbar = () => {
         <div className="font-[var(--font-outfit)] mb-5 shadow-gray-100 bg-white border-[#CDCDCD]">
           <div className="flex justify-between items-center p-3 relative">
             {/* Logo */}
-            <div>
-              <Link href={"/"}>Betelbee</Link>
+            <div className="w-40 text-center">
+              <Link href={"/"}>
+              <img src="/assets/logo.png" alt="" />
+              </Link>
             </div>
 
             {/* Desktop Links */}

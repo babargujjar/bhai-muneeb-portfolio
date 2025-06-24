@@ -134,7 +134,7 @@ const BigCard = () => {
           className={`p-3 rounded-full border transition ${
             slideIndex === 0
               ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-gray-100"
+              : "hover:bg-gray-100 cursor-pointer"
           }`}
         >
           <ChevronLeft />
@@ -146,7 +146,7 @@ const BigCard = () => {
           className={`p-3 rounded-full border transition ${
             slideIndex >= cardData.length - 2
               ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-gray-100"
+              : "hover:bg-gray-100 cursor-pointer"
           }`}
         >
           <ChevronRight />

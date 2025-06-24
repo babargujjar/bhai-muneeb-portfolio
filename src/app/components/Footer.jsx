@@ -15,7 +15,7 @@ const Footer = () => {
             className="w-full p-3 pr-28 border border-[#CDCDCD] rounded-lg"
             type="text"
           />
-          <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-[#302CFF] py-[10px] px-4 text-white text-sm rounded-lg">
+          <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-[#feb436] cursor-pointer py-[10px] px-4 text-white text-sm rounded-lg">
             SUBMIT
           </button>
         </div>
@@ -58,9 +58,8 @@ const Footer = () => {
 
       {/* Bottom Note */}
       <h2 className="pt-8 text-center text-[14px] md:text-[16px] text-black">
-        Copyright © Guidora | Designed by{" "}
-        <span className="text-[#71717A]">Theme-Sleek</span> - Powered by{" "}
-        <span className="text-[#71717A]">Webflow.</span>
+        © 2025 Betelbee | Design & Development by {" "}
+        <span className="text-[#feb436]">Betelbee.</span>
       </h2>
     </div>
   );
