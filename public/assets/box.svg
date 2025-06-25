@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#feb436" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-package" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z"></path>
+  <path d="M3 7l9 5 9-5"></path>
+  <path d="M3 17l9 5 9-5"></path>
+  <path d="M3 7v10l9 5v-10"></path>
+  <path d="M21 7v10l-9 5v-10"></path>
+</svg>

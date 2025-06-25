@@ -69,7 +69,7 @@ const Navbar = () => {
   return (
     <div className="relative shadow-md">
       <div className="max-w-6xl px-5 mx-auto">
-        <div className="font-[var(--font-outfit)] mb-5 shadow-gray-100 bg-white border-[#CDCDCD]">
+        <div className="font-[var(--font-outfit)] shadow-gray-100 bg-white border-[#CDCDCD]">
           <div className="flex justify-between items-center p-3 relative">
             {/* Logo */}
             <div className="w-40 text-center">
@@ -144,7 +144,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden border border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4 z-40"
+              className="md:hidden border mt-5 border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4 z-40"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}

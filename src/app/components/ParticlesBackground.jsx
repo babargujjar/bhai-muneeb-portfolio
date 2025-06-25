@@ -1,21 +1,70 @@
 "use client";
-import React, { useCallback } from "react";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import particlesConfig from "../../../public/particles/particlesjs-config.json";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine) => {
-    // loads slim version instead of full to avoid errors
     await loadSlim(engine);
   }, []);
 
   return (
     <Particles
-      id="tsparticles"
+      className="w-full h-full"
       init={particlesInit}
-      options={particlesConfig}
-      className="absolute top-0 left-0 w-full h-full z-[-1]"
+      options={{
+        fullScreen: false,
+        background: {
+          color: "transparent",
+        },
+        particles: {
+          number: {
+            value: 25,
+            density: {
+              enable: true,
+              value_area: 1000,
+            },
+          },
+          color: {
+            value: "#feb436",
+          },
+          shape: {
+            type: ["circle", "image"],
+            image: [
+              {
+                src: "/assets/cart.svg",
+                width: 20,
+                height: 20,
+              },
+              {
+                src: "/assets/box.svg",
+                width: 20,
+                height: 20,
+              },
+              {
+                src: "/assets/tag.svg",
+                width: 20,
+                height: 20,
+              },
+            ],
+          },
+          opacity: {
+            value: 0.3,
+          },
+          size: {
+            value: 20,
+            random: true,
+          },
+          move: {
+            enable: true,
+            speed: 0.5,
+            direction: "none",
+            out_mode: "out",
+          },
+        },
+        retina_detect: true,
+      }}
     />
   );
 };

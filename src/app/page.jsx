@@ -58,73 +58,75 @@ const page = () => {
 
  
  return (
-   <div className="max-w-6xl mx-auto px-5">
+   <>
      <FadeUp>
        <MainSection />
      </FadeUp>
-     <FadeUp>
-       <Slidder />
-     </FadeUp>
-     <FadeUp>
-       <ExplorAllSection />
-     </FadeUp> 
-     <FadeUp>
-       <LeftTextRightImage
-         buttonText="About Us"
-         headingTitle="Your Trusted Global eCommerce"
-         headingHighlight="Partner"
-         paragraph="We help brands grow faster and smarter across Shopify, eBay, TikTok Shop, and more. With years of experience in digital marketing, SEO, design, and web development, our team delivers real results for businesses in the UK, USA, Europe, and Australia."
-         imageSrc="/assets/image1.jpg"
-         imageClassName="w-full h-full"
-         keyPoints={aboutKeyPoints}
-       />
-     </FadeUp>
-     <FadeUp>
-       <div className="text-center">
-         <Button text="Innovative Services" />
-         <Heading
-           title="Smart Solutions for Modern"
-           highlight="eCommerce"
-           className="text-[35px] lg:text-[48px] max-w-[65%] md:max-w-[55%] lg:max-w-[45%] my-3"
+     <div className="max-w-6xl mx-auto px-5">
+       <FadeUp>
+         <Slidder />
+       </FadeUp>
+       <FadeUp>
+         <ExplorAllSection />
+       </FadeUp>
+       <FadeUp>
+         <LeftTextRightImage
+           buttonText="About Us"
+           headingTitle="Your Trusted Global eCommerce"
+           headingHighlight="Partner"
+           paragraph="We help brands grow faster and smarter across Shopify, eBay, TikTok Shop, and more. With years of experience in digital marketing, SEO, design, and web development, our team delivers real results for businesses in the UK, USA, Europe, and Australia."
+           imageSrc="/assets/image1.jpg"
+           imageClassName="w-full h-full"
+           keyPoints={aboutKeyPoints}
          />
-         <div className="flex justify-center">
-           <p className="text-[16px] md:text-[18px] text-[#71717A] max-w-[65%] md:max-w-[55%] lg:max-w-[45%]">
-             We build stores, design brands, boost visibility, and drive sales
-             across Shopify, TikTok Shop, eBay, and more—powered by SEO, Ads,
-             and stunning design.
-           </p>
+       </FadeUp>
+       <FadeUp>
+         <div className="text-center">
+           <Button text="Innovative Services" />
+           <Heading
+             title="Smart Solutions for Modern"
+             highlight="eCommerce"
+             className="text-[35px] lg:text-[48px] max-w-[65%] md:max-w-[55%] lg:max-w-[45%] my-3"
+           />
+           <div className="flex justify-center">
+             <p className="text-[16px] md:text-[18px] text-[#71717A] max-w-[65%] md:max-w-[55%] lg:max-w-[45%]">
+               We build stores, design brands, boost visibility, and drive sales
+               across Shopify, TikTok Shop, eBay, and more—powered by SEO, Ads,
+               and stunning design.
+             </p>
+           </div>
          </div>
-       </div>
-     </FadeUp>
-     <FadeUp>
-       <LeftTextRightImageWithName
-         buttonText="Why Choose Us"
-         headingTitle="Where Strategy Meets"
-         headingHighlight="Execution"
-         paragraph="We’re not just another agency—we're your growth partner. From setting up high-converting stores to driving traffic and building brands, we deliver real results."
-         imageSrc="/assets/muneeb.jpg"
-         keyPoints={chooseusKeyPoints}
-       />
-     </FadeUp>
-     <FadeUp>
-       <Stats />
-     </FadeUp>
-     <FadeUp>
-       <LeftContentRightCard />
-     </FadeUp>
-     <FadeUp>
-       <BigCard />
-     </FadeUp>
-     <FadeUp>
-       <ImgSection />
-     </FadeUp>
-     <FadeUp>
-       <BlogCard />
-     </FadeUp>
-     <FadeUp>
-       <LastSection />
-     </FadeUp>
-   </div>
+       </FadeUp>
+       <FadeUp>
+         <LeftTextRightImageWithName
+           buttonText="Why Choose Us"
+           headingTitle="Where Strategy Meets"
+           headingHighlight="Execution"
+           paragraph="We’re not just another agency—we're your growth partner. From setting up high-converting stores to driving traffic and building brands, we deliver real results."
+           imageSrc="/assets/muneeb.jpg"
+           keyPoints={chooseusKeyPoints}
+         />
+       </FadeUp>
+       <FadeUp>
+         <Stats />
+       </FadeUp>
+       <FadeUp>
+         <LeftContentRightCard />
+       </FadeUp>
+       <FadeUp>
+         <BigCard />
+       </FadeUp>
+       <FadeUp>
+         <ImgSection />
+       </FadeUp>
+       <FadeUp>
+         <BlogCard />
+       </FadeUp>
+       <FadeUp>
+         <LastSection />
+       </FadeUp>
+     </div>
+   </>
  );
 }
 
