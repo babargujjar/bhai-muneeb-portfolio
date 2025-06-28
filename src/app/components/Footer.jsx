@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -55,15 +55,35 @@ const Footer = () => {
             <h2 className="text-[16px]">betelbee.official@gmail.com</h2>
           </div>
           <div className="flex gap-3">
-            <div className="bg-white p-2 border border-[#71717A] rounded-full">
-              <Twitter className="w-5 h-5 text-[#71717A]" />
-            </div>
-            <div className="bg-white p-2 border border-[#71717A] rounded-full">
-              <Facebook className="w-5 h-5 text-[#71717A]" />
-            </div>
-            <div className="bg-white p-2 border border-[#71717A] rounded-full">
-              <Linkedin className="w-5 h-5 text-[#71717A]" />
-            </div>
+            <a
+              href="https://www.instagram.com/betelbee.official/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Instagram className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61577745511032"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Facebook className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/betelbee-594993371/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Linkedin className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </a>
           </div>
         </div>
 

@@ -1,11 +1,18 @@
 "use client";
 import React from "react";
-import { Twitter, Facebook, Linkedin, UserPlus } from "lucide-react";
+import { Instagram, Facebook, Linkedin, UserPlus } from "lucide-react";
 import { motion } from "framer-motion";
 import IconButton from "./IconButton";
 
 const LastSection = () => {
-  const icons = [Twitter, Facebook, Linkedin];
+  const icons = [
+    { Icon: Instagram, href: "https://www.instagram.com/betelbee.official/" },
+    {
+      Icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61577745511032",
+    },
+    { Icon: Linkedin, href: "https://www.linkedin.com/in/betelbee-594993371/" },
+  ];
 
   return (
     <div className="border text-center py-14 sm:py-20 border-[#CDCDCD] my-14 w-full rounded-3xl px-4 sm:px-10">
@@ -22,7 +29,14 @@ const LastSection = () => {
 
         {/* Animated Icons */}
         <motion.div className="flex mt-10 items-center justify-center gap-5 sm:gap-6">
-          {icons.map((Icon, i) => (
+          {icons.map(({Icon,href}, i) => (
+            <a
+            key={i}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Link to ${href}`}
+          >
             <motion.div
               className="border-[#71717A] border-2 p-2 sm:p-3 rounded-full text-[#71717A]"
               key={i}
@@ -38,6 +52,7 @@ const LastSection = () => {
             >
               <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.div>
+            </a>
           ))}
         </motion.div>
 
