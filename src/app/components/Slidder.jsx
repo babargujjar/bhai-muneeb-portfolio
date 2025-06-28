@@ -44,10 +44,7 @@ export default function SmoothCarousel() {
         scrollContainer.scrollLeft += 0.5;
 
         // FIX: Reset scroll if end is reached
-        if (
-          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-          scrollContainer.scrollWidth
-        ) {
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
           scrollContainer.scrollLeft = 0;
         }
       }
@@ -58,7 +55,7 @@ export default function SmoothCarousel() {
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
   
-
+ 
   // Duplicate items for infinite effect
   const infiniteCompanies = [...companies, ...companies];
 

@@ -74,7 +74,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="w-40 text-center">
               <Link href={"/"}>
-              <img src="/assets/logo.png" alt="" />
+              <img src="/assets/logo2.png" alt="" />
               </Link>
             </div>
 

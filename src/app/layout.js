@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { Outfit } from "next/font/google";
 import Footer from "./components/Footer";
+import CustomLayout from "./components/CustomLayout";
 
 
 
@@ -21,9 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <CustomLayout>{children}</CustomLayout>
       </body>
     </html>
   );
