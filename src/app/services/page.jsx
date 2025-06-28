@@ -15,7 +15,7 @@ const page = () => {
     {
       image: "/assets/SEO.png",
       slug: "seo-marketing",
-      title: "SEO & Performance Marketing",
+      title: "SEO ",
       desc: "Boost your visibility on Google and drive high-converting traffic with expert SEO & paid ads.",
     },
     {

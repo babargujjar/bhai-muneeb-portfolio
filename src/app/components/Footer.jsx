@@ -51,7 +51,8 @@ const Footer = () => {
             growth and success.
           </p>
           <div>
-            <h2 className=" text-[16px]">+92 303 0768989</h2>
+            <h2 className=" text-[16px]">+92 3030768989</h2>
+            <h2 className=" text-[16px]">+44 7411272710</h2>
             <h2 className="text-[16px]">betelbee.official@gmail.com</h2>
           </div>
           <div className="flex gap-3">
@@ -88,7 +89,7 @@ const Footer = () => {
         </div>
 
         {/* Right: Links */}
-        <div className="md:w-1/2 grid grid-cols-2  gap-6">
+        <div className="md:w-1/2 grid grid-cols-1 md:grid-cols-2  gap-6">
           <div className="flex flex-col gap-2">
             <h2 className="text-gray-500 font-semibold text-[18px]">Pages</h2>
             {navLinks.map((link) => (
