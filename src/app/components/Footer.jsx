@@ -12,7 +12,7 @@ const Footer = () => {
   ];
   const services = [
     { slug: "ecommerce", title: "eCommerce Store Setup" },
-    { slug: "seo-marketing", title: "SEO & Performance Marketing" },
+    { slug: "seo-marketing", title: "SEO" },
     { slug: "content-marketing", title: "Content Marketing" },
     { slug: "web-development", title: "Custom Web Development" },
     { slug: "graphic-design", title: "Graphic Design & Branding" },

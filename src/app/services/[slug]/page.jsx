@@ -93,7 +93,7 @@ export default function ServiceDetail({ params }) {
     {
       image: "/assets/SEO.png",
       slug: "seo-marketing",
-      title: "SEO & Paid Ads",
+      title: "SEO",
       desc: "Boost your visibility on Google and drive high-converting traffic with expert SEO & paid ads.",
       features: [
         "Comprehensive keyword research",

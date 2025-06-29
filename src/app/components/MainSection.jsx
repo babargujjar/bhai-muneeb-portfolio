@@ -24,25 +24,7 @@ const MainSection = () => {
 
       <div className="text-center max-w-6xl mx-auto px-5 relative z-10 bg-transparent">
         <div className="pt-12 sm:pt-19 !bg-transparent flex justify-between max-w-6xl mx-auto items-end">
-          <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: [0, -40, 0] }}
-            transition={{
-              duration: 6,
-              times: [0, 0.2, 0.5, 0.8, 1],
-              ease: ["easeOut", "easeIn", "easeOut", "easeIn"],
-              repeat: Infinity,
-            }}
-            className="md:block hidden"
-          >
-            <Image
-              className="rounded-4xl transform -rotate-[15deg] origin-top-left"
-              src="/assets/image1.jpeg"
-              width={200}
-              height={200}
-              alt=""
-            />
-          </motion.div>
+         
           <div className="text-center">
             {/* <Button text="Innovative Strategies" /> */}
             <Heading
@@ -62,25 +44,6 @@ const MainSection = () => {
               </button> */}
             </div>
           </div>
-          <motion.div
-            initial={{ y: -80 }}
-            animate={{ y: [-80, -40, -80] }}
-            transition={{
-              duration: 6,
-              times: [0, 0.2, 0.5, 0.8, 1],
-              ease: ["easeOut", "easeIn", "easeOut", "easeIn"],
-              repeat: Infinity,
-            }}
-            className="md:block hidden"
-          >
-            <Image
-              className="rounded-4xl transform rotate-[15deg] origin-top-left"
-              src="/assets/image1.jpeg"
-              width={200}
-              height={200}
-              alt=""
-            />
-          </motion.div>
         </div>
         <div>
           <motion.div className="flex mt-14 items-center justify-center gap-6">

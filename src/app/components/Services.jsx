@@ -133,7 +133,7 @@ import { motion } from "framer-motion";
 const Services = ({ service }) => {
   return (
     <motion.div
-      className="flex flex-col justify-between w-full h-full relative group bg-gradient-to-br from-[#3b2f1e] to-[#4b3a23] text-white border border-[#4b3a23] rounded-2xl overflow-hidden shadow-[0_2px_10px_rgba(99,64,18,0.4)] hover:shadow-[0_8px_40px_rgba(254,180,54,0.3)] transition-all duration-500 hover:-translate-y-1.5"
+      className="flex flex-col justify-between w-full h-full relative group bg-gradient-to-br from-[#3b2f1e] to-[#4b3a23] text-white border border-[#4b3a23] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1.5"
       whileHover={{ scale: 1.03 }}
       transition={{ type: "spring", stiffness: 400, damping: 15 }}
     >
