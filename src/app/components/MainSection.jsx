@@ -1,20 +1,48 @@
 "use client";
 import { Search, Send } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IconButton from "./IconButton";
-import Button from "./Button";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
-import Heading from "./Heading";
 import ParticlesBackground from "./ParticlesBackground";
 
 const MainSection = () => {
+  const phrases = ["Start Faster", "Scale Smarter", "Sell Everywhere"];
   const icons = [
     { Icon: Instagram, href: "https://www.instagram.com/betelbee.official/" },
     { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577745511032" },
     { Icon: Linkedin, href: "https://www.linkedin.com/in/betelbee-594993371/" },
   ];
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    const currentPhrase = phrases[index];
+    const currentLength = text.length;
+    const typingSpeed = 100;
+    const pauseDuration = 1000;
+    let timer;
+
+    if (typing && currentLength < currentPhrase.length) {
+      timer = setTimeout(() => {
+        setText(currentPhrase.slice(0, currentLength + 1));
+      }, typingSpeed);
+    } else if (typing && currentLength === currentPhrase.length) {
+      timer = setTimeout(() => {
+        setTyping(false);
+      }, pauseDuration);
+    } else if (!typing && currentLength > 0) {
+      timer = setTimeout(() => {
+        setText(currentPhrase.slice(0, currentLength - 1));
+      }, typingSpeed / 2);
+    } else if (!typing && currentLength === 0) {
+      setTyping(true);
+      setIndex((prev) => (prev + 1) % phrases.length);
+    }
+
+    return () => clearTimeout(timer);
+  }, [text, typing, index]);
   return (
     <div className="relative overflow-hidden pt-5">
       {/* Background particles absolute */}
@@ -24,17 +52,27 @@ const MainSection = () => {
 
       <div className="text-center max-w-6xl mx-auto px-5 relative z-10 bg-transparent">
         <div className="pt-12 sm:pt-19 !bg-transparent flex justify-between max-w-6xl mx-auto items-end">
-         
           <div className="text-center">
-            {/* <Button text="Innovative Strategies" /> */}
-            <Heading
-              title="Smart Solutions for Global "
-              highlight="eCommerce"
-              className=" mt-5 max-w-[95%] sm:max-w-[90%] md:lg-w-[70%] text-4xl sm:text-6xl"
-            />
+            <div className="flex justify-center items-center text-center min-h-[200px] overflow-hidden">
+              <h2 className="font-bold text-black max-w-[95%] sm:max-w-[90%] md:max-w-[70%] text-4xl sm:text-6xl leading-snug">
+                We Help You
+                <div className="relative h-[72px] sm:h-[80px] mt-2 flex justify-center items-center overflow-hidden max-w-full">
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-[#feb436] whitespace-nowrap"
+                  >
+                    {text}
+                  </motion.span>
+                </div>
+              </h2>
+            </div>
             <p className="text-[#71717A] text-[18px] font-normal my-6 leading-7 max-w-[75%] mx-auto">
-              Scale your business with expert Shopify, eBay, Vinted, TikTok
-              Shop, web dev, SEO, and ad services.
+              From Product to Profit — We Handle It All Sourcing, branding,
+              launching, and scaling made easy across Amazon, eBay,
+              Walmart, Etsy, and more.
             </p>
             <div className="flex items-center pt-2 justify-center gap-3">
               <IconButton text="Explore Services" Icon={Search} />
