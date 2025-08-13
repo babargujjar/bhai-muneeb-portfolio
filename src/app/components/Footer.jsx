@@ -38,10 +38,15 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="py-10 border-b border-b-[#CDCDCD] flex flex-col md:flex-row justify-between gap-10">
+      <div className="w-full sm:hidden mt-5 flex justify-center">
+        <Link href={"/"}>
+          <img className="w-50" src="/assets/logo2.png" alt="" />
+        </Link>
+      </div>
+      <div className="sm:py-10 py-5 border-b border-b-[#CDCDCD] flex flex-col md:flex-row justify-between gap-5 sm:gap-10">
         {/* Left: Logo and Description */}
-        <div className="md:w-1/2 flex flex-col gap-5">
-          <div className="w-50">
+        <div className="md:w-1/2 hidden sm:flex flex-col gap-5">
+          <div className="w-50 hidden sm:block">
             <Link href={"/"}>
               <img src="/assets/logo2.png" alt="" />
             </Link>
@@ -50,13 +55,13 @@ const Footer = () => {
             Stay connected with us for expert consulting solutions that drive
             growth and success.
           </p>
-          <div>
+          <div className="">
             <h2 className=" text-[16px]">+92 3030768989</h2>
             <h2 className=" text-[16px]">+44 7411272710</h2>
             <h2 className="text-[16px]">betelbee.official@gmail.com</h2>
           </div>
           <div className="flex gap-3">
-            <a
+            <Link
               href="https://www.instagram.com/betelbee.official/"
               target="_blank"
               rel="noopener noreferrer"
@@ -64,9 +69,9 @@ const Footer = () => {
               <div className="bg-white p-2 border border-[#71717A] rounded-full">
                 <Instagram className="w-5 h-5 text-[#71717A]" />
               </div>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.facebook.com/profile.php?id=61577745511032"
               target="_blank"
               rel="noopener noreferrer"
@@ -74,9 +79,9 @@ const Footer = () => {
               <div className="bg-white p-2 border border-[#71717A] rounded-full">
                 <Facebook className="w-5 h-5 text-[#71717A]" />
               </div>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.linkedin.com/in/betelbee-594993371/"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,17 +89,19 @@ const Footer = () => {
               <div className="bg-white p-2 border border-[#71717A] rounded-full">
                 <Linkedin className="w-5 h-5 text-[#71717A]" />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Right: Links */}
-        <div className="md:w-1/2 grid grid-cols-1 md:grid-cols-2  gap-6">
+        <div className="md:w-1/2 grid grid-cols-2  gap-2">
           <div className="flex flex-col gap-2">
             <h2 className="text-gray-500 font-semibold text-[18px]">Pages</h2>
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href}>
-                <h2 className="text-black text-[16px]">{link.label}</h2>
+                <h2 className="text-black text-[12px] sm:text-[16px]">
+                  {link.label}
+                </h2>
               </Link>
             ))}
           </div>
@@ -104,7 +111,7 @@ const Footer = () => {
             </h2>
             {services.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`}>
-                <div className="text-black text-[16px] flex items-center gap-1">
+                <div className="text-black text-[12px] sm:text-[16px] flex items-center gap-1">
                   <span className="text-gray-500 text-[20px] leading-[20px]">
                     •
                   </span>
@@ -121,6 +128,45 @@ const Footer = () => {
               <h2 className="text-black text-[16px]">Home One</h2>
             </div>
           ))} */}
+        </div>
+        {/* info and social media links on mobile screen */}
+        <div className="sm:hidden block">
+          <div className="text-center mb-5">
+            <h2 className=" text-[16px]">+92 3030768989</h2>
+            <h2 className=" text-[16px]">+44 7411272710</h2>
+            <h2 className="text-[16px]">betelbee.official@gmail.com</h2>
+          </div>
+          <div className="flex gap-3 justify-center sm:justify-start">
+            <Link
+              href="https://www.instagram.com/betelbee.official/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Instagram className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </Link>
+
+            <Link
+              href="https://www.facebook.com/profile.php?id=61577745511032"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Facebook className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/betelbee-594993371/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-white p-2 border border-[#71717A] rounded-full">
+                <Linkedin className="w-5 h-5 text-[#71717A]" />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
 
