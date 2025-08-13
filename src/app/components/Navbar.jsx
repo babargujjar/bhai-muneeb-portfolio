@@ -1,43 +1,4 @@
-// import { Send } from 'lucide-react';
-// import Link from 'next/link';
-// import React from 'react'
-// import IconButton from './IconButton';
-
-// const Navbar = () => {
-//   return (
-//     <div className="font-[var(--font-outfit)] shadow-md mb-5 shadow-gray-100 w-full max-w-[85%] mx-auto rounded-lg bg-white mt-8 border-[#CDCDCD] border">
-//       <div className="flex justify-between items-center p-3 ">
-//         <div>logo</div>
-//         <div className="flex gap-8 text-[18px] font-normal">
-//           <Link href="/">
-//             <h2>Home</h2>
-//           </Link>
-//           <Link href="/">
-//             <h2>About</h2>
-//           </Link>
-//           <Link href="/">
-//             <h2>Services</h2>
-//           </Link>
-//           <Link href="/">
-//             <h2>Case Studies</h2>
-//           </Link>
-//           <Link href="/">
-//             <h2>Blog</h2>
-//           </Link>
-//         </div>
-//         <div>
-//           <IconButton text="Contact" Icon={Send} />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Navbar
-
-
 "use client";
-
 import { Send, Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -74,7 +35,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="w-40 text-center">
               <Link href={"/"}>
-              <img src="/assets/logo2.png" alt="" />
+                <img src="/assets/logo2.png" alt="" />
               </Link>
             </div>
 
@@ -124,7 +85,9 @@ const Navbar = () => {
 
             {/* Desktop Contact Button */}
             <div className="hidden md:block">
-              <IconButton text="Contact" Icon={Send} />
+              <Link href={"/contact"}>
+                <IconButton text="Contact" Icon={Send} />
+              </Link>
             </div>
 
             {/* Mobile Toggle */}
@@ -206,7 +169,9 @@ const Navbar = () => {
 
               {/* Contact Button */}
               <div className="pt-2">
-                <IconButton text="Contact" Icon={Send} />
+                <Link href={"/contact"}>
+                  <IconButton text="Contact" Icon={Send} />
+                </Link>
               </div>
             </motion.div>
           )}

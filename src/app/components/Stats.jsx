@@ -4,11 +4,11 @@ import AchievementHighlights from './AchievementHighlights';
 const Stats = () => {
     const stats = [
       {
-        number: "300",
+        number: "3k",
         desc: "eCommerce Stores Launched",
       },
       {
-        number: "40M",
+        number: "40k",
         desc: "Products Processed",
       },
       {
@@ -16,7 +16,7 @@ const Stats = () => {
         desc: "Countries Served",
       },
       {
-        number: "150%",
+        number: "97%",
         desc: "Avg. Growth Within 90 Days",
       },
     ];
