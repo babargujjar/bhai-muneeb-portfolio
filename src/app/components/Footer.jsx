@@ -7,7 +7,6 @@ const Footer = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/" },
     { label: "Services", href: "/services" },
-    { label: "Case Studies", href: "/" },
     { label: "Blog", href: "/" },
   ];
   const services = [
@@ -131,9 +130,19 @@ const Footer = () => {
         </div>
         {/* info and social media links on mobile screen */}
         <div className="sm:hidden block">
-          <div className="text-center mb-5">
-            <h2 className=" text-[16px]">+92 3030768989</h2>
-            <h2 className=" text-[16px]">+44 7411272710</h2>
+          <div className="flex gap-3 text-[12px] justify-start items-center">
+            <div>
+              <h2 className="text-[14px]">HEAD OFFICE (Pakistan)</h2>
+              <h2>13-C, Peoples Colony No 1, Faisalabad, Pakistan, 38000</h2>
+              <h2>+92 3030768989</h2>
+            </div>
+            <div>
+              <h2 className="text-[14px]">REGIONAL HUB (Uk)</h2>
+              <h2>31, Duddingston, Park South, Edinburgh, EH15 3NZ</h2>
+              <h2>+44 7411272710</h2>
+            </div>
+          </div>
+          <div className="text-start mb-5">
             <h2 className="text-[16px]">betelbee.official@gmail.com</h2>
           </div>
           <div className="flex gap-3 justify-center sm:justify-start">

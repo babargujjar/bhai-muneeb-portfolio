@@ -1,16 +1,17 @@
 "use client";
 import { Send, Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IconButton from "./IconButton";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+   const pathname = usePathname();
 
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/" },
-    { label: "Case Studies", href: "/" },
     { label: "Blog", href: "/" },
   ];
 
@@ -26,6 +27,11 @@ const Navbar = () => {
     { slug: "social-media-marketing", title: "Social Media & Marketing" },
   ];
   
+
+  useEffect(() => {
+    setIsOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
   return (
     <div className="relative shadow-md">

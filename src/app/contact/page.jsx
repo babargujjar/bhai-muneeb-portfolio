@@ -20,10 +20,10 @@ const page = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white  mx-auto text-black p-6 flex flex-col items-center">
+    <div className="min-h-screen bg-white  mx-auto text-black p-5 flex flex-col items-center">
       <div className=" w-full grid md:grid-cols-2 gap-8">
         {/* Left Side - Company Info */}
-        <div className="text-black p-8 rounded-lg">
+        <div className="text-black sm:p-8 rounded-lg">
           <h2 className="text-3xl font-bold mb-4 text-[#feb436]">
             Get in Touch
           </h2>
