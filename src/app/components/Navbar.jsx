@@ -108,81 +108,80 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        {/* Mobile Dropdown Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="md:hidden border mt-5 border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4 z-40"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.25 }}
-            >
-              {/* Regular Links */}
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <div className="pb-2">{link.label}</div>
-                </Link>
-              ))}
-
-              {/* Mobile Services Dropdown */}
-              <div>
-                <div
-                  className="flex justify-between items-center pb-2 cursor-pointer"
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                >
-                  <span>Services</span>
-                  <ChevronDown
-                    className={`transform transition-transform duration-300 ${
-                      servicesOpen ? "rotate-180" : ""
-                    }`}
-                    size={18}
-                  />
-                </div>
-
-                <AnimatePresence>
-                  {servicesOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="pl-3 text-[16px] space-y-2 overflow-hidden"
-                    >
-                      {services.map((service) => (
-                        <Link
-                          key={service.slug}
-                          href={`/services/${service.slug}`}
-                          onClick={() => {
-                            setIsOpen(false);
-                            setServicesOpen(false);
-                          }}
-                        >
-                          <div className="px-2 py-1 hover:bg-gray-100 rounded-md text-sm">
-                            {service.title}
-                          </div>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Contact Button */}
-              <div className="pt-2">
-                <Link href={"/contact"}>
-                  <IconButton text="Contact" Icon={Send} />
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
+      {/* Mobile Dropdown Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="md:hidden border mt-5 border-[#CDCDCD] top-20 absolute w-full rounded-lg bg-white px-3 py-4 shadow-md font-[var(--font-outfit)] text-[18px] space-y-4 z-40"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            {/* Regular Links */}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+              >
+                <div className="pb-2">{link.label}</div>
+              </Link>
+            ))}
+
+            {/* Mobile Services Dropdown */}
+            <div>
+              <div
+                className="flex justify-between items-center pb-2 cursor-pointer"
+                onClick={() => setServicesOpen(!servicesOpen)}
+              >
+                <span>Services</span>
+                <ChevronDown
+                  className={`transform transition-transform duration-300 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
+                  size={18}
+                />
+              </div>
+
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="pl-3 text-[16px] space-y-2 overflow-hidden"
+                  >
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setServicesOpen(false);
+                        }}
+                      >
+                        <div className="px-2 py-1 hover:bg-gray-100 rounded-md text-sm">
+                          {service.title}
+                        </div>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Contact Button */}
+            <div className="pt-2">
+              <Link href={"/contact"}>
+                <IconButton text="Contact" Icon={Send} />
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
