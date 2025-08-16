@@ -99,7 +99,7 @@ const page = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#feb436] text-black font-semibold py-2 rounded-lg hover:bg-black hover:text-white transition-all duration-300"
+              className="w-full bg-[#feb436] text-black font-semibold py-2 rounded-lg transition-all duration-300"
             >
               Send Message
             </button>
@@ -143,3 +143,4 @@ const page = () => {
 };
 
 export default page;
+
