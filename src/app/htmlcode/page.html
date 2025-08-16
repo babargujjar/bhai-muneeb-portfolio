@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>[Your Company] – E‑Commerce & AI Services</title>
+    <meta name="description"
+        content="E‑commerce services with AI: private label, store setup, sourcing, logistics, marketing, CRM, marketplaces, branding, and growth." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            /* page background */
+            --panel: #f9f9f9;
+            /* panels/cards */
+            --muted: #333333;
+            /* secondary text */
+            --text: #000000;
+            /* primary text */
+            --brand: #FEB436;
+            /* accent (yellow) */
+            --brand-2: #FEB436;
+            /* secondary accent (same) */
+            --stroke: #e0e0e0;
+            /* borders */
+            --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            --radius-xl: 18px;
+            --radius-lg: 14px;
+            --radius: 12px;
+            --radius-sm: 10px;
+            --maxw: 1200px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            letter-spacing: .2px;
+        }
+
+        a {
+            color: var(--brand)
+        }
+
+        a:hover {
+            opacity: .9
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .btn {
+            display: inline-flex;
+            gap: .6rem;
+            align-items: center;
+            border: 2px solid transparent;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            text-decoration: none;
+        }
+
+        .btn-prim {
+            background: var(--brand);
+            color: #000
+        }
+
+        .btn-ghost {
+            border-color: var(--brand);
+            color: var(--text);
+            background: transparent
+        }
+
+        .btn-ghost:hover {
+            background: var(--brand);
+            color: #000
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            font-size: .8rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: var(--brand);
+            color: #000;
+            font-weight: 700;
+            border: 1px solid rgba(0, 0, 0, .06)
+        }
+
+        header.navbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: saturate(160%) blur(10px);
+            background: rgba(255, 255, 255, .9);
+            border-bottom: 2px solid var(--brand)
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            font-weight: 800;
+            letter-spacing: .3px;
+            color: var(--text)
+        }
+
+        .brand .logo {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--brand);
+            box-shadow: 0 0 0 2px #fff
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 8px
+        }
+
+        .nav-links a:hover {
+            background: var(--brand);
+            color: #000
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 40px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 34px;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-family: "Plus Jakarta Sans", Inter, sans-serif;
+            font-size: clamp(28px, 4vw, 56px);
+            line-height: 1.06;
+            letter-spacing: .2px;
+            margin: 0 0 14px
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: clamp(14px, 1.4vw, 18px)
+        }
+
+        .hero-card {
+            background: #fff;
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius-xl);
+            padding: 22px;
+            box-shadow: var(--shadow)
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            background: var(--panel);
+            border: 1px solid var(--stroke);
+            padding: 18px;
+            border-radius: var(--radius-lg);
+            text-align: center
+        }
+
+        .stat .n {
+            font-size: 1.6rem;
+            font-weight: 800
+        }
+
+        .stat .t {
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0
+        }
+
+        .section-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px
+        }
+
+        .section-head h2 {
+            font-family: "Plus Jakarta Sans";
+            font-size: clamp(22px, 3vw, 36px);
+            margin: 0
+        }
+
+        .section-head p {
+            color: var(--muted);
+            max-width: 760px
+        }
+
+        /* Cards grid */
+        .grid {
+            display: grid;
+            gap: 18px
+        }
+
+        .grid.cols-3 {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+        }
+
+        .grid.cols-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden
+        }
+
+        .card h3 {
+            margin: 4px 0 8px
+        }
+
+        .card p {
+            color: var(--muted);
+            margin: 0 0 12px
+        }
+
+        .tagline {
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .pill {
+            display: inline-block;
+            border: 1px solid var(--stroke);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: .8rem;
+            color: var(--muted)
+        }
+
+        .kicker {
+            display: inline-flex;
+            gap: .5rem;
+            align-items: center;
+            font-weight: 700;
+            font-size: .85rem;
+            color: var(--brand)
+        }
+
+        .kicker svg {
+            opacity: .9
+        }
+
+        /* Feature rows */
+        .feat {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin: 10px 0
+        }
+
+        .feat svg {
+            flex: 0 0 18px
+        }
+
+        .feat b {
+            font-weight: 700
+        }
+
+        /* Private Label spotlight */
+        .spotlight {
+            border: 2px solid var(--brand);
+            background: #fff;
+            position: relative
+        }
+
+        .spotlight .ribbon {
+            position: absolute;
+            top: 16px;
+            right: -40px;
+            transform: rotate(35deg);
+            background: var(--brand);
+            color: #111;
+            font-weight: 800;
+            padding: 6px 50px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, .06)
+        }
+
+        /* List */
+        .list {
+            display: grid;
+            gap: 8px;
+            margin-top: 8px
+        }
+
+        .list li {
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px
+        }
+
+        .list svg {
+            flex: 0 0 18px
+        }
+
+        /* Pricing / engagement */
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px
+        }
+
+        .price-card {
+            background: var(--panel);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius-lg);
+            padding: 20px
+        }
+
+        .price-card h4 {
+            margin: 6px 0 4px
+        }
+
+        .price-card .desc {
+            color: var(--muted)
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 10px 0;
+            color: var(--brand)
+        }
+
+        /* FAQ */
+        details {
+            background: var(--panel);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius-lg);
+            padding: 14px 16px
+        }
+
+        details+details {
+            margin-top: 10px
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700
+        }
+
+        details p {
+            color: var(--muted)
+        }
+
+        /* Footer */
+        footer {
+            border-top: 2px solid var(--brand);
+            color: var(--muted);
+            padding: 28px 0 40px
+        }
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .grid.cols-3,
+            .grid.cols-2 {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding-top: 48px
+            }
+
+            .nav-links {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <div class="brand">
+                <div class="logo" aria-hidden></div> <span>[Your Company Name]</span>
+            </div>
+            <nav class="nav-links"> <a href="#services">Services</a> <a href="#private-label">Private Label</a> <a
+                    href="#engagement">Packages</a> <a href="#faq">FAQ</a> <a href="#contact" class="pill">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div> <span class="chip">AI‑Powered E‑Commerce Agency</span>
+                <h1>Launch, scale & optimize your brand with AI — from factory to first sale.</h1>
+                <p class="tagline">We build high‑converting stores, source products, run logistics, and grow sales
+                    across marketplaces. Our private label program delivers a ready‑to‑sell brand — website, packaging,
+                    marketing, and operations included.</p>
+                <div class="hero-cta"> <a href="#contact" class="btn btn-prim">Book a Strategy Call →</a> <a
+                        href="#services" class="btn btn-ghost">Explore Services</a> </div>
+                <div class="hero-badges"> <span class="chip">AI Copy & Creatives</span> <span class="chip">Predictive
+                        Forecasting</span> <span class="chip">Fraud & Risk Scoring</span> </div>
+            </div>
+            <div class="hero-card">
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+                    <div class="stat"><span class="n">50%+</span><span class="t">Faster Launch</span></div>
+                    <div class="stat"><span class="n">3–7×</span><span class="t">ROI Targets</span></div>
+                    <div class="stat"><span class="n">24/7</span><span class="t">AI Support</span></div>
+                </div>
+                <p class="tagline" style="margin-top:10px">Benchmarks based on prior client averages. Your results may
+                    vary depending on niche and budget.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <div class="section-head">
+                <h2>Core Services (AI‑Enhanced)</h2>
+                <p>Full‑stack e‑commerce operations: storefronts, sourcing, logistics, growth marketing, customer
+                    experience, data, marketplaces, and brand creative — all accelerated by practical AI.</p>
+            </div>
+            <div class="grid cols-3"> <!-- Store Setup & Management -->
+                <div class="card">
+                    <div class="kicker">Store Setup & Management <!-- icon --> <svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg> </div>
+                    <h3>Shopify / Woo / Magento + Custom</h3>
+                    <p>Conversion‑focused builds with AI copy, image cleanup, smart collections, and health checks
+                        (speed, SEO, UX heatmaps).</p>
+                    <ul class="list">
+                        <li><!-- check --> <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg> Product catalog import & tagging </li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>AI testing roadmap (A/B, CRO)</li>
+                    </ul>
+                </div> <!-- Sourcing & Fulfillment -->
+                <div class="card">
+                    <div class="kicker">Sourcing & Fulfillment <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 7h18v10H3V7zm3 0v10M18 7v10" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg> </div>
+                    <h3>Supplier Vetting, MOQs & 3PL</h3>
+                    <p>AI‑assisted supplier scoring, demand forecasting, auto‑reorder alerts, and smart buffers to
+                        prevent stockouts.</p>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Dropship & wholesale workflows</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>PO automation & QC plans</li>
+                    </ul>
+                </div> <!-- Logistics -->
+                <div class="card">
+                    <div class="kicker">Order Processing & Logistics <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12h18M3 12l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>Smart Routing & Tracking</h3>
+                    <p>Route orders to the nearest warehouse, predict delivery ETAs and exceptions, and offer branded
+                        tracking with proactive updates.</p>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Returns automation & fraud flags</li>
+                    </ul>
+                </div> <!-- Digital Marketing -->
+                <div class="card">
+                    <div class="kicker">Digital Marketing & Ads <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16v6H4zM9 20l6-10" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>SEO, Paid Social & CRO</h3>
+                    <p>AI keyword research, creative generation, audience modeling, and budget pacing with fatigue
+                        detection.</p>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Impact‑ranked test ideas</li>
+                    </ul>
+                </div> <!-- Email & CRM -->
+                <div class="card">
+                    <div class="kicker">Email, SMS & CRM <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16v12H4zM4 6l8 7 8-7" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>Automation & Personalization</h3>
+                    <p>AI segments (RFM, churn risk), persona‑based copy, replenishment triggers, and predictive LTV —
+                        all synced to your CRM.</p>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Abandon cart & win‑back flows</li>
+                    </ul>
+                </div> <!-- Support & Personalization -->
+                <div class="card">
+                    <div class="kicker">Support & Personalization <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2a5 5 0 015 5v2a5 5 0 11-10 0V7a5 5 0 015-5zm-7 18a7 7 0 1114 0H5z"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>24/7 AI Chat + Human</h3>
+                    <p>Instant support with sentiment routing, macros for refunds/reships, and quiz‑driven guided
+                        selling with recommendations.</p>
+                </div> <!-- Analytics & Security -->
+                <div class="card">
+                    <div class="kicker">Analytics & Security <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 20V4h16v16H4zm4-4l3-4 3 2 2-3" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>Dashboards, Anomalies & Fraud</h3>
+                    <p>Unify ads, store & CRM data, detect sudden CAC/ROAS shifts, and reduce chargebacks with AI risk
+                        scoring.</p>
+                </div> <!-- Branding & Creative -->
+                <div class="card">
+                    <div class="kicker">Branding & Creative <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 20l8-16 8 16H4z" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>Identity, Packaging & Content</h3>
+                    <p>Logo systems, packaging, style guides, and production with AI concept boards and lifestyle
+                        mockups.</p>
+                </div> <!-- Marketplace Management -->
+                <div class="card">
+                    <div class="kicker">Marketplace Management <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16v6H4zM4 14h16v6H4z" stroke="currentColor" stroke-width="2" />
+                        </svg> </div>
+                    <h3>Amazon, eBay, Etsy, TikTok</h3>
+                    <p>AI listing SEO, auto‑repricing, buy‑box tactics, review mining and response automation, plus
+                        inventory sync.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="private-label">
+        <div class="container">
+            <div class="section-head">
+                <h2>🏷️ Private Label – End‑to‑End Build</h2>
+                <p>We don’t just launch a product — we deliver a complete, retail‑ready brand: sourcing, design,
+                    website, social media, marketing, and marketplace distribution.</p>
+            </div>
+            <div class="card spotlight">
+                <div class="ribbon">FULL‑SERVICE</div>
+                <div class="grid cols-2" style="align-items:start">
+                    <div>
+                        <h3>What We Do</h3>
+                        <ul class="list">
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Product Research & Sourcing:</b> AI trend & gap scans, factory vetting,
+                                samples, QC, costing & MOQs.</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Custom Branding & Packaging:</b> logo, labels, packaging dielines, sustainable
+                                options, inserts.</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Website Development:</b> Shopify / Woo builds, CRO, SEO, payments, analytics.
+                            </li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Social Media & Marketing:</b> full setup (IG, TikTok, FB, Pinterest), AI
+                                content, influencer & ads.</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Launch & Distribution:</b> marketplace listings, A+ content, email/SMS
+                                automations, UGC seeding.</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                                </svg><b>Scale & Compliance:</b> forecasting, versioning from reviews, certifications,
+                                international rollout.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+                            <div class="stat"><span class="n">4–6 wks</span><span class="t">Launch Sprint</span></div>
+                            <div class="stat"><span class="n">End‑to‑End</span><span class="t">Brand Build</span></div>
+                            <div class="stat"><span class="n">Global</span><span class="t">Market‑Ready</span></div>
+                            <div class="stat"><span class="n">Plug‑&‑Play</span><span class="t">Ops & CRM</span></div>
+                        </div>
+                        <div class="hero-cta" style="margin-top:16px"> <a href="#contact" class="btn btn-prim">Start
+                                Private Label →</a> <a href="#faq" class="btn btn-ghost">How it Works</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="engagement">
+        <div class="container">
+            <div class="section-head">
+                <h2>Packages & Engagement Models</h2>
+                <p>Choose a starting point — we’ll tailor deliverables to your niche (eco‑beauty, suncatchers, leather
+                    goods, etc.).</p>
+            </div>
+            <div class="pricing">
+                <div class="price-card">
+                    <h4>Launch Sprint</h4>
+                    <div class="desc">Store + first 50 SKUs + core automations</div>
+                    <div class="price">Custom Quote</div>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Shopify/Woo build</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>AI copy & PDPs</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Core CRM flows</li>
+                    </ul> <a href="#contact" class="btn btn-prim" style="margin-top:10px">Get Proposal</a>
+                </div>
+                <div class="price-card">
+                    <h4>Growth Retainer</h4>
+                    <div class="desc">Ads, CRO, CRM, content & analytics</div>
+                    <div class="price">Monthly</div>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>SEO + Paid Social</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>A/B tests & CRO</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Dashboards & insights</li>
+                    </ul> <a href="#contact" class="btn btn-ghost" style="margin-top:10px">Discuss Goals</a>
+                </div>
+                <div class="price-card">
+                    <h4>Private Label Build</h4>
+                    <div class="desc">Idea → product → brand → sales</div>
+                    <div class="price">Milestone‑Based</div>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Research & sourcing</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Branding & website</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Marketing & launch</li>
+                    </ul> <a href="#contact" class="btn btn-prim" style="margin-top:10px">Start Build</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="container">
+            <div class="section-head">
+                <h2>FAQs</h2>
+                <p>Short answers to common questions. Need more detail? Drop us a line.</p>
+            </div>
+            <details>
+                <summary>How does the Private Label timeline work?</summary>
+                <p>We typically run a 4–6 week launch sprint covering research, sourcing, branding, site build, and
+                    pre‑launch marketing. Timelines depend on sampling and compliance.</p>
+            </details>
+            <details>
+                <summary>Do you work with existing stores?</summary>
+                <p>Yes — we can optimize your current stack, migrate platforms, or plug into your ops for growth (ads,
+                    CRO, CRM, marketplaces).</p>
+            </details>
+            <details>
+                <summary>Which tools & integrations do you support?</summary>
+                <p>Shopify, WooCommerce, Magento, Amazon, eBay, Etsy, TikTok Shop, Meta/Google Ads, Klaviyo,
+                    Gorgias/Zendesk, GA4/Looker, ShipStation/ShipBob, Stripe/PayPal/BNPL, and more.</p>
+            </details>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="section-head">
+                <h2>Let’s Build Your Brand</h2>
+                <p>Tell us about your niche (e.g., eco beauty, suncatchers, leather goods) and your goals. We’ll respond
+                    with a tailored plan.</p>
+            </div>
+            <div class="grid cols-2">
+                <form class="card" style="display:grid; gap:10px"> <label>Full Name<input required type="text"
+                            placeholder="Your name"
+                            style="width:100%; margin-top:6px; padding:12px; border-radius:10px; background:#fff; border:1px solid var(--stroke); color:var(--text)"></label>
+                    <label>Email<input required type="email" placeholder="you@example.com"
+                            style="width:100%; margin-top:6px; padding:12px; border-radius:10px; background:#fff; border:1px solid var(--stroke); color:var(--text)"></label>
+                    <label>What do you need?<textarea rows="5"
+                            placeholder="Private label launch, store build, sourcing, marketing…"
+                            style="width:100%; margin-top:6px; padding:12px; border-radius:10px; background:#fff; border:1px solid var(--stroke); color:var(--text)"></textarea></label>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap"> <button class="btn btn-prim"
+                            type="submit">Request Proposal</button> <a class="btn btn-ghost"
+                            href="mailto:hello@yourcompany.com">Email Us</a> </div>
+                </form>
+                <div class="card">
+                    <h3>Why Choose Us</h3>
+                    <ul class="list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>AI + human expertise for speed & accuracy</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24 " fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>End‑to‑end private label ownership</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" />
+                            </svg>Transparent roadmaps, targets & reporting</li>
+                    </ul>
+                    <div class="hero-badges" style="margin-top:12px"> <span class="chip">Eco‑friendly Options</span>
+                        <span class="chip">Global Markets</span> <span class="chip">Marketplace Ready</span> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
+            <div>© <span id="yr"></span> [Your Company Name]. All rights reserved.</div>
+            <div>Built with ♥ for ambitious e‑commerce brands.</div>
+        </div>
+    </footer>
+    <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
+</body>
+
+</html>

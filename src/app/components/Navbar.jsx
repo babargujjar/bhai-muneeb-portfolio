@@ -9,10 +9,16 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
    const pathname = usePathname();
 
-  const navLinks = [
+  const navLinksForSmallScreen = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Blog", href: "/" },
+    { label: "Private Label", href: "/privatelabel" },
+  ];
+  const navLinks = [
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/" },
+    { label: "Private Label", href: "/privatelabel" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +53,9 @@ const Navbar = () => {
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-5 lg:gap-8 text-[16px] lg:text-[18px] font-normal items-center relative">
-              {navLinks.map((link) => (
-                <Link key={link.label} href={link.href}>
-                  <h2>{link.label}</h2>
-                </Link>
-              ))}
+              <Link href={"/"}>
+                <h2>Home</h2>
+              </Link>
 
               {/* Services Dropdown */}
               <div
@@ -87,6 +91,12 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+
+              {navLinks.map((link) => (
+                <Link key={link.label} href={link.href}>
+                  <h2>{link.label}</h2>
+                </Link>
+              ))}
             </div>
 
             {/* Desktop Contact Button */}
@@ -120,7 +130,7 @@ const Navbar = () => {
             transition={{ duration: 0.25 }}
           >
             {/* Regular Links */}
-            {navLinks.map((link) => (
+            {navLinksForSmallScreen.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
