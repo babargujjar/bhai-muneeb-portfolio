@@ -64,7 +64,9 @@ const Navbar = () => {
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <h2>Services</h2>
+                  <Link href={"/services"}>
+                    <h2>Services</h2>
+                  </Link> 
                   <ChevronDown size={16} />
                 </div>
 
