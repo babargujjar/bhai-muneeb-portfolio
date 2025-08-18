@@ -25,12 +25,21 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
-    { slug: "ecommerce", title: "eCommerce Store Setup" },
-    { slug: "seo-marketing", title: "SEO" },
-    { slug: "content-marketing", title: "Content Marketing" },
-    { slug: "web-development", title: "Custom Web Development" },
-    { slug: "graphic-design", title: "Graphic Design & Branding" },
-    { slug: "social-media-marketing", title: "Social Media & Marketing" },
+    {
+      slug: "store-setup-management",
+      title: "Store Setup & Management",
+    },
+    { slug: "sourcing-fulfillment", title: "Sourcing & Fulfillment" },
+    {
+      slug: "order-processing-logistics",
+      title: "Order Processing & Logistics",
+    },
+    { slug: "digital-marketing-ads", title: "Digital Marketing & Ads" },
+    { slug: "email-sms-crm", title: "Email, SMS & CRM" },
+    { slug: "support-personalization", title: "Support & Personalization" },
+    { slug: "analytics-security", title: "Analytics & Security" },
+    { slug: "branding-creative", title: "Branding & Creative" },
+    { slug: "marketplace-management", title: "Marketplace Management" },
   ];
   
 

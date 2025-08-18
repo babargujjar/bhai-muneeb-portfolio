@@ -299,7 +299,6 @@ const page = () => {
     <div className="bg-white max-w-6xl mx-auto px-5 text-black font-inter tracking-wide leading-relaxed">
       {/* Hero Section */}
       <section className="py-18">
-        <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-8 items-center">
             <div>
               <span className="chip inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-yellow-400 text-black font-bold border border-black/10">
@@ -366,14 +365,12 @@ const page = () => {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* --- */}
 
       {/* Core Services Section */}
       <section id="services" className="py-16">
-        <div className="container max-w-7xl mx-auto px-5">
           <div className="flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4 mb-5">
             <h2 className="font-plus-jakarta text-xl sm:text-2xl md:text-3xl font-bold m-0">
               Core Services (AI‑Enhanced)
@@ -395,14 +392,12 @@ const page = () => {
               </Link>
             ))}
           </div>
-        </div>
       </section>
 
       {/* --- */}
 
       {/* Private Label Section */}
       <section id="private-label" className="py-16">
-        <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4 mb-5">
             <h2 className="font-plus-jakarta text-xl sm:text-2xl md:text-3xl font-bold m-0">
               🏷️ Private Label – End‑to‑End Build
@@ -574,14 +569,12 @@ const page = () => {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* --- */}
 
       {/* Packages & Engagement Section */}
       <section id="engagement" className="py-16">
-        <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4 mb-5">
             <h2 className="font-plus-jakarta text-xl sm:text-2xl md:text-3xl font-bold m-0">
               Packages & Engagement Models
@@ -790,14 +783,12 @@ const page = () => {
               </a>
             </div>
           </div>
-        </div>
       </section>
 
       {/* --- */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-16">
-        <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4 mb-5">
             <h2 className="font-plus-jakarta text-xl sm:text-2xl md:text-3xl font-bold m-0">
               FAQs
@@ -836,14 +827,12 @@ const page = () => {
               ShipStation/ShipBob, Stripe/PayPal/BNPL, and more.
             </p>
           </details>
-        </div>
       </section>
 
       {/* --- */}
 
       {/* Contact Section */}
       <section id="contact" className="py-16">
-        <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-baseline justify-between gap-4 mb-5">
             <h2 className="font-plus-jakarta text-xl sm:text-2xl md:text-3xl font-bold m-0">
               Let’s Build Your Brand
@@ -961,7 +950,6 @@ const page = () => {
               </div>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
