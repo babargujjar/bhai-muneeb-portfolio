@@ -4,6 +4,7 @@ import Heading from "./Heading";
 import Image from "next/image";
 import IconButton from "./IconButton";
 import { Search } from "lucide-react";
+import Link from "next/link";
 
 const LeftTextRightImage = ({
   buttonText,
@@ -39,7 +40,9 @@ const LeftTextRightImage = ({
               </div>
             ))}
           </div>
-          <IconButton text={"Contact Us"} Icon={Search} />
+          <Link href={"/contact"}>
+            <IconButton text={"Contact Us"} Icon={Search} />
+          </Link>
         </div>
       </div>
       <div className="md:col-span-1 col-span-2">

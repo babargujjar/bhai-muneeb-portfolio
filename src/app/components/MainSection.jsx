@@ -5,6 +5,7 @@ import IconButton from "./IconButton";
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
+import Link from "next/link";
 
 const MainSection = () => {
   const phrases = ["Start Faster", "Scale Smarter", "Sell Everywhere"];
@@ -75,7 +76,9 @@ const MainSection = () => {
               Walmart, Etsy, and more.
             </p>
             <div className="flex items-center pt-2 justify-center gap-3">
-              <IconButton text="Explore Services" Icon={Search} />
+              <Link href={"/services"}>
+                <IconButton text="Explore Services" Icon={Search} />
+              </Link>
               <IconButton text="Get Free Demo" Icon={Send} />
               {/* <button className="buttoncss">
                 Get Free Demo <Send className="w-4" />

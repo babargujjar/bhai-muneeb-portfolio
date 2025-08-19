@@ -126,10 +126,13 @@ export default function ServiceDetail({ params }) {
        title: "Shopify / Woo / Magento + Custom",
        kicker: "Store Setup & Management",
        description:
-         "Conversion‑focused builds with AI copy, image cleanup, smart collections, and health checks (speed, SEO, UX heatmaps).",
+         "We build and manage online stores that are designed for performance and growth. Whether it’s Shopify, WooCommerce, Magento, or custom platforms, we create conversion-focused storefronts backed by the latest technology. Our approach includes:",
        points: [
-         "Product catalog import & tagging",
-         "AI testing roadmap (A/B, CRO)",
+         "AI-driven copywriting and image optimization to make your store more appealing.",
+         "Smart product catalog import & tagging for seamless organization.",
+         "Conversion roadmaps (A/B, CRO testing) to continuously improve sales.",
+         "Comprehensive store health checks covering speed, SEO, and user experience with heatmaps.",
+         "We don’t just set up stores — we ensure they’re optimized, scalable, and ready to sell.",
        ],
        icon: (
          <svg
@@ -150,11 +153,47 @@ export default function ServiceDetail({ params }) {
        slug: "store-setup-management",
      },
      {
+       title: "Amazon, eBay, Etsy, TikTok Shop, Vinted",
+       kicker: "Marketplace Management",
+       description:
+         "Selling on marketplaces requires precision — we help you dominate platforms like Amazon, eBay, Etsy, and TikTok Shop with:",
+       points: [
+         "AI-optimized product listings for higher visibility.",
+         "Auto-repricing & buy-box tactics to stay competitive.",
+         "Review mining & response automation to build credibility.",
+         "nventory synchronization across platforms to prevent overselling.",
+         "With our marketplace expertise, you’ll expand your reach, grow your sales, and strengthen your online presence.",
+       ],
+       icon: (
+         <svg
+           width="16"
+           height="16"
+           viewBox="0 0 24 24"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+         >
+           <path
+             d="M4 4h16v6H4zM4 14h16v6H4z"
+             stroke="currentColor"
+             strokeWidth="2"
+           />
+         </svg>
+       ),
+       slug: "marketplace-management",
+     },
+     {
        title: "Supplier Vetting, MOQs & 3PL",
        kicker: "Sourcing & Fulfillment",
        description:
-         "AI‑assisted supplier scoring, demand forecasting, auto‑reorder alerts, and smart buffers to prevent stockouts.",
-       points: ["Dropship & wholesale workflows", "PO automation & QC plans"],
+         "Our sourcing and fulfillment services ensure you always have the right products, suppliers, and logistics in place. We help you avoid unreliable suppliers and stock issues with:",
+       points: [
+         "Supplier vetting & MOQ management for reliable partnerships.",
+         "AI-assisted supplier scoring to choose the best options.",
+         "Demand forecasting & auto-reorder alerts to prevent stockouts.",
+         "Dropshipping and wholesale workflows tailored to your business.",
+         "PO automation & quality control (QC) plans for consistency.",
+         "From supplier selection to final delivery, we make sure your supply chain is efficient, reliable, and profitable.",
+       ],
        icon: (
          <svg
            width="16"
@@ -177,8 +216,15 @@ export default function ServiceDetail({ params }) {
        title: "Smart Routing & Tracking",
        kicker: "Order Processing & Logistics",
        description:
-         "Route orders to the nearest warehouse, predict delivery ETAs and exceptions, and offer branded tracking with proactive updates.",
-       points: ["Returns automation & fraud flags"],
+         "A seamless order experience builds customer trust. We design logistics systems that ensure speed, accuracy, and visibility:",
+       points: [
+         "Smart routing to nearest warehouse for faster delivery.",
+         "Delivery ETA predictions & exception handling to reduce surprises.",
+         "Branded tracking portals with proactive updates for customers.",
+         "Automated returns processing to save time and effort.",
+         "Fraud detection & prevention flags for safe transactions.",
+         "We make order management simple while boosting customer satisfaction and reducing operational headaches.",
+       ],
        icon: (
          <svg
            width="16"
@@ -200,8 +246,15 @@ export default function ServiceDetail({ params }) {
        title: "SEO, Paid Social & CRO",
        kicker: "Digital Marketing & Ads",
        description:
-         "AI keyword research, creative generation, audience modeling, and budget pacing with fatigue detection.",
-       points: ["Impact‑ranked test ideas"],
+         "We combine creativity with data-driven strategies to deliver measurable results. Our digital marketing solutions cover:",
+       points: [
+         "SEO and paid social ads powered by AI keyword research.",
+         "Audience modeling & budget pacing to reach the right customers at the right time.",
+         "Creative generation & fatigue detection to keep campaigns fresh.",
+         "Conversion rate optimization (CRO) testing to maximize ROI.",
+         "Impact-ranked test ideas for continuous growth.",
+         "From traffic to sales, we ensure every marketing dollar delivers maximum value.",
+       ],
        icon: (
          <svg
            width="16"
@@ -223,8 +276,15 @@ export default function ServiceDetail({ params }) {
        title: "Automation & Personalization",
        kicker: "Email, SMS & CRM",
        description:
-         "AI segments (RFM, churn risk), persona‑based copy, replenishment triggers, and predictive LTV — all synced to your CRM.",
-       points: ["Abandon cart & win‑back flows"],
+         "Personalized communication builds loyalty — we help you automate it without losing the human touch. Our services include:",
+       points: [
+         "AI-driven customer segmentation (RFM, churn risk).",
+         "Persona-based copywriting that resonates with your audience.",
+         "Replenishment triggers & predictive lifetime value modeling.",
+         "Seamless CRM integrations for a unified customer view.",
+         "-Abandoned cart recovery & win-back flows to capture lost revenue.",
+         "We make your customer communication smart, automated, and revenue-focused.",
+       ],
        icon: (
          <svg
            width="16"
@@ -246,8 +306,14 @@ export default function ServiceDetail({ params }) {
        title: "24/7 AI Chat + Human",
        kicker: "Support & Personalization",
        description:
-         "Instant support with sentiment routing, macros for refunds/reships, and quiz‑driven guided selling with recommendations.",
-       points: [],
+         "Customer experience defines your brand — we make sure it shines. With a mix of AI and human support, we deliver:",
+       points: [
+         "24/7 AI chatbots with human handover for instant responses.",
+         "Sentiment-based routing to handle priority cases with care.",
+         "Refund & reshipment macros for faster resolutions.",
+         "Quiz-driven guided selling with AI recommendations.",
+         "We create support systems that not only solve problems but also build trust and boost sales.",
+       ],
        icon: (
          <svg
            width="16"
@@ -269,8 +335,15 @@ export default function ServiceDetail({ params }) {
        title: "Dashboards, Anomalies & Fraud",
        kicker: "Analytics & Security",
        description:
-         "Unify ads, store & CRM data, detect sudden CAC/ROAS shifts, and reduce chargebacks with AI risk scoring.",
-       points: [],
+         "Every decision should be backed by data and protected by security. We offer:",
+       points: [
+         "Custom dashboards unifying ads, store, and CRM data.",
+         "AI anomaly detection to flag sudden shifts in CAC, ROAS, or sales.",
+         "Fraud prevention tools including AI risk scoring.",
+         "Chargeback reduction strategies to safeguard your revenue.",
+         "With actionable insights and strong security, you stay ahead while staying protected.",
+         "",
+       ],
        icon: (
          <svg
            width="16"
@@ -292,8 +365,14 @@ export default function ServiceDetail({ params }) {
        title: "Identity, Packaging & Content",
        kicker: "Branding & Creative",
        description:
-         "Logo systems, packaging, style guides, and production with AI concept boards and lifestyle mockups.",
-       points: [],
+         "Your brand identity is more than a logo — it’s the story customers connect with. We design creative solutions that stand out:",
+       points: [
+         "Logo systems & style guides that define your brand.",
+         "Packaging design that reflects quality and value.",
+         "Content production tailored for your audience.",
+         "AI concept boards & lifestyle mockups for faster, better creative direction.",
+         "We ensure your brand not only looks good but also leaves a lasting impression.",
+       ],
        icon: (
          <svg
            width="16"
@@ -306,29 +385,6 @@ export default function ServiceDetail({ params }) {
          </svg>
        ),
        slug: "branding-creative",
-     },
-     {
-       title: "Amazon, eBay, Etsy, TikTok",
-       kicker: "Marketplace Management",
-       description:
-         "AI listing SEO, auto‑repricing, buy‑box tactics, review mining and response automation, plus inventory sync.",
-       points: [],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 4h16v6H4zM4 14h16v6H4z"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "marketplace-management",
      },
    ];
 
