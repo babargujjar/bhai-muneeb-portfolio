@@ -15,6 +15,7 @@ const Footer = () => {
      slug: "store-setup-management",
      title: "Store Setup & Management",
    },
+   { slug: "marketplace-management", title: "Marketplace Management" },
    { slug: "sourcing-fulfillment", title: "Sourcing & Fulfillment" },
    {
      slug: "order-processing-logistics",
@@ -25,7 +26,6 @@ const Footer = () => {
    { slug: "support-personalization", title: "Support & Personalization" },
    { slug: "analytics-security", title: "Analytics & Security" },
    { slug: "branding-creative", title: "Branding & Creative" },
-   { slug: "marketplace-management", title: "Marketplace Management" },
  ];
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
