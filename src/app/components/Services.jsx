@@ -145,11 +145,11 @@ const Services = ({ service }) => {
     <div
       className="card bg-gray-100 border flex-1 border-gray-200 rounded-lg p-5 shadow-md relative overflow-hidden"
     >
-      <div className="kicker flex items-center gap-2 font-bold text-sm text-yellow-400">
+      <div className="kicker flex items-center gap-2 font-bold text-lg text-yellow-400">
         {service.kicker}
         {service.icon}
       </div>
-      <h3 className="mt-1 mb-2">{service.title}</h3>
+      <h5 className="mt-1 mb-2">{service.title}</h5>
       <p className="text-gray-700 text-sm mb-3">{service.description}</p>
       {service.points.length > 0 && (
         <ul className="list grid gap-2 mt-2">

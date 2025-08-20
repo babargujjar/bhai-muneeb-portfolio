@@ -727,7 +727,7 @@ const CompleteHomePage = () => {
       {/* Become a Partner (Premium) */}
       <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-amber-400">
         <div className="container mx-auto px-5 max-w-6xl z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4.5 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-stretch">
             <div
               className="bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
               ref={(el) => (partnerRevealRefs.current[0] = el)}

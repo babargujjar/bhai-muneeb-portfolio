@@ -82,13 +82,11 @@ const page = () => {
       title: "Shopify / Woo / Magento + Custom",
       kicker: "Store Setup & Management",
       description:
-        "We build and manage online stores that are designed for performance and growth. Whether it’s Shopify, WooCommerce, Magento, or custom platforms, we create conversion-focused storefronts backed by the latest technology. Our approach includes:",
+        "We create and manage high-performance, conversion-focused online stores on all major platforms.",
       points: [
-        "AI-driven copywriting and image optimization to make your store more appealing.",
-        "Smart product catalog import & tagging for seamless organization.",
-        "Conversion roadmaps (A/B, CRO testing) to continuously improve sales.",
-        "Comprehensive store health checks covering speed, SEO, and user experience with heatmaps.",
-        "We don’t just set up stores — we ensure they’re optimized, scalable, and ready to sell.",
+        "AI copywriting & image optimization",
+        "Store health checks (speed, SEO, UX)",
+        "Product catalog setup & testing",
       ],
       icon: (
         <svg
@@ -112,13 +110,11 @@ const page = () => {
       title: "Amazon, eBay, Etsy, TikTok Shop, Vinted",
       kicker: "Marketplace Management",
       description:
-        "Selling on marketplaces requires precision — we help you dominate platforms like Amazon, eBay, Etsy, and TikTok Shop with:",
+        "We help you succeed on Amazon, eBay, Etsy, and TikTok Shop with precision marketplace management.",
       points: [
-        "AI-optimized product listings for higher visibility.",
-        "Auto-repricing & buy-box tactics to stay competitive.",
-        "Review mining & response automation to build credibility.",
-        "nventory synchronization across platforms to prevent overselling.",
-        "With our marketplace expertise, you’ll expand your reach, grow your sales, and strengthen your online presence.",
+        "AI-optimized product listings for visibility",
+        "Auto-repricing & buy-box tactics",
+        "Inventory sync across platforms",
       ],
       icon: (
         <svg
@@ -141,14 +137,11 @@ const page = () => {
       title: "Supplier Vetting, MOQs & 3PL",
       kicker: "Sourcing & Fulfillment",
       description:
-        "Our sourcing and fulfillment services ensure you always have the right products, suppliers, and logistics in place. We help you avoid unreliable suppliers and stock issues with:",
+        "We ensure reliable products, suppliers, and logistics to avoid stock issues and keep your business running smoothly.",
       points: [
-        "Supplier vetting & MOQ management for reliable partnerships.",
-        "AI-assisted supplier scoring to choose the best options.",
-        "Demand forecasting & auto-reorder alerts to prevent stockouts.",
-        "Dropshipping and wholesale workflows tailored to your business.",
-        "PO automation & quality control (QC) plans for consistency.",
-        "From supplier selection to final delivery, we make sure your supply chain is efficient, reliable, and profitable.",
+        "Trusted suppliers MOQ control",
+        "Demand forecasting & auto-reorder alerts",
+        "Dropshipping & wholesale workflows",
       ],
       icon: (
         <svg
@@ -174,12 +167,9 @@ const page = () => {
       description:
         "A seamless order experience builds customer trust. We design logistics systems that ensure speed, accuracy, and visibility:",
       points: [
-        "Smart routing to nearest warehouse for faster delivery.",
-        "Delivery ETA predictions & exception handling to reduce surprises.",
-        "Branded tracking portals with proactive updates for customers.",
-        "Automated returns processing to save time and effort.",
-        "Fraud detection & prevention flags for safe transactions.",
-        "We make order management simple while boosting customer satisfaction and reducing operational headaches.",
+        "Smart routing for faster delivery",
+        "Automated returns processing.",
+        "Fraud detection & prevention",
       ],
       icon: (
         <svg
@@ -204,12 +194,9 @@ const page = () => {
       description:
         "We combine creativity with data-driven strategies to deliver measurable results. Our digital marketing solutions cover:",
       points: [
-        "SEO and paid social ads powered by AI keyword research.",
-        "Audience modeling & budget pacing to reach the right customers at the right time.",
-        "Creative generation & fatigue detection to keep campaigns fresh.",
-        "Conversion rate optimization (CRO) testing to maximize ROI.",
-        "Impact-ranked test ideas for continuous growth.",
-        "From traffic to sales, we ensure every marketing dollar delivers maximum value.",
+        "SEO & paid ads powered by AI",
+        "Audience modeling & smart budget.",
+        "Conversion optimization to maximize ROI",
       ],
       icon: (
         <svg
@@ -234,12 +221,9 @@ const page = () => {
       description:
         "Personalized communication builds loyalty — we help you automate it without losing the human touch. Our services include:",
       points: [
-        "AI-driven customer segmentation (RFM, churn risk).",
-        "Persona-based copywriting that resonates with your audience.",
-        "Replenishment triggers & predictive lifetime value modeling.",
-        "Seamless CRM integrations for a unified customer view.",
-        "-Abandoned cart recovery & win-back flows to capture lost revenue.",
-        "We make your customer communication smart, automated, and revenue-focused.",
+        "AI segmentation & personalization",
+        "Cart recovery & win-back",
+        "Seamless CRM integration",
       ],
       icon: (
         <svg
@@ -264,11 +248,9 @@ const page = () => {
       description:
         "Customer experience defines your brand — we make sure it shines. With a mix of AI and human support, we deliver:",
       points: [
-        "24/7 AI chatbots with human handover for instant responses.",
-        "Sentiment-based routing to handle priority cases with care.",
-        "Refund & reshipment macros for faster resolutions.",
-        "Quiz-driven guided selling with AI recommendations.",
-        "We create support systems that not only solve problems but also build trust and boost sales.",
+        "24/7 AI chatbots with human support",
+        "Sentiment-based routing for priority cases",
+        "Guided selling with AI recommendations",
       ],
       icon: (
         <svg
@@ -293,12 +275,9 @@ const page = () => {
       description:
         "Every decision should be backed by data and protected by security. We offer:",
       points: [
-        "Custom dashboards unifying ads, store, and CRM data.",
-        "AI anomaly detection to flag sudden shifts in CAC, ROAS, or sales.",
-        "Fraud prevention tools including AI risk scoring.",
-        "Chargeback reduction strategies to safeguard your revenue.",
-        "With actionable insights and strong security, you stay ahead while staying protected.",
-        "",
+        "Custom dashboards (ads, store & CRM)",
+        "AI anomaly detection & fraud prevention",
+        "Chargeback reduction strategies",
       ],
       icon: (
         <svg
@@ -323,11 +302,9 @@ const page = () => {
       description:
         "Your brand identity is more than a logo — it’s the story customers connect with. We design creative solutions that stand out:",
       points: [
-        "Logo systems & style guides that define your brand.",
-        "Packaging design that reflects quality and value.",
-        "Content production tailored for your audience.",
-        "AI concept boards & lifestyle mockups for faster, better creative direction.",
-        "We ensure your brand not only looks good but also leaves a lasting impression.",
+        "Logo systems & style guides",
+        "Packaging design with reflects quality",
+        "AI concept boards & mockups",
       ],
       icon: (
         <svg
