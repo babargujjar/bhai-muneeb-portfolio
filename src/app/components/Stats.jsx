@@ -4,7 +4,7 @@ import AchievementHighlights from './AchievementHighlights';
 const Stats = () => {
     const stats = [
       {
-        number: "3k",
+        number: "3000",
         desc: "eCommerce Stores Launched",
       },
       {
@@ -21,9 +21,9 @@ const Stats = () => {
       },
     ];
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-10">
+    <div className="grid items-stretch grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 my-5">
       {stats.map((v, i) => (
-        <div key={i}>
+        <div key={i} >
           <AchievementHighlights desc={v.desc} number={v.number} />
         </div>
       ))}

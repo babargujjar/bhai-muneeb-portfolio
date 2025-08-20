@@ -31,13 +31,16 @@ const AchievementHighlights = ({ number, desc }) => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="p-4">
-      <p className="text-[48px] font-semibold">
+    <div
+      ref={ref}
+      className="bg-gray-50 border h-full border-gray-200 rounded-xl p-3"
+    >
+      <p className="text-[30px] font-semibold">
         {count}
         {typeof number === "string" && number.match(/[a-zA-Z%]+$/)?.[0]}
         <span className="text-[#feb436] font-bold">+</span>
       </p>
-      <p className="text-[#71717A] text-[18px]">{desc}</p>
+      <p className="text-[#71717A] text-[15px] md:text-[16px]">{desc}</p>
     </div>
   );
 };

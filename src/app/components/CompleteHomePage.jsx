@@ -32,6 +32,9 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import Services from "./Services";
+import Link from "next/link";
+import Stats from "./Stats";
 
 const icons = {
   usersCog: Shirt,
@@ -244,6 +247,217 @@ const partnerBulletsYouBring = [
   },
 ];
 
+ const services = [
+   {
+     title: "Shopify / Woo / Magento + Custom",
+     kicker: "Store Setup & Management",
+     description:
+       "Conversion‑focused builds with AI copy, image cleanup, smart collections, and health checks (speed, SEO, UX heatmaps).",
+     points: [
+       "Product catalog import & tagging",
+       "AI testing roadmap (A/B, CRO)",
+     ],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M4 6h16M4 12h16M4 18h16"
+           stroke="currentColor"
+           strokeWidth="2"
+           strokeLinecap="round"
+         />
+       </svg>
+     ),
+     slug: "store-setup-management",
+   },
+   {
+     title: "Supplier Vetting, MOQs & 3PL",
+     kicker: "Sourcing & Fulfillment",
+     description:
+       "AI‑assisted supplier scoring, demand forecasting, auto‑reorder alerts, and smart buffers to prevent stockouts.",
+     points: ["Dropship & wholesale workflows", "PO automation & QC plans"],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M3 7h18v10H3V7zm3 0v10M18 7v10"
+           stroke="currentColor"
+           strokeWidth="2"
+           strokeLinecap="round"
+         />
+       </svg>
+     ),
+     slug: "sourcing-fulfillment",
+   },
+   {
+     title: "Smart Routing & Tracking",
+     kicker: "Order Processing & Logistics",
+     description:
+       "Route orders to the nearest warehouse, predict delivery ETAs and exceptions, and offer branded tracking with proactive updates.",
+     points: ["Returns automation & fraud flags"],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M3 12h18M3 12l4-4m-4 4l4 4"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "order-processing-logistics",
+   },
+   {
+     title: "SEO, Paid Social & CRO",
+     kicker: "Digital Marketing & Ads",
+     description:
+       "AI keyword research, creative generation, audience modeling, and budget pacing with fatigue detection.",
+     points: ["Impact‑ranked test ideas"],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M4 4h16v6H4zM9 20l6-10"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "digital-marketing-ads",
+   },
+   {
+     title: "Automation & Personalization",
+     kicker: "Email, SMS & CRM",
+     description:
+       "AI segments (RFM, churn risk), persona‑based copy, replenishment triggers, and predictive LTV — all synced to your CRM.",
+     points: ["Abandon cart & win‑back flows"],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M4 6h16v12H4zM4 6l8 7 8-7"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "email-sms-crm",
+   },
+   {
+     title: "24/7 AI Chat + Human",
+     kicker: "Support & Personalization",
+     description:
+       "Instant support with sentiment routing, macros for refunds/reships, and quiz‑driven guided selling with recommendations.",
+     points: [],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M12 2a5 5 0 015 5v2a5 5 0 11-10 0V7a5 5 0 015-5zm-7 18a7 7 0 1114 0H5z"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "support-personalization",
+   },
+   {
+     title: "Dashboards, Anomalies & Fraud",
+     kicker: "Analytics & Security",
+     description:
+       "Unify ads, store & CRM data, detect sudden CAC/ROAS shifts, and reduce chargebacks with AI risk scoring.",
+     points: [],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M4 20V4h16v16H4zm4-4l3-4 3 2 2-3"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "analytics-security",
+   },
+   {
+     title: "Identity, Packaging & Content",
+     kicker: "Branding & Creative",
+     description:
+       "Logo systems, packaging, style guides, and production with AI concept boards and lifestyle mockups.",
+     points: [],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path d="M4 20l8-16 8 16H4z" stroke="currentColor" strokeWidth="2" />
+       </svg>
+     ),
+     slug: "branding-creative",
+   },
+   {
+     title: "Amazon, eBay, Etsy, TikTok",
+     kicker: "Marketplace Management",
+     description:
+       "AI listing SEO, auto‑repricing, buy‑box tactics, review mining and response automation, plus inventory sync.",
+     points: [],
+     icon: (
+       <svg
+         width="16"
+         height="16"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M4 4h16v6H4zM4 14h16v6H4z"
+           stroke="currentColor"
+           strokeWidth="2"
+         />
+       </svg>
+     ),
+     slug: "marketplace-management",
+   },
+ ];
+
 const CompleteHomePage = () => {
   const phrases = ["Start Faster", "Scale Smarter", "Sell Everywhere"];
   const kpiRefs = useRef([]);
@@ -392,63 +606,21 @@ const CompleteHomePage = () => {
         </div>
       </section>
 
-      {/* Company Message (image left) */}
-      <section id="message" className="py-16">
+      {/* services */}
+      <section id="services" className="">
         <div className="container mx-auto px-5 max-w-6xl">
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Our Message
+            Our Services
           </h2>
           <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-[minmax(260px,520px)_1fr] gap-4.5 items-center">
-            <img
-              className="w-full h-full min-h-[260px] object-cover rounded-xl border border-gray-200 shadow-lg"
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop"
-              alt="Betelbee team working on eCommerce growth"
-            />
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg">
-              <h3 className="font-semibold text-[17px] md:text-[20px]">
-                Built for Your Growth
-              </h3>
-              <p className="text-gray-700">
-                We started Betelbee to make eCommerce easier for everyone. Clear
-                plans, simple tools, and steady support — so you can focus on
-                your brand while we handle the heavy lifting.
-              </p>
-              <ul className="mt-2.5 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
-                  <span className="text-sm">
-                    Practical strategies you can act on today
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
-                  <span className="text-sm">
-                    Transparent reporting and honest advice
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
-                  <span className="text-sm">
-                    Long‑term partnership focused on results
-                  </span>
-                </li>
-              </ul>
-              <div className="flex gap-3 flex-wrap mt-3">
-                <a
-                  href="#contact"
-                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
-                >
-                  Let’s Talk
-                </a>
-                <a
-                  href="#services"
-                  className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold hover:bg-amber-400"
-                >
-                  See What We Do
-                </a>
-              </div>
-            </div>
+          <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+            {services.map((v, i) => (
+              <Link key={i} href={`/services/${v.slug}`} className="block">
+                <div className="flex flex-col h-full">
+                  <Services service={v} />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -482,23 +654,13 @@ const CompleteHomePage = () => {
       </section>
 
       {/* Why Choose Us / Stats */}
-      <section id="why" className="py-16">
+      <section>
         <div className="container mx-auto px-5 max-w-6xl">
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Why Choose Betelbee?
           </h2>
           <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
-            {statsData.map((stat, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"
-              >
-                <div className="text-2xl font-extrabold">{stat.count}</div>
-                <div className="text-gray-700">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          <Stats />
         </div>
       </section>
 
@@ -509,39 +671,11 @@ const CompleteHomePage = () => {
             Brands We’ve Helped Grow
           </h2>
           <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-2">
             Real teams, real outcomes. Here are a few names and words from
             clients we’ve supported. Swap these placeholders with your own logos
             and photos anytime.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-2.5 mb-4">
-            <div className="flex items-center justify-center bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">
-                Nova Home
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-14 bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">
-                UrbanWear
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-14 bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">
-                GreenGlow
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-14 bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">PetPals</span>
-            </div>
-            <div className="flex items-center justify-center h-14 bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">
-                Craftory
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-14 bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span className="py-2 px-4 rounded-xl bg-amber-400">FitFuel</span>
-            </div>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             {testimonialsData.map((testimonial, index) => (
               <div
@@ -593,7 +727,7 @@ const CompleteHomePage = () => {
       {/* Become a Partner (Premium) */}
       <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-amber-400">
         <div className="container mx-auto px-5 max-w-6xl z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4.5 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4.5 items-stretch">
             <div
               className="bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
               ref={(el) => (partnerRevealRefs.current[0] = el)}
@@ -679,8 +813,8 @@ const CompleteHomePage = () => {
               className="grid gap-3 opacity-0 translate-y-4"
               ref={(el) => (partnerRevealRefs.current[1] = el)}
             >
-              <div className="bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
-                <h3 className="text-lg font-extrabold mb-1.5">What We Bring</h3>
+              <div className="bg-white/5 border flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+                <h3 className="text-lg font-extrabold mb-3">What We Bring</h3>
                 <ul className="grid gap-2.5">
                   {partnerBulletsWeBring.map((bullet, index) => {
                     const Icon = bullet.icon;
@@ -696,10 +830,8 @@ const CompleteHomePage = () => {
                   })}
                 </ul>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
-                <h3 className="text-lg font-extrabold mb-1.5">
-                  What You Bring
-                </h3>
+              <div className="bg-white/5 border flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+                <h3 className="text-lg font-extrabold mb-3">What You Bring</h3>
                 <ul className="grid gap-2.5">
                   {partnerBulletsYouBring.map((bullet, index) => {
                     const Icon = bullet.icon;
@@ -721,7 +853,7 @@ const CompleteHomePage = () => {
       </section>
 
       {/* Growth with AI */}
-      <section id="ai" className="py-16">
+      <section id="ai" className="py-10">
         <div className="container mx-auto px-5 max-w-6xl">
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Growth With AI
@@ -767,29 +899,69 @@ const CompleteHomePage = () => {
             *Typical for simple catalogs & in‑stock items. Results vary by niche
             and budget.
           </p>
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg grid grid-cols-1 md:grid-cols-[minmax(220px,_1fr)_2fr] gap-3.5 items-center mt-4">
-            <div className="flex items-center justify-center h-[70px] bg-gray-50 border border-gray-200 rounded-xl shadow-lg font-extrabold">
-              <span>FashionCo</span>
-            </div>
-            <div>
-              <h3>Case Study: From $5K to $50K/mo in 6 months</h3>
-              <p className="italic">
-                “Betelbee’s AI‑assisted ads and product insights helped us scale
-                faster without burning our budget. Clear reports, quick actions,
-                real results.”
+        </div>
+      </section>
+
+      {/* Company Message (image left) */}
+      <section id="message" className="py-5">
+        <div className="container mx-auto px-5 max-w-6xl">
+          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+            Our Message
+          </h2>
+          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="grid grid-cols-1 items-stretch md:grid-cols-[minmax(260px,450px)_2fr] lg:grid-cols-[minmax(260px,520px)_1fr] gap-4.5">
+            <img
+              className="w-full h-full min-h-[260px] object-cover rounded-xl border border-gray-200 shadow-lg"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop"
+              alt="Betelbee team working on eCommerce growth"
+            />
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg">
+              <h3 className="font-semibold text-[17px] md:text-[20px]">
+                Built for Your Growth
+              </h3>
+              <p className="text-gray-700">
+                We started Betelbee to make eCommerce easier for everyone. Clear
+                plans, simple tools, and steady support — so you can focus on
+                your brand while we handle the heavy lifting.
               </p>
-              <div className="flex gap-3 flex-wrap mt-1.5">
+              <ul className="mt-2.5 space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="text-sm">
+                    Practical strategies you can act on today
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="text-sm">
+                    Transparent reporting and honest advice
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="text-sm">
+                    Long‑term partnership focused on results
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="text-sm">
+                    Tailored solutions designed for your business growth
+                  </span>
+                </li>
+              </ul>
+              <div className="flex gap-3 flex-wrap mt-3">
                 <a
                   href="#contact"
                   className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
                 >
-                  Get the Playbook
+                  Let’s Talk
                 </a>
                 <a
                   href="#services"
                   className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold hover:bg-amber-400"
                 >
-                  See the Setup
+                  See What We Do
                 </a>
               </div>
             </div>
