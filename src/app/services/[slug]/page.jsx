@@ -1,396 +1,14 @@
-"use client";
-import Image from "next/image";
-import { use } from "react";
+"use client"; // If using Next.js 13+ App Router
+import React, { use } from "react";
+import { Check, ArrowRight } from "lucide-react";
+import allServicesData from "./servicesData"; 
 
-export default function ServiceDetail({ params }) {
-  const { slug } = use(params);
-  
-  // const services = [
-  //   {
-  //     image: "/assets/ecommerce.png",
-  //     slug: "ecommerce",
-  //     title: "eCommerce Store Setup",
-  //     desc: "Launch and scale stores on Shopify, eBay, Vinted, and TikTok Shop—fully optimized for success.",
-  //     features: [
-  //       "Shopify, eBay, Vinted & TikTok store integration",
-  //       "Responsive design for all devices",
-  //       "Payment & shipping setup",
-  //       "Ongoing support & scaling strategy",
-  //     ],
-  //     whyChooseUs: [
-  //       "Platform-specific expertise",
-  //       "Optimized for sales & conversions",
-  //       "Tailored support for your niche",
-  //       "Analytics & performance insights",
-  //     ],
-  //     ctaText: "Launch My Store",
-  //   },
-  //   {
-  //     image: "/assets/SEO.png",
-  //     slug: "seo-marketing",
-  //     title: "SEO",
-  //     desc: "Boost your visibility on Google and drive high-converting traffic with expert SEO & paid ads.",
-  //     features: [
-  //       "Comprehensive keyword research",
-  //       "On-page and technical SEO",
-  //       "Backlink strategy",
-  //       "Google Ads setup & management",
-  //     ],
-  //     whyChooseUs: [
-  //       "White-hat techniques",
-  //       "Transparent reporting",
-  //       "ROI-focused strategies",
-  //       "Proven ranking results",
-  //     ],
-  //     ctaText: "Improve My Rankings",
-  //   },
-  //   {
-  //     image: "/assets/content.png",
-  //     slug: "content-marketing",
-  //     title: "Content Marketing",
-  //     desc: "Build trust and drive sales with powerful, targeted content across platforms and channels.",
-  //     features: [
-  //       "Blog writing & content strategy",
-  //       "Content calendars",
-  //       "Platform-specific copywriting",
-  //       "Visual content planning",
-  //     ],
-  //     whyChooseUs: [
-  //       "Engaging storytelling",
-  //       "Brand-aligned messaging",
-  //       "SEO-integrated content",
-  //       "Cross-platform expertise",
-  //     ],
-  //     ctaText: "Build My Content",
-  //   },
-  //   {
-  //     image: "/assets/web.png",
-  //     slug: "web-development",
-  //     title: "Custom Web Development",
-  //     desc: "Build fast, responsive, and branded websites tailored to your business goals.",
-  //     features: [
-  //       "Fully responsive design",
-  //       "Speed & SEO optimized",
-  //       "CMS & admin panel integration",
-  //       "Custom animations & features",
-  //     ],
-  //     whyChooseUs: [
-  //       "Modern tech stack",
-  //       "Scalable architecture",
-  //       "Conversion-first layouts",
-  //       "Ongoing maintenance options",
-  //     ],
-  //     ctaText: "Build My Website",
-  //   },
-  //   {
-  //     image: "/assets/graphic.png",
-  //     slug: "graphic-design",
-  //     title: "Graphic Design & Branding",
-  //     desc: "Professional, eye-catching visuals and identity design that sets your brand apart.",
-  //     features: [
-  //       "Logo, brand kit & style guide",
-  //       "Marketing & social media designs",
-  //       "Custom illustrations",
-  //       "Product packaging design",
-  //     ],
-  //     whyChooseUs: [
-  //       "Creative, custom-first approach",
-  //       "Consistent visual identity",
-  //       "Unlimited revisions (up to 2 weeks)",
-  //       "Experienced designers",
-  //     ],
-  //     ctaText: "Design My Brand",
-  //   },
-  //   {
-  //     image: "/assets/social.png",
-  //     slug: "social-media-marketing",
-  //     title: "Social Media & Marketing",
-  //     desc: "Grow your audience and drive engagement through data-backed campaigns across all major platforms.",
-  //     features: [
-  //       "Platform-specific strategy",
-  //       "Creative post designs",
-  //       "Ad campaigns & targeting",
-  //       "Monthly reporting",
-  //     ],
-  //     whyChooseUs: [
-  //       "Audience growth specialists",
-  //       "Paid & organic strategy",
-  //       "Content scheduling systems",
-  //       "Clear performance tracking",
-  //     ],
-  //     ctaText: "Grow My Audience",
-  //   },
-  // ];
-   const services = [
-     {
-       title: "Shopify / Woo / Magento + Custom",
-       kicker: "Store Setup & Management",
-       description:
-         "We build and manage online stores that are designed for performance and growth. Whether it’s Shopify, WooCommerce, Magento, or custom platforms, we create conversion-focused storefronts backed by the latest technology. Our approach includes:",
-       points: [
-         "AI-driven copywriting and image optimization to make your store more appealing.",
-         "Smart product catalog import & tagging for seamless organization.",
-         "Conversion roadmaps (A/B, CRO testing) to continuously improve sales.",
-         "Comprehensive store health checks covering speed, SEO, and user experience with heatmaps.",
-         "We don’t just set up stores — we ensure they’re optimized, scalable, and ready to sell.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 6h16M4 12h16M4 18h16"
-             stroke="currentColor"
-             strokeWidth="2"
-             strokeLinecap="round"
-           />
-         </svg>
-       ),
-       slug: "store-setup-management",
-     },
-     {
-       title: "Amazon, eBay, Etsy, TikTok Shop, Vinted",
-       kicker: "Marketplace Management",
-       description:
-         "Selling on marketplaces requires precision — we help you dominate platforms like Amazon, eBay, Etsy, and TikTok Shop with:",
-       points: [
-         "AI-optimized product listings for higher visibility.",
-         "Auto-repricing & buy-box tactics to stay competitive.",
-         "Review mining & response automation to build credibility.",
-         "nventory synchronization across platforms to prevent overselling.",
-         "With our marketplace expertise, you’ll expand your reach, grow your sales, and strengthen your online presence.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 4h16v6H4zM4 14h16v6H4z"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "marketplace-management",
-     },
-     {
-       title: "Supplier Vetting, MOQs & 3PL",
-       kicker: "Sourcing & Fulfillment",
-       description:
-         "Our sourcing and fulfillment services ensure you always have the right products, suppliers, and logistics in place. We help you avoid unreliable suppliers and stock issues with:",
-       points: [
-         "Supplier vetting & MOQ management for reliable partnerships.",
-         "AI-assisted supplier scoring to choose the best options.",
-         "Demand forecasting & auto-reorder alerts to prevent stockouts.",
-         "Dropshipping and wholesale workflows tailored to your business.",
-         "PO automation & quality control (QC) plans for consistency.",
-         "From supplier selection to final delivery, we make sure your supply chain is efficient, reliable, and profitable.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M3 7h18v10H3V7zm3 0v10M18 7v10"
-             stroke="currentColor"
-             strokeWidth="2"
-             strokeLinecap="round"
-           />
-         </svg>
-       ),
-       slug: "sourcing-fulfillment",
-     },
-     {
-       title: "Smart Routing & Tracking",
-       kicker: "Order Processing & Logistics",
-       description:
-         "A seamless order experience builds customer trust. We design logistics systems that ensure speed, accuracy, and visibility:",
-       points: [
-         "Smart routing to nearest warehouse for faster delivery.",
-         "Delivery ETA predictions & exception handling to reduce surprises.",
-         "Branded tracking portals with proactive updates for customers.",
-         "Automated returns processing to save time and effort.",
-         "Fraud detection & prevention flags for safe transactions.",
-         "We make order management simple while boosting customer satisfaction and reducing operational headaches.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M3 12h18M3 12l4-4m-4 4l4 4"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "order-processing-logistics",
-     },
-     {
-       title: "SEO, Paid Social & CRO",
-       kicker: "Digital Marketing & Ads",
-       description:
-         "We combine creativity with data-driven strategies to deliver measurable results. Our digital marketing solutions cover:",
-       points: [
-         "SEO and paid social ads powered by AI keyword research.",
-         "Audience modeling & budget pacing to reach the right customers at the right time.",
-         "Creative generation & fatigue detection to keep campaigns fresh.",
-         "Conversion rate optimization (CRO) testing to maximize ROI.",
-         "Impact-ranked test ideas for continuous growth.",
-         "From traffic to sales, we ensure every marketing dollar delivers maximum value.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 4h16v6H4zM9 20l6-10"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "digital-marketing-ads",
-     },
-     {
-       title: "Automation & Personalization",
-       kicker: "Email, SMS & CRM",
-       description:
-         "Personalized communication builds loyalty — we help you automate it without losing the human touch. Our services include:",
-       points: [
-         "AI-driven customer segmentation (RFM, churn risk).",
-         "Persona-based copywriting that resonates with your audience.",
-         "Replenishment triggers & predictive lifetime value modeling.",
-         "Seamless CRM integrations for a unified customer view.",
-         "-Abandoned cart recovery & win-back flows to capture lost revenue.",
-         "We make your customer communication smart, automated, and revenue-focused.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 6h16v12H4zM4 6l8 7 8-7"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "email-sms-crm",
-     },
-     {
-       title: "24/7 AI Chat + Human",
-       kicker: "Support & Personalization",
-       description:
-         "Customer experience defines your brand — we make sure it shines. With a mix of AI and human support, we deliver:",
-       points: [
-         "24/7 AI chatbots with human handover for instant responses.",
-         "Sentiment-based routing to handle priority cases with care.",
-         "Refund & reshipment macros for faster resolutions.",
-         "Quiz-driven guided selling with AI recommendations.",
-         "We create support systems that not only solve problems but also build trust and boost sales.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M12 2a5 5 0 015 5v2a5 5 0 11-10 0V7a5 5 0 015-5zm-7 18a7 7 0 1114 0H5z"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "support-personalization",
-     },
-     {
-       title: "Dashboards, Anomalies & Fraud",
-       kicker: "Analytics & Security",
-       description:
-         "Every decision should be backed by data and protected by security. We offer:",
-       points: [
-         "Custom dashboards unifying ads, store, and CRM data.",
-         "AI anomaly detection to flag sudden shifts in CAC, ROAS, or sales.",
-         "Fraud prevention tools including AI risk scoring.",
-         "Chargeback reduction strategies to safeguard your revenue.",
-         "With actionable insights and strong security, you stay ahead while staying protected.",
-         "",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M4 20V4h16v16H4zm4-4l3-4 3 2 2-3"
-             stroke="currentColor"
-             strokeWidth="2"
-           />
-         </svg>
-       ),
-       slug: "analytics-security",
-     },
-     {
-       title: "Identity, Packaging & Content",
-       kicker: "Branding & Creative",
-       description:
-         "Your brand identity is more than a logo — it’s the story customers connect with. We design creative solutions that stand out:",
-       points: [
-         "Logo systems & style guides that define your brand.",
-         "Packaging design that reflects quality and value.",
-         "Content production tailored for your audience.",
-         "AI concept boards & lifestyle mockups for faster, better creative direction.",
-         "We ensure your brand not only looks good but also leaves a lasting impression.",
-       ],
-       icon: (
-         <svg
-           width="16"
-           height="16"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path d="M4 20l8-16 8 16H4z" stroke="currentColor" strokeWidth="2" />
-         </svg>
-       ),
-       slug: "branding-creative",
-     },
-   ];
+const ServiceDetail = ({ params }) => {
+  console.log('allServicesData', allServicesData)
+ const { slug } = use(params);
+  const service = allServicesData.find((s) => s.slug === slug);
 
-  const service = services.find((s) => s.slug === slug);
-
-  if (!service) {
+  if (!service || !service.detailPageData) {
     return (
       <div className="text-center py-20 text-red-500 font-semibold text-xl">
         Service not found
@@ -399,69 +17,170 @@ export default function ServiceDetail({ params }) {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-20 bg-white text-black">
+    <div className="bg-white text-gray-900 font-inter leading-relaxed">
+      {/* Hero Section */}
+      <section className="py-16 text-center">
+        <div className="container max-w-6xl mx-auto px-4">
+          <span className="bg-yellow-400 text-black font-extrabold rounded-full px-3 py-1 text-sm mb-3 inline-block">
+            {service.kicker}
+          </span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+            {service.detailPageData.hero.title}
+          </h1>
+          <p className="text-gray-600 text-md md:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+            {service.detailPageData.hero.description}
+          </p>
+          <a
+            href="#contact"
+            className="btn bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
+          >
+            Get Started
+          </a>
+        </div>
+      </section>
 
-      <h2>{service.title}</h2>
-      <h2>{service.kicker}</h2>
-      {/* Header */}
-      {/* <div className="text-center mb-16">
-        <Image
-          src={service.image}
-          width={60}
-          height={60}
-          alt={service.title}
-          className="mx-auto mb-4"
-        />
-        <h1 className="text-4xl font-bold mb-2">{service.title}</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">{service.desc}</p>
-      </div> */}
+      {/* Core Features Sections */}
+      {service.detailPageData.sections && (
+        <section className="py-16 bg-gray-50">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {service.detailPageData.sections.map((section, index) => (
+                <div
+                  key={index}
+                  className="card bg-white border border-gray-200 rounded-2xl p-6 shadow-md"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    {section.icon && (
+                      <section.icon className="w-8 h-8 text-yellow-400" />
+                    )}
+                    <h3 className="text-2xl font-bold">{section.title}</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4">{section.description}</p>
+                  {section.points && (
+                    <ul className="list-none p-0 space-y-2 text-gray-700">
+                      {section.points.map((point, pointIndex) => (
+                        <li key={pointIndex} className="flex items-start gap-2">
+                          {point.icon && (
+                            <point.icon className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                          )}
+                          <span>{point.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* Features */}
-      {/* <div className="mb-16">
-        <h2 className="text-2xl font-semibold text-[#ffb02b] mb-6">
-          What's Included
-        </h2>
-        <ul className="grid md:grid-cols-2 gap-4 text-base text-gray-800">
-          {service.features.map((item, index) => (
-            <li
-              key={index}
-              className="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm"
-            >
-              ✅ {item}
-            </li>
-          ))}
-        </ul>
-      </div> */}
+      {/* Why Choose Us Section */}
+      {service.detailPageData.whyChoose && (
+        <section className="py-16">
+          <div className="container max-w-6xl mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center">
+              {service.detailPageData.whyChoose.title}
+            </h2>
+            <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {service.detailPageData.whyChoose.points.map((point, index) => (
+                <div
+                  key={index}
+                  className="card bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md"
+                >
+                  <h4 className="text-lg font-bold flex items-center gap-2 mb-2">
+                    {point.icon && (
+                      <point.icon className="w-6 h-6 text-yellow-400" />
+                    )}
+                    {point.text}
+                  </h4>
+                  <p className="text-gray-700">{point.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* Why Choose Us */}
-      {/* <div className="mb-16">
-        <h2 className="text-2xl font-semibold text-[#ffb02b] mb-6">
-          Why Choose Us?
-        </h2>
-        <ul className="grid md:grid-cols-2 gap-4 text-base text-gray-800">
-          {service.whyChooseUs.map((item, index) => (
-            <li
-              key={index}
-              className="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm"
-            >
-              ⭐ {item}
-            </li>
-          ))}
-        </ul>
-      </div> */}
+      {/* Real-World Example Section */}
+      {service.detailPageData.example && (
+        <section className="py-16 bg-gray-50">
+          <div className="container max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+              {service.detailPageData.example.title}
+            </h2>
+            <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
+            <p className="text-gray-700 text-lg">
+              {service.detailPageData.example.content}
+            </p>
+          </div>
+        </section>
+      )}
 
-      {/* CTA */}
-      {/* <div className="text-center py-12 bg-[#ffb02b] rounded-xl">
-        <h3 className="text-2xl font-bold text-black mb-4">
-          Let’s get started on your success journey!
-        </h3>
-        <a
-          href="/contact"
-          className="inline-block mt-2 bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-opacity-90 transition"
-        >
-          {service.ctaText}
-        </a>
-      </div> */}
+      {/* Our Process Section */}
+      {service.detailPageData.process && (
+        <section className="py-16">
+          <div className="container max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+              {service.detailPageData.process.title}
+            </h2>
+            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+            <ol className="list-decimal list-inside p-0 space-y-4 text-gray-700 text-lg">
+              {service.detailPageData.process.steps.map((step, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="font-bold flex-shrink-0">{step.text}:</span>
+                  <span>{step.description}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      {/* Outcome & Final Word */}
+      {(service.detailPageData.outcome || service.detailPageData.finalWord) && (
+        <section className="py-16 bg-gray-50">
+          <div className="container max-w-4xl mx-auto px-4 text-center">
+            {service.detailPageData.outcome && (
+              <>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                  {service.detailPageData.outcome.title}
+                </h2>
+                <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {service.detailPageData.outcome.points.map((point, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 text-left"
+                    >
+                      <Check className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
+                      <p className="text-gray-700 text-lg">{point}</p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {service.detailPageData.finalWord && (
+              <div className="mt-16">
+                <p className="text-gray-700 text-lg mb-6">
+                  {service.detailPageData.finalWord.content}
+                </p>
+                <a
+                  href="#"
+                  className="btn bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
+                >
+                  {service.detailPageData.finalWord.buttonText}
+                  <ArrowRight className="w-5 h-5 ml-2 inline-block" />
+                </a>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
     </div>
   );
-}
+};
+
+export default ServiceDetail;

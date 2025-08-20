@@ -22,7 +22,7 @@ const page = () => {
   return (
     <div className="min-h-screen bg-white max-w-6xl mx-auto px-5">
       <div className="text-black flex flex-col items-center">
-        <div className=" w-full grid md:grid-cols-2 gap-8">
+        <div className="pt-5 w-full grid md:grid-cols-2 gap-8">
           {/* Left Side - Company Info */}
           <div className="text-black sm:p-8 rounded-lg">
             <h2 className="text-3xl font-bold mb-4 text-[#feb436]">

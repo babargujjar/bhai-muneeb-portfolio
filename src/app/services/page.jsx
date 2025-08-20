@@ -360,7 +360,7 @@ const page = () => {
             <span className="chip inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-yellow-400 text-black font-bold border border-black/10">
               AI‑Powered E‑Commerce Agency
             </span>
-            <h1 className="font-plus-jakarta text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-4 mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-4 mb-4">
               Launch, scale & optimize your brand with AI — from factory to
               first sale.
             </h1>
