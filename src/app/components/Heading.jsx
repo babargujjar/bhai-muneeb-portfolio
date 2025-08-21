@@ -6,7 +6,7 @@ export default function Heading({ title, highlight, className = "" }) {
     <h2
       className={` leading-10 sm:leading-14 font-bold text-black mx-auto ${className}`}
     >
-      {title} <span className="text-[#feb436]">{highlight}</span>
+      {title} <span className="text-yellow-400">{highlight}</span>
     </h2>
   );
 }

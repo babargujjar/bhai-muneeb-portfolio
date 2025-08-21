@@ -36,7 +36,7 @@ const StatCard = ({ number, text }) => {
       ref={ref}
       className="flex flex-col items-center justify-center bg-gray-100 border border-gray-200 p-4 rounded-xl text-center"
     >
-      <span className="text-3xl font-extrabold text-[#feb436]">
+      <span className="text-3xl font-extrabold text-yellow-400">
         {count}
         {typeof number === "string" && number.match(/[a-zA-Z%]+$/)?.[0]}
         <span className="font-bold">+</span>

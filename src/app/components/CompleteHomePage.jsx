@@ -233,7 +233,7 @@ const partnerBulletsYouBring = [
   },
 ];
 
- const services = allServicesData
+const services = allServicesData;
 
 const CompleteHomePage = () => {
   const phrases = ["Start Faster", "Scale Smarter", "Sell Everywhere"];
@@ -324,7 +324,7 @@ const CompleteHomePage = () => {
       {/* Hero */}
       <section className="text-center py-16">
         <div className="container mx-auto px-5 max-w-6xl">
-          <span className="inline-block bg-amber-400 text-black font-extrabold rounded-full px-3 py-1.5 mb-3">
+          <span className="inline-block bg-yellow-400 text-black font-extrabold rounded-full px-3 py-1.5 mb-3">
             eCommerce Growth Partner
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
@@ -334,7 +334,7 @@ const CompleteHomePage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="text-[#feb436] whitespace-nowrap"
+                className="text-yellow-400 whitespace-nowrap"
               >
                 {text}
               </motion.span>
@@ -348,13 +348,13 @@ const CompleteHomePage = () => {
           <div className="flex gap-3 justify-center flex-wrap mt-4.5">
             <Link
               href="#services"
-              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
+              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
             >
               Explore Services
             </Link>
             <Link
               href={"/contact"}
-              className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold hover:bg-amber-400"
+              className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
             >
               Get Free Demo
             </Link>
@@ -389,7 +389,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Our Services
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
             {services.map((v, i) => (
               <Link key={i} href={`/services/${v.slug}`} className="block">
@@ -408,7 +408,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             How It Works
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             {stepsData.map((step, index) => (
               <div
@@ -416,7 +416,7 @@ const CompleteHomePage = () => {
                 className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
               >
                 <h3 className="flex items-center gap-2.5 mb-2">
-                  <span className="w-7 h-7 rounded-full bg-amber-400 inline-flex items-center justify-center font-extrabold">
+                  <span className="w-7 h-7 rounded-full bg-yellow-400 inline-flex items-center justify-center font-extrabold">
                     {step.num}
                   </span>
                   <p className="text-black font-semibold text-[17px] md:text-[20px]">
@@ -436,7 +436,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Why Choose Betelbee?
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <Stats />
         </div>
       </section>
@@ -447,7 +447,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Brands We’ve Helped Grow
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <p className="text-gray-700 mb-2">
             Real teams, real outcomes. Here are a few names and words from
             clients we’ve supported. Swap these placeholders with your own logos
@@ -460,7 +460,7 @@ const CompleteHomePage = () => {
                 className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
               >
                 <div className="flex items-center gap-2.5 mb-2">
-                  <div className="w-9 h-9 rounded-full bg-white border-2 border-amber-400 flex items-center justify-center font-extrabold">
+                  <div className="w-9 h-9 rounded-full bg-white border-2 border-yellow-400 flex items-center justify-center font-extrabold">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -475,7 +475,7 @@ const CompleteHomePage = () => {
                   {testimonial.results.map((result, i) => (
                     <span
                       key={i}
-                      className="border border-dashed border-amber-400 rounded-full px-2.5 py-1.5 font-extrabold text-md md:text-lg "
+                      className="border border-dashed border-yellow-400 rounded-full px-2.5 py-1.5 font-extrabold text-md md:text-lg "
                     >
                       {result}
                     </span>
@@ -487,13 +487,13 @@ const CompleteHomePage = () => {
           <div className="flex gap-3 justify-center flex-wrap mt-3.5">
             <Link
               href={"/contact"}
-              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
+              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
             >
               Share Your Goal
             </Link>
             <Link
               href="#services"
-              className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold hover:bg-amber-400"
+              className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
             >
               See Our Process
             </Link>
@@ -502,11 +502,11 @@ const CompleteHomePage = () => {
       </section>
 
       {/* Become a Partner (Premium) */}
-      <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-amber-400">
+      <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-yellow-400">
         <div className="container mx-auto px-5 max-w-6xl z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-stretch">
             <div
-              className="bg-white/5 border hover:shadow-lg hover:shadow-amber-300 hover:shadow-glow hover:-translate-y-1 border-white/10 rounded-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
+              className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 border-white/10 rounded-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
               ref={(el) => (partnerRevealRefs.current[0] = el)}
             >
               <h2 className="text-xl md:text-3xl font-extrabold mb-2 text-white">
@@ -522,7 +522,7 @@ const CompleteHomePage = () => {
               <ul className="grid gap-2.5 mt-2">
                 <li className="flex gap-2.5 items-start">
                   <Box
-                    className="text-black bg-amber-400 rounded-md p-1.5"
+                    className="text-black bg-yellow-400 rounded-md p-1.5"
                     size={24}
                   />
                   <span>
@@ -532,7 +532,7 @@ const CompleteHomePage = () => {
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Truck
-                    className="text-black bg-amber-400 rounded-md p-1.5"
+                    className="text-black bg-yellow-400 rounded-md p-1.5"
                     size={24}
                   />
                   <span>
@@ -542,7 +542,7 @@ const CompleteHomePage = () => {
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <PenTool
-                    className="text-black bg-amber-400 rounded-md p-1.5"
+                    className="text-black bg-yellow-400 rounded-md p-1.5"
                     size={24}
                   />
                   <span>
@@ -552,7 +552,7 @@ const CompleteHomePage = () => {
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Store
-                    className="text-black bg-amber-400 rounded-md p-1.5"
+                    className="text-black bg-yellow-400 rounded-md p-1.5"
                     size={24}
                   />
                   <span>
@@ -562,7 +562,7 @@ const CompleteHomePage = () => {
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Wallet
-                    className="text-black bg-amber-400 rounded-md p-1.5"
+                    className="text-black bg-yellow-400 rounded-md p-1.5"
                     size={24}
                   />
                   <span>
@@ -574,13 +574,13 @@ const CompleteHomePage = () => {
               <div className="flex gap-3 flex-wrap mt-3.5">
                 <Link
                   href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
+                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
                 >
                   Start a Partnership
                 </Link>
                 <Link
                   href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold bg-white hover:bg-amber-400"
+                  className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold bg-white hover:bg-yellow-400"
                 >
                   Book a Free Consultation
                 </Link>
@@ -590,7 +590,7 @@ const CompleteHomePage = () => {
               className="grid gap-3 opacity-0 translate-y-4"
               ref={(el) => (partnerRevealRefs.current[1] = el)}
             >
-              <div className="bg-white/5 border hover:shadow-lg hover:shadow-amber-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+              <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
                 <h3 className="text-lg font-extrabold mb-3">What We Bring</h3>
                 <ul className="grid gap-2.5">
                   {partnerBulletsWeBring.map((bullet, index) => {
@@ -598,7 +598,7 @@ const CompleteHomePage = () => {
                     return (
                       <li key={index} className="flex gap-2.5 items-start">
                         <Icon
-                          className="text-black bg-amber-400 rounded-md p-1.5"
+                          className="text-black bg-yellow-400 rounded-md p-1.5"
                           size={24}
                         />
                         <span>{bullet.text}</span>
@@ -607,7 +607,7 @@ const CompleteHomePage = () => {
                   })}
                 </ul>
               </div>
-              <div className="bg-white/5 border hover:shadow-lg hover:shadow-amber-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+              <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
                 <h3 className="text-lg font-extrabold mb-3">What You Bring</h3>
                 <ul className="grid gap-2.5">
                   {partnerBulletsYouBring.map((bullet, index) => {
@@ -615,7 +615,7 @@ const CompleteHomePage = () => {
                     return (
                       <li key={index} className="flex gap-2.5 items-start">
                         <Icon
-                          className="text-black bg-amber-400 rounded-md p-1.5"
+                          className="text-black bg-yellow-400 rounded-md p-1.5"
                           size={24}
                         />
                         <span>{bullet.text}</span>
@@ -635,7 +635,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Growth With AI
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5">
             {aiBenefitsData.map((benefit, index) => {
               const Icon = benefit.icon;
@@ -645,7 +645,10 @@ const CompleteHomePage = () => {
                   className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
                 >
                   <h3 className="flex items-center gap-2.5 mb-1.5">
-                    <Icon className="bg-amber-400 rounded-md p-1.5" size={20} />{" "}
+                    <Icon
+                      className="bg-yellow-400 rounded-md p-1.5"
+                      size={20}
+                    />{" "}
                     <p className="text-black font-semibold text-[15px] md:text-[20px]">
                       {benefit.title}
                     </p>
@@ -659,7 +662,7 @@ const CompleteHomePage = () => {
             {aiKpisData.map((kpi, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-dashed border-amber-400 rounded-xl p-4 text-center"
+                className="bg-white border-2 border-dashed border-yellow-400 rounded-xl p-4 text-center"
                 ref={(el) => (kpiRefs.current[index] = el)}
               >
                 <span
@@ -685,7 +688,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Our Message
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <div className="grid grid-cols-1 items-stretch md:grid-cols-[minmax(260px,450px)_2fr] lg:grid-cols-[minmax(260px,520px)_1fr] gap-4.5">
             <img
               className="w-full h-full min-h-[260px] object-cover rounded-xl border border-gray-200 shadow-lg"
@@ -703,25 +706,25 @@ const CompleteHomePage = () => {
               </p>
               <ul className="mt-2.5 space-y-2">
                 <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                   <span className="text-sm">
                     Practical strategies you can act on today
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                   <span className="text-sm">
                     Transparent reporting and honest advice
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                   <span className="text-sm">
                     Long‑term partnership focused on results
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                   <span className="text-sm">
                     Tailored solutions designed for your business growth
                   </span>
@@ -730,13 +733,13 @@ const CompleteHomePage = () => {
               <div className="flex gap-3 flex-wrap mt-3">
                 <Link
                   href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
+                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
                 >
                   Let’s Talk
                 </Link>
                 <a
                   href="#services"
-                  className="inline-block px-4 py-3 rounded-full border-2 border-amber-400 text-black font-extrabold hover:bg-amber-400"
+                  className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
                 >
                   See What We Do
                 </a>
@@ -752,7 +755,7 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
             Core Features
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5">
             {coreFeaturesData.map((feature, index) => {
               const Icon = feature.icon;
@@ -786,14 +789,14 @@ const CompleteHomePage = () => {
           <h2 className="text-2xl md:text-4xl leading-tight mb-3">
             Ready to grow your brand?
           </h2>
-          <div className="w-18 h-1.5 bg-amber-400 rounded-md mx-auto my-2"></div>
+          <div className="w-18 h-1.5 bg-yellow-400 rounded-md mx-auto my-2"></div>
           <p className="text-gray-700 mx-auto mb-3.5">
             Tell us your goals and budget. We’ll send a simple plan you can
             follow.
           </p>
           <Link
             href={"/contact"}
-            className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-amber-400 text-black font-extrabold"
+            className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
           >
             Contact Us
           </Link>

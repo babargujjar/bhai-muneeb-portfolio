@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
 const page = () => {
@@ -25,7 +25,7 @@ const page = () => {
         <div className="pt-5 w-full grid md:grid-cols-2 gap-8">
           {/* Left Side - Company Info */}
           <div className="text-black sm:p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4 text-[#feb436]">
+            <h2 className="text-3xl font-bold mb-4 text-yellow-400">
               Get in Touch
             </h2>
             <p className="mb-6 text-gray-500">
@@ -37,7 +37,7 @@ const page = () => {
 
             {/* Pakistan Head Office */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-[#feb436]">
+              <h3 className="text-xl font-semibold text-yellow-400">
                 HEAD OFFICE (Pakistan)
               </h3>
               <p>13-C, Peoples Colony No 1, Faisalabad, Pakistan, 38000</p>
@@ -47,7 +47,7 @@ const page = () => {
 
             {/* UK Virtual Office */}
             <div>
-              <h3 className="text-xl font-semibold text-[#feb436]">
+              <h3 className="text-xl font-semibold text-yellow-400">
                 REGIONAL HUB (UK)
               </h3>
               <p>31, Duddingston, Park South, Edinburgh, EH15 3NZ</p>
@@ -70,7 +70,7 @@ const page = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#feb436]"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-yellow-400"
                 />
               </div>
 
@@ -82,7 +82,7 @@ const page = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#feb436]"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-yellow-400"
                 />
               </div>
 
@@ -94,13 +94,13 @@ const page = () => {
                   onChange={handleChange}
                   rows="4"
                   required
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#feb436]"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-yellow-400"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#feb436] text-black font-semibold py-2 rounded-lg transition-all duration-300"
+                className="w-full bg-yellow-400 text-black font-semibold py-2 rounded-lg transition-all duration-300"
               >
                 Send Message
               </button>
@@ -110,7 +110,7 @@ const page = () => {
         <div className="p-8 flex md:flex-row flex-col gap-5 bg-black justify-between rounded-md border-gray-200 items-center w-full border mt-10">
           <div className="flex flex-col text-white gap-10 justify-between">
             <div className="w-full">
-              <h2 className="text-3xl pb-2 w-full text-[#feb436]">
+              <h2 className="text-3xl pb-2 w-full text-yellow-400">
                 Got a Project in Mind? Let’s <br /> Make It Happen.
               </h2>
               <p className="text-md">
@@ -147,4 +147,3 @@ const page = () => {
 };
 
 export default page;
-

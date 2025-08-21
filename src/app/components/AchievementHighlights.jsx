@@ -38,7 +38,7 @@ const AchievementHighlights = ({ number, desc }) => {
       <p className="text-[30px] font-semibold">
         {count}
         {typeof number === "string" && number.match(/[a-zA-Z%]+$/)?.[0]}
-        <span className="text-[#feb436] font-bold">+</span>
+        <span className="text-yellow-400 font-bold">+</span>
       </p>
       <p className="text-[#71717A] text-[15px] md:text-[16px]">{desc}</p>
     </div>

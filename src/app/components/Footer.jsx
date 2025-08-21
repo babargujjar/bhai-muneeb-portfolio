@@ -7,27 +7,10 @@ const Footer = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
+    { label: "Private Label", href: "/privatelabel" },
     { label: "About", href: "/about" },
     { label: "Blog", href: "/" },
-    { label: "Private Label", href: "/privatelabel" },
   ];
- const services = [
-   {
-     slug: "store-setup-management",
-     title: "Store Setup & Management",
-   },
-   { slug: "marketplace-management", title: "Marketplace Management" },
-   { slug: "sourcing-fulfillment", title: "Sourcing & Fulfillment" },
-   {
-     slug: "order-processing-logistics",
-     title: "Order Processing & Logistics",
-   },
-   { slug: "digital-marketing-ads", title: "Digital Marketing & Ads" },
-   { slug: "email-sms-crm", title: "Email, SMS & CRM" },
-   { slug: "support-personalization", title: "Support & Personalization" },
-   { slug: "analytics-security", title: "Analytics & Security" },
-   { slug: "branding-creative", title: "Branding & Creative" },
- ];
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       {/* Contact Section */}
@@ -41,7 +24,7 @@ const Footer = () => {
             className="w-full p-3 pr-28 border border-[#CDCDCD] rounded-lg"
             type="text"
           />
-          <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-[#feb436] cursor-pointer py-[10px] px-4 text-white text-sm rounded-lg">
+          <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-yellow-400 cursor-pointer py-[10px] px-4 text-white text-sm rounded-lg">
             SUBMIT
           </button>
         </div>
@@ -193,7 +176,7 @@ const Footer = () => {
       {/* Bottom Note */}
       <h2 className="pt-8 text-center text-[14px] md:text-[16px] text-black">
         © 2025 Betelbee | Design & Development by{" "}
-        <span className="text-[#feb436]">Betelbee.</span>
+        <span className="text-yellow-400">Betelbee.</span>
       </h2>
     </div>
   );

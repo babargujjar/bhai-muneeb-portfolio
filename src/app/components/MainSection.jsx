@@ -11,7 +11,10 @@ const MainSection = () => {
   const phrases = ["Start Faster", "Scale Smarter", "Sell Everywhere"];
   const icons = [
     { Icon: Instagram, href: "https://www.instagram.com/betelbee.official/" },
-    { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577745511032" },
+    {
+      Icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61577745511032",
+    },
     { Icon: Linkedin, href: "https://www.linkedin.com/in/betelbee-594993371/" },
   ];
   const [index, setIndex] = useState(0);
@@ -63,7 +66,7 @@ const MainSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="text-[#feb436] whitespace-nowrap"
+                    className="text-yellow-400 whitespace-nowrap"
                   >
                     {text}
                   </motion.span>

@@ -4,27 +4,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Services = ({ service }) => {
-
-
-    // Reusable SVG for the checkmark
-    const checkmarkIcon = (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5 13l4 4L19 7"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-
+  // Reusable SVG for the checkmark
+  const checkmarkIcon = (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 13l4 4L19 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 
   return (
     // <motion.div
@@ -35,7 +32,7 @@ const Services = ({ service }) => {
     //   {/* Top bar with animated dots */}
     //   <div className="flex items-center justify-between px-4 py-2.5 bg-gradient-to-r from-[#4b3a23] to-[#5c452a] border-b border-[#5c452a]/50">
     //     <span className="text-xs font-mono text-[#d1b899] tracking-tight flex items-center gap-1.5">
-    //       <span className="w-1.5 h-1.5 bg-[#feb436] rounded-full animate-pulse" />
+    //       <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse" />
     //       ~/services/{service.slug}
     //     </span>
     //     <div className="flex gap-1.5">
@@ -61,7 +58,7 @@ const Services = ({ service }) => {
     //   <div className="p-6 space-y-6 flex-grow flex flex-col justify-between">
     //     {/* Icon */}
     //     <motion.div
-    //       className="w-16 h-16 bg-gradient-to-br from-[#feb436] to-[#f3b03d] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(254,180,54,0.3)]"
+    //       className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-[#f3b03d] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(254,180,54,0.3)]"
     //       whileHover={{
     //         rotate: [0, 5, -5, 0],
     //         transition: { duration: 0.6 },
@@ -82,7 +79,7 @@ const Services = ({ service }) => {
     //         {service.title}
     //       </h3>
     //       <motion.div
-    //         className="absolute bottom-0 left-0 h-0.5 bg-[#feb436]"
+    //         className="absolute bottom-0 left-0 h-0.5 bg-yellow-400"
     //         initial={{ width: 0 }}
     //         whileHover={{ width: "100%" }}
     //         transition={{ duration: 0.4 }}
@@ -91,7 +88,7 @@ const Services = ({ service }) => {
 
     //     {/* Description */}
     //     <motion.p
-    //       className="text-sm text-[#e6cfa8] font-mono leading-relaxed p-3 rounded-lg bg-[#4b3a23]/50 backdrop-blur-sm border border-[#5c452a]/30 group-hover:border-[#feb436]/30 transition-all duration-300"
+    //       className="text-sm text-[#e6cfa8] font-mono leading-relaxed p-3 rounded-lg bg-[#4b3a23]/50 backdrop-blur-sm border border-[#5c452a]/30 group-hover:border-yellow-400/30 transition-all duration-300"
     //       whileHover={{
     //         backgroundColor: "rgba(75, 58, 35, 0.7)",
     //         scale: 1.02,

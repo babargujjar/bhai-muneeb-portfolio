@@ -8,23 +8,22 @@ import { usePathname } from "next/navigation";
 import allServicesData from "@/data/services";
 
 const Navbar = () => {
-   const pathname = usePathname();
+  const pathname = usePathname();
 
   const navLinksForSmallScreen = [
     { label: "Home", href: "/" },
+    { label: "Private Label", href: "/privatelabel" },
     { label: "About", href: "/about" },
     { label: "Blog", href: "/" },
-    { label: "Private Label", href: "/privatelabel" },
   ];
   const navLinks = [
+    { label: "Private Label", href: "/privatelabel" },
     { label: "About", href: "/about" },
     { label: "Blog", href: "/" },
-    { label: "Private Label", href: "/privatelabel" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  
 
   useEffect(() => {
     setIsOpen(false);
@@ -32,7 +31,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <div className="relative border-b-amber-400 border-b-2">
+    <div className="relative border-b-yellow-400 border-b-2">
       <div className="max-w-6xl px-5 mx-auto">
         <div className="font-[var(--font-outfit)] shadow-gray-100 bg-white border-[#CDCDCD]">
           <div className="flex justify-between items-center p-3 relative">
@@ -95,7 +94,7 @@ const Navbar = () => {
               {/* Desktop Contact Button */}
               <Link
                 href={"/contact"}
-                className="px-4 py-2 font-extrabold text-black transition-colors duration-200 border-2 rounded-full border-brand hover:bg-brand"
+                className="px-4 hover:bg-yellow-400 hover:text-white py-2 font-extrabold text-black transition-colors duration-200 border-2 rounded-full border-brand hover:bg-brand"
               >
                 Contact
               </Link>
