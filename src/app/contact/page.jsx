@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import FadeUp from "../components/FadeUp";
 
 const page = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +25,7 @@ const page = () => {
       <div className="text-black flex flex-col items-center">
         <div className="pt-5 w-full grid md:grid-cols-2 gap-8">
           {/* Left Side - Company Info */}
+          <FadeUp>
           <div className="text-black sm:p-8 rounded-lg">
             <h2 className="text-3xl font-bold mb-4 text-yellow-400">
               Get in Touch
@@ -55,8 +57,10 @@ const page = () => {
               <p>Email: betelbee.official@gmail.com</p>
             </div>
           </div>
+          </FadeUp>
 
           {/* Right Side - Contact Form */}
+          <FadeUp>
           <div className="bg-white p-8 rounded-lg border border-gray-200">
             <h2 className="text-3xl font-bold mb-6 text-black">
               Send Us a Message
@@ -106,41 +110,44 @@ const page = () => {
               </button>
             </form>
           </div>
+          </FadeUp>
         </div>
-        <div className="p-8 flex md:flex-row flex-col gap-5 bg-black justify-between rounded-md border-gray-200 items-center w-full border mt-10">
-          <div className="flex flex-col text-white gap-10 justify-between">
-            <div className="w-full">
-              <h2 className="text-3xl pb-2 w-full text-yellow-400">
-                Got a Project in Mind? Let’s <br /> Make It Happen.
-              </h2>
-              <p className="text-md">
-                Partner with Betelbee to get your digital <br /> marketing done
-                right with strategy, <br /> creativity, and results.
-              </p>
+        <FadeUp>
+          <div className="p-8 flex md:flex-row flex-col gap-5 bg-black justify-between rounded-md border-gray-200 items-center w-full border mt-10">
+            <div className="flex flex-col text-white gap-10 justify-between">
+              <div className="w-full">
+                <h2 className="text-3xl pb-2 w-full text-yellow-400">
+                  Got a Project in Mind? Let’s <br /> Make It Happen.
+                </h2>
+                <p className="text-md">
+                  Partner with Betelbee to get your digital <br /> marketing
+                  done right with strategy, <br /> creativity, and results.
+                </p>
+              </div>
+              <div className="text-md flex gap-4">
+                <h2>
+                  <span className="font-bold text-lg">2021</span> <br /> Founded
+                  in
+                </h2>
+                <h2>
+                  <span className="font-bold text-lg">3k+</span> <br />{" "}
+                  eCommerce Stores <br /> Lounched
+                </h2>
+                <h2>
+                  <span className="font-bold text-lg">20+</span> <br /> Offered
+                  services
+                </h2>
+              </div>
             </div>
-            <div className="text-md flex gap-4">
-              <h2>
-                <span className="font-bold text-lg">2021</span> <br /> Founded
-                in
-              </h2>
-              <h2>
-                <span className="font-bold text-lg">3k+</span> <br /> eCommerce
-                Stores <br /> Lounched
-              </h2>
-              <h2>
-                <span className="font-bold text-lg">20+</span> <br /> Offered
-                services
-              </h2>
+            <div className="md:w-1/2 w-full flex justify-center items-center">
+              <img
+                className=" h-[200px] rounded-lg"
+                src={"/assets/contactimg.jpeg"}
+                alt=""
+              />
             </div>
           </div>
-          <div className="md:w-1/2 w-full flex justify-center items-center">
-            <img
-              className=" h-[200px] rounded-lg"
-              src={"/assets/contactimg.jpeg"}
-              alt=""
-            />
-          </div>
-        </div>
+        </FadeUp>
       </div>
     </div>
   );

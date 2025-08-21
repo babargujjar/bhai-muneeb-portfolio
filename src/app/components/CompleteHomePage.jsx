@@ -28,6 +28,7 @@ import Services from "./Services";
 import Link from "next/link";
 import Stats from "./Stats";
 import allServicesData from "@/data/services";
+import FadeUp from "./FadeUp";
 
 const icons = {
   usersCog: Shirt,
@@ -322,486 +323,510 @@ const CompleteHomePage = () => {
   return (
     <div className="font-sans text-black antialiased bg-white leading-relaxed">
       {/* Hero */}
-      <section className="text-center py-16">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <span className="inline-block bg-yellow-400 text-black font-extrabold rounded-full px-3 py-1.5 mb-3">
-            eCommerce Growth Partner
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
-            <div className="relative h-[72px] sm:h-[80px] mt-2 flex justify-center items-center overflow-hidden max-w-full">
-              <motion.span
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
-                className="text-yellow-400 whitespace-nowrap"
-              >
-                {text}
-              </motion.span>
-            </div>
-          </h1>
-          <p className="text-gray-700 max-w-4xl mx-auto">
-            From <b>product to profit</b>, we handle it all — sourcing,
-            branding, store setup, marketing, and scaling across Amazon, eBay,
-            Walmart, Etsy, TikTok Shop, and more.
-          </p>
-          <div className="flex gap-3 justify-center flex-wrap mt-4.5">
-            <Link
-              href="#services"
-              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
-            >
-              Explore Services
-            </Link>
-            <Link
-              href={"/contact"}
-              className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
-            >
-              Get Free Demo
-            </Link>
-          </div>
-          <div
-            className="flex flex-wrap justify-center gap-2.5 mt-3"
-            aria-label="Platforms we support"
-          >
-            {servicesBadges.map((badge, index) => {
-              const Icon = badge.icon;
-              return (
-                <span
+      <FadeUp>
+        <section className="text-center py-16">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <span className="inline-block bg-yellow-400 text-black font-extrabold rounded-full px-3 py-1.5 mb-3">
+              eCommerce Growth Partner
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
+              <div className="relative h-[72px] sm:h-[80px] mt-2 flex justify-center items-center overflow-hidden max-w-full">
+                <motion.span
                   key={index}
-                  className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-2 rounded-full font-semibold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-yellow-400 whitespace-nowrap"
                 >
-                  <img
-                    src={badge.icon}
-                    alt={badge.label}
-                    className="w-4 h-4 object-contain" // 16px = w-4 h-4
-                  />
-                  {badge.label}
-                </span>
-              );
-            })}
+                  {text}
+                </motion.span>
+              </div>
+            </h1>
+            <p className="text-gray-700 max-w-4xl mx-auto">
+              From <b>product to profit</b>, we handle it all — sourcing,
+              branding, store setup, marketing, and scaling across Amazon, eBay,
+              Walmart, Etsy, TikTok Shop, and more.
+            </p>
+            <div className="flex gap-3 justify-center flex-wrap mt-4.5">
+              <Link
+                href="#services"
+                className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+              >
+                Explore Services
+              </Link>
+              <Link
+                href={"/contact"}
+                className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
+              >
+                Get Free Demo
+              </Link>
+            </div>
+            <div
+              className="flex flex-wrap justify-center gap-2.5 mt-3"
+              aria-label="Platforms we support"
+            >
+              {servicesBadges.map((badge, index) => {
+                const Icon = badge.icon;
+                return (
+                  <span
+                    key={index}
+                    className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-2 rounded-full font-semibold"
+                  >
+                    <img
+                      src={badge.icon}
+                      alt={badge.label}
+                      className="w-4 h-4 object-contain" // 16px = w-4 h-4
+                    />
+                    {badge.label}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeUp>
 
       {/* services */}
-      <section id="services" className="">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Our Services
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-            {services.map((v, i) => (
-              <Link key={i} href={`/services/${v.slug}`} className="block">
-                <div className="flex flex-col h-full">
-                  <Services service={v} />
-                </div>
-              </Link>
-            ))}
+      <FadeUp>
+        <section id="services" className="">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Our Services
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+              {services.map((v, i) => (
+                <Link key={i} href={`/services/${v.slug}`} className="block">
+                  <div className="flex flex-col h-full">
+                    <Services service={v} />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeUp>
 
       {/* How It Works */}
-      <section id="how" className="py-16">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            How It Works
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-            {stepsData.map((step, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
-              >
-                <h3 className="flex items-center gap-2.5 mb-2">
-                  <span className="w-7 h-7 rounded-full bg-yellow-400 inline-flex items-center justify-center font-extrabold">
-                    {step.num}
-                  </span>
-                  <p className="text-black font-semibold text-[17px] md:text-[20px]">
-                    {step.title}
-                  </p>
-                </h3>
-                <p>{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us / Stats */}
-      <section>
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Why Choose Betelbee?
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <Stats />
-        </div>
-      </section>
-
-      {/* Brands We've Helped Grow (replaces Success Stories) */}
-      <section id="stories" className="py-16">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Brands We’ve Helped Grow
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <p className="text-gray-700 mb-2">
-            Real teams, real outcomes. Here are a few names and words from
-            clients we’ve supported. Swap these placeholders with your own logos
-            and photos anytime.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-            {testimonialsData.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-2.5 mb-2">
-                  <div className="w-9 h-9 rounded-full bg-white border-2 border-yellow-400 flex items-center justify-center font-extrabold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="text-gray-700 font-semibold">
-                      {testimonial.by}
-                    </div>
-                    <small className="text-gray-600">{testimonial.meta}</small>
-                  </div>
-                </div>
-                <p>“{testimonial.quote}”</p>
-                <div className="flex flex-wrap gap-2.5 mt-2.5">
-                  {testimonial.results.map((result, i) => (
-                    <span
-                      key={i}
-                      className="border border-dashed border-yellow-400 rounded-full px-2.5 py-1.5 font-extrabold text-md md:text-lg "
-                    >
-                      {result}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-3 justify-center flex-wrap mt-3.5">
-            <Link
-              href={"/contact"}
-              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
-            >
-              Share Your Goal
-            </Link>
-            <Link
-              href="#services"
-              className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
-            >
-              See Our Process
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Become a Partner (Premium) */}
-      <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-yellow-400">
-        <div className="container mx-auto px-5 max-w-6xl z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-stretch">
-            <div
-              className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 border-white/10 rounded-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
-              ref={(el) => (partnerRevealRefs.current[0] = el)}
-            >
-              <h2 className="text-xl md:text-3xl font-extrabold mb-2 text-white">
-                Partner With Betelbee
-              </h2>
-              <p className="text-gray-300">
-                We manage your eCommerce brand end‑to‑end while you bring the{" "}
-                <b>idea</b> and <b>investment</b>. From <b>sourcing</b> and{" "}
-                <b>fulfillment</b> to <b>brand identity</b>, <b>stores</b>, and
-                day‑to‑day operations — we handle everything and grow{" "}
-                <b>together</b>.
-              </p>
-              <ul className="grid gap-2.5 mt-2">
-                <li className="flex gap-2.5 items-start">
-                  <Box
-                    className="text-black bg-yellow-400 rounded-md p-1.5"
-                    size={24}
-                  />
-                  <span>
-                    <b>Sourcing & Suppliers</b> — vetted factories, MOQs,
-                    samples, and QC.
-                  </span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <Truck
-                    className="text-black bg-yellow-400 rounded-md p-1.5"
-                    size={24}
-                  />
-                  <span>
-                    <b>Fulfillment & Logistics</b> — 3PL setup, routing,
-                    tracking, returns.
-                  </span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <PenTool
-                    className="text-black bg-yellow-400 rounded-md p-1.5"
-                    size={24}
-                  />
-                  <span>
-                    <b>Brand Identity</b> — name, logo, packaging, content
-                    guidelines.
-                  </span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <Store
-                    className="text-black bg-yellow-400 rounded-md p-1.5"
-                    size={24}
-                  />
-                  <span>
-                    <b>Stores & Marketplaces</b> — Shopify/Woo + Amazon, eBay,
-                    TikTok Shop.
-                  </span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <Wallet
-                    className="text-black bg-yellow-400 rounded-md p-1.5"
-                    size={24}
-                  />
-                  <span>
-                    <b>Growth</b> — ads, SEO, email/SMS, reviews, reporting, and
-                    KPIs.
-                  </span>
-                </li>
-              </ul>
-              <div className="flex gap-3 flex-wrap mt-3.5">
-                <Link
-                  href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
-                >
-                  Start a Partnership
-                </Link>
-                <Link
-                  href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold bg-white hover:bg-yellow-400"
-                >
-                  Book a Free Consultation
-                </Link>
-              </div>
-            </div>
-            <div
-              className="grid gap-3 opacity-0 translate-y-4"
-              ref={(el) => (partnerRevealRefs.current[1] = el)}
-            >
-              <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
-                <h3 className="text-lg font-extrabold mb-3">What We Bring</h3>
-                <ul className="grid gap-2.5">
-                  {partnerBulletsWeBring.map((bullet, index) => {
-                    const Icon = bullet.icon;
-                    return (
-                      <li key={index} className="flex gap-2.5 items-start">
-                        <Icon
-                          className="text-black bg-yellow-400 rounded-md p-1.5"
-                          size={24}
-                        />
-                        <span>{bullet.text}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-              <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
-                <h3 className="text-lg font-extrabold mb-3">What You Bring</h3>
-                <ul className="grid gap-2.5">
-                  {partnerBulletsYouBring.map((bullet, index) => {
-                    const Icon = bullet.icon;
-                    return (
-                      <li key={index} className="flex gap-2.5 items-start">
-                        <Icon
-                          className="text-black bg-yellow-400 rounded-md p-1.5"
-                          size={24}
-                        />
-                        <span>{bullet.text}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Growth with AI */}
-      <section id="ai" className="py-10">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Growth With AI
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5">
-            {aiBenefitsData.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
+      <FadeUp>
+        <section id="how" className="py-16">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              How It Works
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {stepsData.map((step, index) => (
                 <div
                   key={index}
                   className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
                 >
-                  <h3 className="flex items-center gap-2.5 mb-1.5">
-                    <Icon
-                      className="bg-yellow-400 rounded-md p-1.5"
-                      size={20}
-                    />{" "}
-                    <p className="text-black font-semibold text-[15px] md:text-[20px]">
-                      {benefit.title}
+                  <h3 className="flex items-center gap-2.5 mb-2">
+                    <span className="w-7 h-7 rounded-full bg-yellow-400 inline-flex items-center justify-center font-extrabold">
+                      {step.num}
+                    </span>
+                    <p className="text-black font-semibold text-[17px] md:text-[20px]">
+                      {step.title}
                     </p>
                   </h3>
-                  <p>{benefit.description}</p>
+                  <p>{step.description}</p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-3.5">
-            {aiKpisData.map((kpi, index) => (
-              <div
-                key={index}
-                className="bg-white border-2 border-dashed border-yellow-400 rounded-xl p-4 text-center"
-                ref={(el) => (kpiRefs.current[index] = el)}
-              >
-                <span
-                  className="count text-3xl font-extrabold block"
-                  data-count={kpi.count}
-                >
-                  0
-                </span>
-                <span className="text-gray-700">{kpi.label}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-gray-700 mt-2">
-            *Typical for simple catalogs & in‑stock items. Results vary by niche
-            and budget.
-          </p>
-        </div>
-      </section>
+        </section>
+      </FadeUp>
 
-      {/* Company Message (image left) */}
-      <section id="message" className="py-5">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Our Message
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 items-stretch md:grid-cols-[minmax(260px,450px)_2fr] lg:grid-cols-[minmax(260px,520px)_1fr] gap-4.5">
-            <img
-              className="w-full h-full min-h-[260px] object-cover rounded-xl border border-gray-200 shadow-lg"
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop"
-              alt="Betelbee team working on eCommerce growth"
-            />
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg">
-              <h3 className="font-semibold text-[17px] md:text-[20px]">
-                Built for Your Growth
-              </h3>
-              <p className="text-gray-700">
-                We started Betelbee to make eCommerce easier for everyone. Clear
-                plans, simple tools, and steady support — so you can focus on
-                your brand while we handle the heavy lifting.
-              </p>
-              <ul className="mt-2.5 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="text-sm">
-                    Practical strategies you can act on today
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="text-sm">
-                    Transparent reporting and honest advice
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="text-sm">
-                    Long‑term partnership focused on results
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="text-sm">
-                    Tailored solutions designed for your business growth
-                  </span>
-                </li>
-              </ul>
-              <div className="flex gap-3 flex-wrap mt-3">
-                <Link
-                  href={"/contact"}
-                  className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+      {/* Why Choose Us / Stats */}
+      <FadeUp>
+        <section>
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Why Choose Betelbee?
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <Stats />
+          </div>
+        </section>
+      </FadeUp>
+
+      {/* Brands We've Helped Grow (replaces Success Stories) */}
+      <FadeUp>
+        <section id="stories" className="py-16">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Brands We’ve Helped Grow
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <p className="text-gray-700 mb-2">
+              Real teams, real outcomes. Here are a few names and words from
+              clients we’ve supported. Swap these placeholders with your own
+              logos and photos anytime.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {testimonialsData.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
                 >
-                  Let’s Talk
-                </Link>
-                <a
-                  href="#services"
-                  className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
-                >
-                  See What We Do
-                </a>
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <div className="w-9 h-9 rounded-full bg-white border-2 border-yellow-400 flex items-center justify-center font-extrabold">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="text-gray-700 font-semibold">
+                        {testimonial.by}
+                      </div>
+                      <small className="text-gray-600">
+                        {testimonial.meta}
+                      </small>
+                    </div>
+                  </div>
+                  <p>“{testimonial.quote}”</p>
+                  <div className="flex flex-wrap gap-2.5 mt-2.5">
+                    {testimonial.results.map((result, i) => (
+                      <span
+                        key={i}
+                        className="border border-dashed border-yellow-400 rounded-full px-2.5 py-1.5 font-extrabold text-md md:text-lg "
+                      >
+                        {result}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-3 justify-center flex-wrap mt-3.5">
+              <Link
+                href={"/contact"}
+                className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+              >
+                Share Your Goal
+              </Link>
+              <Link
+                href="#services"
+                className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
+              >
+                See Our Process
+              </Link>
+            </div>
+          </div>
+        </section>
+      </FadeUp>
+
+      {/* Become a Partner (Premium) */}
+      <FadeUp>
+        <section className="relative isolate py-16 bg-gradient-to-b from-[#0b0d10] via-[#111418] to-[#0b0d10] text-white border-t-2 border-b-2 border-yellow-400">
+          <div className="container mx-auto px-5 max-w-6xl z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-stretch">
+              <div
+                className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 border-white/10 rounded-2xl p-5 transition-all duration-250 ease-in-out glow-hover opacity-0 translate-y-4"
+                ref={(el) => (partnerRevealRefs.current[0] = el)}
+              >
+                <h2 className="text-xl md:text-3xl font-extrabold mb-2 text-white">
+                  Partner With Betelbee
+                </h2>
+                <p className="text-gray-300">
+                  We manage your eCommerce brand end‑to‑end while you bring the{" "}
+                  <b>idea</b> and <b>investment</b>. From <b>sourcing</b> and{" "}
+                  <b>fulfillment</b> to <b>brand identity</b>, <b>stores</b>,
+                  and day‑to‑day operations — we handle everything and grow{" "}
+                  <b>together</b>.
+                </p>
+                <ul className="grid gap-2.5 mt-2">
+                  <li className="flex gap-2.5 items-start">
+                    <Box
+                      className="text-black bg-yellow-400 rounded-md p-1.5"
+                      size={24}
+                    />
+                    <span>
+                      <b>Sourcing & Suppliers</b> — vetted factories, MOQs,
+                      samples, and QC.
+                    </span>
+                  </li>
+                  <li className="flex gap-2.5 items-start">
+                    <Truck
+                      className="text-black bg-yellow-400 rounded-md p-1.5"
+                      size={24}
+                    />
+                    <span>
+                      <b>Fulfillment & Logistics</b> — 3PL setup, routing,
+                      tracking, returns.
+                    </span>
+                  </li>
+                  <li className="flex gap-2.5 items-start">
+                    <PenTool
+                      className="text-black bg-yellow-400 rounded-md p-1.5"
+                      size={24}
+                    />
+                    <span>
+                      <b>Brand Identity</b> — name, logo, packaging, content
+                      guidelines.
+                    </span>
+                  </li>
+                  <li className="flex gap-2.5 items-start">
+                    <Store
+                      className="text-black bg-yellow-400 rounded-md p-1.5"
+                      size={24}
+                    />
+                    <span>
+                      <b>Stores & Marketplaces</b> — Shopify/Woo + Amazon, eBay,
+                      TikTok Shop.
+                    </span>
+                  </li>
+                  <li className="flex gap-2.5 items-start">
+                    <Wallet
+                      className="text-black bg-yellow-400 rounded-md p-1.5"
+                      size={24}
+                    />
+                    <span>
+                      <b>Growth</b> — ads, SEO, email/SMS, reviews, reporting,
+                      and KPIs.
+                    </span>
+                  </li>
+                </ul>
+                <div className="flex gap-3 flex-wrap mt-3.5">
+                  <Link
+                    href={"/contact"}
+                    className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+                  >
+                    Start a Partnership
+                  </Link>
+                  <Link
+                    href={"/contact"}
+                    className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold bg-white hover:bg-yellow-400"
+                  >
+                    Book a Free Consultation
+                  </Link>
+                </div>
+              </div>
+              <div
+                className="grid gap-3 opacity-0 translate-y-4"
+                ref={(el) => (partnerRevealRefs.current[1] = el)}
+              >
+                <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+                  <h3 className="text-lg font-extrabold mb-3">What We Bring</h3>
+                  <ul className="grid gap-2.5">
+                    {partnerBulletsWeBring.map((bullet, index) => {
+                      const Icon = bullet.icon;
+                      return (
+                        <li key={index} className="flex gap-2.5 items-start">
+                          <Icon
+                            className="text-black bg-yellow-400 rounded-md p-1.5"
+                            size={24}
+                          />
+                          <span>{bullet.text}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <div className="bg-white/5 border hover:shadow-lg hover:shadow-yellow-300 hover:shadow-glow hover:-translate-y-1 flex flex-col justify-center border-white/10 rounded-2xl shadow-2xl p-5 glow-hover transition-all duration-250 ease-in-out">
+                  <h3 className="text-lg font-extrabold mb-3">
+                    What You Bring
+                  </h3>
+                  <ul className="grid gap-2.5">
+                    {partnerBulletsYouBring.map((bullet, index) => {
+                      const Icon = bullet.icon;
+                      return (
+                        <li key={index} className="flex gap-2.5 items-start">
+                          <Icon
+                            className="text-black bg-yellow-400 rounded-md p-1.5"
+                            size={24}
+                          />
+                          <span>{bullet.text}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeUp>
 
-      {/* Core Features (Redesigned) */}
-      <section id="features" className="py-16">
-        <div className="container mx-auto px-5 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
-            Core Features
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5">
-            {coreFeaturesData.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
+      {/* Growth with AI */}
+      <FadeUp>
+        <section id="ai" className="py-10">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Growth With AI
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5">
+              {aiBenefitsData.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-gray-50 border border-gray-200 rounded-xl p-4 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
+                  >
+                    <h3 className="flex items-center gap-2.5 mb-1.5">
+                      <Icon
+                        className="bg-yellow-400 rounded-md p-1.5"
+                        size={20}
+                      />{" "}
+                      <p className="text-black font-semibold text-[15px] md:text-[20px]">
+                        {benefit.title}
+                      </p>
+                    </h3>
+                    <p>{benefit.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-3.5">
+              {aiKpisData.map((kpi, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
+                  className="bg-white border-2 border-dashed border-yellow-400 rounded-xl p-4 text-center"
+                  ref={(el) => (kpiRefs.current[index] = el)}
                 >
-                  <h3 className="flex items-center gap-2.5 mb-2">
-                    <Icon size={20} />{" "}
-                    <p className="text-black font-bold text-[18px] md:text-[25px]">
-                      {feature.title}
-                    </p>
-                  </h3>
-                  <p className="text-gray-700">{feature.description}</p>
-                  <ul className="mt-2 space-y-1">
-                    {feature.items.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                  <span
+                    className="count text-3xl font-extrabold block"
+                    data-count={kpi.count}
+                  >
+                    0
+                  </span>
+                  <span className="text-gray-700">{kpi.label}</span>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+            <p className="text-gray-700 mt-2">
+              *Typical for simple catalogs & in‑stock items. Results vary by
+              niche and budget.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeUp>
+
+      {/* Company Message (image left) */}
+      <FadeUp>
+        <section id="message" className="py-5">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Our Message
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <div className="grid grid-cols-1 items-stretch md:grid-cols-[minmax(260px,450px)_2fr] lg:grid-cols-[minmax(260px,520px)_1fr] gap-4.5">
+              <img
+                className="w-full h-full min-h-[260px] object-cover rounded-xl border border-gray-200 shadow-lg"
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop"
+                alt="Betelbee team working on eCommerce growth"
+              />
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg">
+                <h3 className="font-semibold text-[17px] md:text-[20px]">
+                  Built for Your Growth
+                </h3>
+                <p className="text-gray-700">
+                  We started Betelbee to make eCommerce easier for everyone.
+                  Clear plans, simple tools, and steady support — so you can
+                  focus on your brand while we handle the heavy lifting.
+                </p>
+                <ul className="mt-2.5 space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="text-sm">
+                      Practical strategies you can act on today
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="text-sm">
+                      Transparent reporting and honest advice
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="text-sm">
+                      Long‑term partnership focused on results
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="text-sm">
+                      Tailored solutions designed for your business growth
+                    </span>
+                  </li>
+                </ul>
+                <div className="flex gap-3 flex-wrap mt-3">
+                  <Link
+                    href={"/contact"}
+                    className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+                  >
+                    Let’s Talk
+                  </Link>
+                  <a
+                    href="#services"
+                    className="inline-block px-4 py-3 rounded-full border-2 border-yellow-400 text-black font-extrabold hover:bg-yellow-400"
+                  >
+                    See What We Do
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeUp>
+
+      {/* Core Features (Redesigned) */}
+      <FadeUp>
+        <section id="features" className="py-16">
+          <div className="container mx-auto px-5 max-w-6xl">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-3">
+              Core Features
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md my-2"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5">
+              {coreFeaturesData.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-gray-50 border border-gray-200 rounded-2xl p-4.5 shadow-lg transition-transform duration-200 ease-in-out hover:-translate-y-1"
+                  >
+                    <h3 className="flex items-center gap-2.5 mb-2">
+                      <Icon size={20} />{" "}
+                      <p className="text-black font-bold text-[18px] md:text-[25px]">
+                        {feature.title}
+                      </p>
+                    </h3>
+                    <p className="text-gray-700">{feature.description}</p>
+                    <ul className="mt-2 space-y-1">
+                      {feature.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </FadeUp>
 
       {/* CTA */}
-      <section id="contact" className="py-16">
-        <div className="container mx-auto px-5 max-w-6xl text-center">
-          <h2 className="text-2xl md:text-4xl leading-tight mb-3">
-            Ready to grow your brand?
-          </h2>
-          <div className="w-18 h-1.5 bg-yellow-400 rounded-md mx-auto my-2"></div>
-          <p className="text-gray-700 mx-auto mb-3.5">
-            Tell us your goals and budget. We’ll send a simple plan you can
-            follow.
-          </p>
-          <Link
-            href={"/contact"}
-            className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section>
+      <FadeUp>
+        <section id="contact" className="py-16">
+          <div className="container mx-auto px-5 max-w-6xl text-center">
+            <h2 className="text-2xl md:text-4xl leading-tight mb-3">
+              Ready to grow your brand?
+            </h2>
+            <div className="w-18 h-1.5 bg-yellow-400 rounded-md mx-auto my-2"></div>
+            <p className="text-gray-700 mx-auto mb-3.5">
+              Tell us your goals and budget. We’ll send a simple plan you can
+              follow.
+            </p>
+            <Link
+              href={"/contact"}
+              className="inline-block px-4 py-3 rounded-full border-2 border-transparent bg-yellow-400 text-black font-extrabold"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </section>
+      </FadeUp>
     </div>
   );
 };
