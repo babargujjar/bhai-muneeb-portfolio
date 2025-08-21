@@ -1,7 +1,7 @@
 "use client"; // If using Next.js 13+ App Router
 import React, { use } from "react";
 import { Check, ArrowRight } from "lucide-react";
-import allServicesData from "./servicesData"; 
+import allServicesData from "@/data/services"; 
 
 const ServiceDetail = ({ params }) => {
   console.log('allServicesData', allServicesData)

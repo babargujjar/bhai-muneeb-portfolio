@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
+import allServicesData from "@/data/services";
 
 const Footer = () => {
   const navLinks = [
@@ -118,13 +119,13 @@ const Footer = () => {
             <h2 className="text-gray-500 font-semibold text-[18px]">
               Our Services
             </h2>
-            {services.map((service) => (
+            {allServicesData.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`}>
                 <div className="text-black text-[12px] sm:text-[16px] flex items-center gap-1">
                   <span className="text-gray-500 text-[20px] leading-[20px]">
                     •
                   </span>
-                  {service.title}
+                  {service.kicker}
                 </div>
               </Link>
             ))}

@@ -142,10 +142,8 @@ const Services = ({ service }) => {
     //     />
     //   </div>
     // </motion.div>
-    <div
-      className="card bg-gray-100 border flex-1 border-gray-200 rounded-lg p-5 shadow-md relative overflow-hidden"
-    >
-      <div className="kicker flex items-center gap-2 font-bold text-lg text-yellow-400">
+    <div className="transition-transform duration-200 ease-in-out hover:-translate-y-1 bg-gray-100 border flex-1 border-gray-200 rounded-lg p-5 shadow-md relative overflow-hidden">
+      <div className="flex items-center gap-2 font-bold text-lg text-yellow-400">
         {service.kicker}
         {service.icon}
       </div>

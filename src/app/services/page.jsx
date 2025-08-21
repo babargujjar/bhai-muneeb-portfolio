@@ -75,251 +75,253 @@
 import React, { useEffect } from "react";
 import Services from "../components/Services";
 import Link from "next/link";
+import allServicesData from "@/data/services";
 
 const page = () => {
-  const servicesData = [
-    {
-      title: "Shopify / Woo / Magento + Custom",
-      kicker: "Store Setup & Management",
-      description:
-        "We create and manage high-performance, conversion-focused online stores on all major platforms.",
-      points: [
-        "AI copywriting & image optimization",
-        "Store health checks (speed, SEO, UX)",
-        "Product catalog setup & testing",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 6h16M4 12h16M4 18h16"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      ),
-      slug: "store-setup-management",
-    },
-    {
-      title: "Amazon, eBay, Etsy, TikTok Shop, Vinted",
-      kicker: "Marketplace Management",
-      description:
-        "We help you succeed on Amazon, eBay, Etsy, and TikTok Shop with precision marketplace management.",
-      points: [
-        "AI-optimized product listings for visibility",
-        "Auto-repricing & buy-box tactics",
-        "Inventory sync across platforms",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 4h16v6H4zM4 14h16v6H4z"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "marketplace-management",
-    },
-    {
-      title: "Supplier Vetting, MOQs & 3PL",
-      kicker: "Sourcing & Fulfillment",
-      description:
-        "We ensure reliable products, suppliers, and logistics to avoid stock issues and keep your business running smoothly.",
-      points: [
-        "Trusted suppliers MOQ control",
-        "Demand forecasting & auto-reorder alerts",
-        "Dropshipping & wholesale workflows",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 7h18v10H3V7zm3 0v10M18 7v10"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      ),
-      slug: "sourcing-fulfillment",
-    },
-    {
-      title: "Smart Routing & Tracking",
-      kicker: "Order Processing & Logistics",
-      description:
-        "A seamless order experience builds customer trust. We design logistics systems that ensure speed, accuracy, and visibility:",
-      points: [
-        "Smart routing for faster delivery",
-        "Automated returns processing.",
-        "Fraud detection & prevention",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 12h18M3 12l4-4m-4 4l4 4"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "order-processing-logistics",
-    },
-    {
-      title: "SEO, Paid Social & CRO",
-      kicker: "Digital Marketing & Ads",
-      description:
-        "We combine creativity with data-driven strategies to deliver measurable results. Our digital marketing solutions cover:",
-      points: [
-        "SEO & paid ads powered by AI",
-        "Audience modeling & smart budget.",
-        "Conversion optimization to maximize ROI",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 4h16v6H4zM9 20l6-10"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "digital-marketing-ads",
-    },
-    {
-      title: "Automation & Personalization",
-      kicker: "Email, SMS & CRM",
-      description:
-        "Personalized communication builds loyalty — we help you automate it without losing the human touch. Our services include:",
-      points: [
-        "AI segmentation & personalization",
-        "Cart recovery & win-back",
-        "Seamless CRM integration",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 6h16v12H4zM4 6l8 7 8-7"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "email-sms-crm",
-    },
-    {
-      title: "24/7 AI Chat + Human",
-      kicker: "Support & Personalization",
-      description:
-        "Customer experience defines your brand — we make sure it shines. With a mix of AI and human support, we deliver:",
-      points: [
-        "24/7 AI chatbots with human support",
-        "Sentiment-based routing for priority cases",
-        "Guided selling with AI recommendations",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 2a5 5 0 015 5v2a5 5 0 11-10 0V7a5 5 0 015-5zm-7 18a7 7 0 1114 0H5z"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "support-personalization",
-    },
-    {
-      title: "Dashboards, Anomalies & Fraud",
-      kicker: "Analytics & Security",
-      description:
-        "Every decision should be backed by data and protected by security. We offer:",
-      points: [
-        "Custom dashboards (ads, store & CRM)",
-        "AI anomaly detection & fraud prevention",
-        "Chargeback reduction strategies",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 20V4h16v16H4zm4-4l3-4 3 2 2-3"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      slug: "analytics-security",
-    },
-    {
-      title: "Identity, Packaging & Content",
-      kicker: "Branding & Creative",
-      description:
-        "Your brand identity is more than a logo — it’s the story customers connect with. We design creative solutions that stand out:",
-      points: [
-        "Logo systems & style guides",
-        "Packaging design with reflects quality",
-        "AI concept boards & mockups",
-      ],
-      icon: (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M4 20l8-16 8 16H4z" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      ),
-      slug: "branding-creative",
-    },
-  ];
+  const servicesData = allServicesData
+  // const servicesData = [
+  //   {
+  //     title: "Shopify / Woo / Magento + Custom",
+  //     kicker: "Store Setup & Management",
+  //     description:
+  //       "We create and manage high-performance, conversion-focused online stores on all major platforms.",
+  //     points: [
+  //       "AI copywriting & image optimization",
+  //       "Store health checks (speed, SEO, UX)",
+  //       "Product catalog setup & testing",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M4 6h16M4 12h16M4 18h16"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //           strokeLinecap="round"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "store-setup-management",
+  //   },
+  //   {
+  //     title: "Amazon, eBay, Etsy, TikTok Shop, Vinted",
+  //     kicker: "Marketplace Management",
+  //     description:
+  //       "We help you succeed on Amazon, eBay, Etsy, and TikTok Shop with precision marketplace management.",
+  //     points: [
+  //       "AI-optimized product listings for visibility",
+  //       "Auto-repricing & buy-box tactics",
+  //       "Inventory sync across platforms",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M4 4h16v6H4zM4 14h16v6H4z"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "marketplace-management",
+  //   },
+  //   {
+  //     title: "Supplier Vetting, MOQs & 3PL",
+  //     kicker: "Sourcing & Fulfillment",
+  //     description:
+  //       "We ensure reliable products, suppliers, and logistics to avoid stock issues and keep your business running smoothly.",
+  //     points: [
+  //       "Trusted suppliers MOQ control",
+  //       "Demand forecasting & auto-reorder alerts",
+  //       "Dropshipping & wholesale workflows",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M3 7h18v10H3V7zm3 0v10M18 7v10"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //           strokeLinecap="round"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "sourcing-fulfillment",
+  //   },
+  //   {
+  //     title: "Smart Routing & Tracking",
+  //     kicker: "Order Processing & Logistics",
+  //     description:
+  //       "A seamless order experience builds customer trust. We design logistics systems that ensure speed, accuracy, and visibility:",
+  //     points: [
+  //       "Smart routing for faster delivery",
+  //       "Automated returns processing.",
+  //       "Fraud detection & prevention",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M3 12h18M3 12l4-4m-4 4l4 4"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "order-processing-logistics",
+  //   },
+  //   {
+  //     title: "SEO, Paid Social & CRO",
+  //     kicker: "Digital Marketing & Ads",
+  //     description:
+  //       "We combine creativity with data-driven strategies to deliver measurable results. Our digital marketing solutions cover:",
+  //     points: [
+  //       "SEO & paid ads powered by AI",
+  //       "Audience modeling & smart budget.",
+  //       "Conversion optimization to maximize ROI",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M4 4h16v6H4zM9 20l6-10"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "digital-marketing-ads",
+  //   },
+  //   {
+  //     title: "Automation & Personalization",
+  //     kicker: "Email, SMS & CRM",
+  //     description:
+  //       "Personalized communication builds loyalty — we help you automate it without losing the human touch. Our services include:",
+  //     points: [
+  //       "AI segmentation & personalization",
+  //       "Cart recovery & win-back",
+  //       "Seamless CRM integration",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M4 6h16v12H4zM4 6l8 7 8-7"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "email-sms-crm",
+  //   },
+  //   {
+  //     title: "24/7 AI Chat + Human",
+  //     kicker: "Support & Personalization",
+  //     description:
+  //       "Customer experience defines your brand — we make sure it shines. With a mix of AI and human support, we deliver:",
+  //     points: [
+  //       "24/7 AI chatbots with human support",
+  //       "Sentiment-based routing for priority cases",
+  //       "Guided selling with AI recommendations",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M12 2a5 5 0 015 5v2a5 5 0 11-10 0V7a5 5 0 015-5zm-7 18a7 7 0 1114 0H5z"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "support-personalization",
+  //   },
+  //   {
+  //     title: "Dashboards, Anomalies & Fraud",
+  //     kicker: "Analytics & Security",
+  //     description:
+  //       "Every decision should be backed by data and protected by security. We offer:",
+  //     points: [
+  //       "Custom dashboards (ads, store & CRM)",
+  //       "AI anomaly detection & fraud prevention",
+  //       "Chargeback reduction strategies",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path
+  //           d="M4 20V4h16v16H4zm4-4l3-4 3 2 2-3"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //         />
+  //       </svg>
+  //     ),
+  //     slug: "analytics-security",
+  //   },
+  //   {
+  //     title: "Identity, Packaging & Content",
+  //     kicker: "Branding & Creative",
+  //     description:
+  //       "Your brand identity is more than a logo — it’s the story customers connect with. We design creative solutions that stand out:",
+  //     points: [
+  //       "Logo systems & style guides",
+  //       "Packaging design with reflects quality",
+  //       "AI concept boards & mockups",
+  //     ],
+  //     icon: (
+  //       <svg
+  //         width="16"
+  //         height="16"
+  //         viewBox="0 0 24 24"
+  //         fill="none"
+  //         xmlns="http://www.w3.org/2000/svg"
+  //       >
+  //         <path d="M4 20l8-16 8 16H4z" stroke="currentColor" strokeWidth="2" />
+  //       </svg>
+  //     ),
+  //     slug: "branding-creative",
+  //   },
+  // ];
 
   useEffect(() => {
     const yr = document.getElementById("yr");
@@ -348,18 +350,18 @@ const page = () => {
               and operations included.
             </p>
             <div className="flex gap-3 flex-wrap mt-5">
-              <a
-                href="#contact"
+              <Link
+                href={"/contact"}
                 className="btn inline-flex items-center justify-center font-bold px-4 py-3 rounded-full bg-yellow-400 text-black hover:opacity-90 transition-opacity"
               >
                 Book a Strategy Call →
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#services"
                 className="btn inline-flex items-center justify-center font-bold px-4 py-3 rounded-full border-2 border-yellow-400 text-black bg-transparent hover:bg-yellow-400 hover:text-black transition-colors"
               >
                 Explore Services
-              </a>
+              </Link>
             </div>
             <div className="flex gap-2 flex-wrap mt-4">
               <span className="chip text-sm px-3 py-1 rounded-full bg-yellow-400 text-black font-bold border border-black/10">

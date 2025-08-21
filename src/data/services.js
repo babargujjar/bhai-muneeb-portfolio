@@ -40,7 +40,6 @@ const allServicesData = [
     slug: "store-setup-management",
     detailPageData: {
       hero: {
-        kicker: "Store Setup & Management",
         title: "Build a Store That Converts, Not Just Exists",
         description:
           "In today’s digital world, having an online store is no longer enough — it has to stand out, perform well, and convert visitors into loyal buyers. That’s where our Store Setup & Management services come in. We don’t just build stores; we create powerful digital experiences that drive sales, customer engagement, and brand trust. Whether you’re starting from scratch or need to optimize an existing store, we provide end-to-end solutions across Shopify, WooCommerce, Magento, and custom platforms.",

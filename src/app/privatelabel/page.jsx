@@ -106,7 +106,7 @@ const faqData = [
 
 // Component for a reusable card in the "How We Help" section
 const StepCard = ({ num, title, description }) => (
-  <div className="card bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md flex items-start gap-4">
+  <div className="transition-transform duration-200 ease-in-out hover:-translate-y-1 bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md flex items-start gap-4">
     <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-yellow-400 text-black font-bold rounded-lg">
       {num}
     </div>
@@ -151,147 +151,147 @@ const page = () => {
               friendly support.
             </p>
             <div className="flex gap-3 justify-center flex-wrap">
-              <a
-                href="#contact"
+              <Link
+                href={"/contact"}
                 className="btn bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
               >
                 Get a Free Plan
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#how"
                 className="btn border-2 border-yellow-400 text-black font-extrabold px-5 py-3 rounded-full hover:bg-yellow-400 transition-all"
               >
                 See How It Works
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         {/* What is Private Label? Section */}
         <section id="what" className="py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
-              What is Private Label?
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="card bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md">
-                <h3 className="text-md sm:text-lg md:text-xl font-bold mb-2">
-                  It’s your product, your name.
-                </h3>
-                <p className="text-gray-700">
-                  We create products under your brand. You pick the idea, we
-                  help make it real — with your logo, packaging, and story.
-                </p>
-              </div>
-              <div className="card bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md">
-                <h3 className="text-md sm:text-lg md:text-xl font-bold mb-2">
-                  Why it’s better than reselling
-                </h3>
-                <p className="text-gray-700">
-                  You own the brand, set your prices, and stand out from the
-                  crowd. That means more trust and better profits.
-                </p>
-              </div>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+            What is Private Label?
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="transition-transform duration-200 ease-in-out hover:-translate-y-1 bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md">
+              <h3 className="text-md sm:text-lg md:text-xl font-bold mb-2">
+                It’s your product, your name.
+              </h3>
+              <p className="text-gray-700">
+                We create products under your brand. You pick the idea, we help
+                make it real — with your logo, packaging, and story.
+              </p>
             </div>
+            <div className="transition-transform duration-200 ease-in-out hover:-translate-y-1 bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md">
+              <h3 className="text-md sm:text-lg md:text-xl font-bold mb-2">
+                Why it’s better than reselling
+              </h3>
+              <p className="text-gray-700">
+                You own the brand, set your prices, and stand out from the
+                crowd. That means more trust and better profits.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* How we help Section */}
         <section id="how" className="py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
-              How We Help You
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {howItWorksData.map((step, index) => (
-                <StepCard
-                  key={index}
-                  num={step.num}
-                  title={step.title}
-                  description={step.description}
-                />
-              ))}
-            </div>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+            How We Help You
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {howItWorksData.map((step, index) => (
+              <StepCard
+                key={index}
+                num={step.num}
+                title={step.title}
+                description={step.description}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Timeline Section */}
         <section id="timeline" className="py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
-              Typical Timeline
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
-            <div className="space-y-4">
-              {timelineData.map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <div>
-                    <b>{item.week}:</b> {item.text}
-                  </div>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+            Typical Timeline
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+          <div className="space-y-4">
+            {timelineData.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-yellow-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                <div>
+                  <b>{item.week}:</b> {item.text}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Packages Section */}
         <section id="packages" className="py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
-              Packages
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {packagesData.map((pkg, index) => (
-                <div
-                  key={index}
-                  className="price-card bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md text-center"
-                >
-                  <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
-                  <p className="text-gray-700 mb-3">{pkg.description}</p>
-                  <div className="text-md sm:text-lg md:text-xl font-extrabold text-black mb-3">
-                    Custom Quote
-                  </div>
-                  <a
-                    href="#contact"
-                    className=" bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
-                  >
-                    Ask for Details
-                  </a>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+            Packages
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {packagesData.map((pkg, index) => (
+              <div
+                key={index}
+                className="transition-transform duration-200 ease-in-out hover:-translate-y-1 bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-md text-center"
+              >
+                <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
+                <p className="text-gray-700 mb-3">{pkg.description}</p>
+                <div className="text-md sm:text-lg md:text-xl font-extrabold text-black mb-3">
+                  Custom Quote
                 </div>
-              ))}
-            </div>
+                <Link
+                  href={"/contact"}
+                  className=" bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
+                >
+                  Ask for Details
+                </Link>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* FAQ Section */}
         <section id="faq" className="py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-              FAQs
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
-            <div className="space-y-4">
-              {faqData.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            FAQs
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mb-6"></div>
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Contact CTA */}
         <section id="contact" className="py-16 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
-              Ready to build your brand?
-            </h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
-            <p className="text-gray-600 text-md md:text-lg leading-relaxed max-w-3xl mx-auto mb-4">
-              Tell us your idea and budget. We’ll send a simple plan you can
-              follow.
-            </p>
-            <Link
-              href={"/contact"}
-              className="btn bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
-            >
-              Contact Us
-            </Link>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+            Ready to build your brand?
+          </h2>
+          <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
+          <p className="text-gray-600 text-md md:text-lg leading-relaxed max-w-3xl mx-auto mb-4">
+            Tell us your idea and budget. We’ll send a simple plan you can
+            follow.
+          </p>
+          <Link
+            href={"/contact"}
+            className="btn bg-yellow-400 text-black font-extrabold px-5 py-3 rounded-full border-2 border-transparent hover:border-yellow-400 transition-all"
+          >
+            Contact Us
+          </Link>
         </section>
       </div>
     </div>
