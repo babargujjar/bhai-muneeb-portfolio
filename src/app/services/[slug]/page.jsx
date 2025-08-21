@@ -1,4 +1,4 @@
-"use client"; // If using Next.js 13+ App Router
+"use client"; 
 import React, { use } from "react";
 import { Check, ArrowRight } from "lucide-react";
 import allServicesData from "@/data/services"; 

@@ -18,7 +18,6 @@ import {
   Home,
   Store,
   Wallet,
-  Check,
 } from "lucide-react";
 import Link from "next/link";
 

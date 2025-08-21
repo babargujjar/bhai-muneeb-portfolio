@@ -1,18 +1,5 @@
 "use client"
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  Package,
-  Boxes,
-  MapPin,
-  Megaphone,
-  Mail,
-  MessageCircle,
-  BarChart,
-  Palette,
-  ShoppingCart,
-  CheckCircle,
-} from "lucide-react";
 import Link from "next/link";
 
 // Data for the "How We Help" section
