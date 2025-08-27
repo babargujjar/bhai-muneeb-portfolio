@@ -71,22 +71,22 @@
 // };
 
 // export default page;
-"use client";
-import React, { useEffect } from "react";
+
+import React from "react";
 import Services from "../components/Services";
 import Link from "next/link";
 import allServicesData from "@/data/services";
 import FadeUp from "../components/FadeUp";
 
+
+export const metadata = {
+  title: "Our Services | Betelbee",
+  description: "Discover the full range of services we offer – from product sourcing and private labeling to digital growth solutions.",
+};
+
+
 const page = () => {
   const servicesData = allServicesData
-  
-  useEffect(() => {
-    const yr = document.getElementById("yr");
-    if (yr) {
-      yr.textContent = new Date().getFullYear();
-    }
-  }, []);
 
   return (
     <div className="bg-white max-w-6xl mx-auto px-5 text-black font-inter tracking-wide leading-relaxed">

@@ -1,5 +1,4 @@
-"use client"
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Eye,
   Target,
@@ -21,6 +20,13 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import FadeUp from "../components/FadeUp";
+
+export const metadata = {
+  title: "About Us | Betelbee",
+  description:
+    "Learn more about Betelbee, our mission, vision, and the team behind delivering excellence to our clients.",
+};
+
 
 // Data for the 'Our Values' section
 const valuesData = [
@@ -142,12 +148,6 @@ const ListItem = ({ text }) => (
 );
 
 const page = () => {
-  useEffect(() => {
-    const yr = document.getElementById("yr");
-    if (yr) {
-      yr.textContent = new Date().getFullYear();
-    }
-  }, []);
 
   return (
     <div className="bg-white text-gray-900 max-w-6xl mx-auto px-5 leading-relaxed">

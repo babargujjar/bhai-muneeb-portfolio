@@ -1,7 +1,13 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import FadeUp from "../components/FadeUp";
+
+// app/private-label/page.tsx
+export const metadata = {
+  title: "Private Label Solutions | Betelbee",
+  description: "Build your own brand with our custom private label solutions. High-quality, scalable, and tailored for your business growth.",
+};
+
 
 // Data for the "How We Help" section
 const howItWorksData = [
@@ -114,12 +120,6 @@ const FAQItem = ({ question, answer }) => (
 );
 
 const page = () => {
-  useEffect(() => {
-    const yr = document.getElementById("yr");
-    if (yr) {
-      yr.textContent = new Date().getFullYear();
-    }
-  }, []);
 
   return (
     <div className="bg-white leading-relaxed">

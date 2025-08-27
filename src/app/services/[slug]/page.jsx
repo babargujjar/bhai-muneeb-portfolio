@@ -1,12 +1,23 @@
-"use client"; 
-import React, { use } from "react";
+import React from "react";
 import { Check, ArrowRight } from "lucide-react";
 import allServicesData from "@/data/services"; 
 import FadeUp from "@/app/components/FadeUp";
+import { iconMap } from "@/data/iconMap";
+
+export async function generateMetadata({ params }) {
+  const service = allServicesData.find((s) => s.slug === params.slug);
+  if (!service) return { title: "Service Not Found" };
+
+  return {
+    title: `${service.kicker} | Betelbee Services`,
+    description: service.description,
+  };
+}
+
 
 const ServiceDetail = ({ params }) => {
-  console.log('allServicesData', allServicesData)
- const { slug } = use(params);
+
+ const { slug } = params;
   const service = allServicesData.find((s) => s.slug === slug);
 
   if (!service || !service.detailPageData) {
@@ -16,7 +27,7 @@ const ServiceDetail = ({ params }) => {
       </div>
     );
   }
-
+const Icon = iconMap[service.icon];
   return (
     <div className="bg-white text-gray-900 font-inter leading-relaxed">
       {/* Hero Section */}
@@ -55,7 +66,7 @@ const ServiceDetail = ({ params }) => {
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {section.icon && (
-                        <section.icon className="w-8 h-8 text-yellow-400" />
+                        <Icon className="w-6 h-6 text-yellow-400" />
                       )}
                       <h3 className="text-2xl font-bold">{section.title}</h3>
                     </div>
@@ -68,7 +79,7 @@ const ServiceDetail = ({ params }) => {
                             className="flex items-start gap-2"
                           >
                             {point.icon && (
-                              <point.icon className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                              <Icon className="w-6 h-6 text-yellow-400" />
                             )}
                             <span>{point.text}</span>
                           </li>
@@ -100,7 +111,7 @@ const ServiceDetail = ({ params }) => {
                   >
                     <h4 className="text-lg font-bold flex items-center gap-2 mb-2">
                       {point.icon && (
-                        <point.icon className="w-6 h-6 text-yellow-400" />
+                        <Icon className="w-6 h-6 text-yellow-400" />
                       )}
                       {point.text}
                     </h4>

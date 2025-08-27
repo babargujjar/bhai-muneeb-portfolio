@@ -1,30 +1,3 @@
-import {
-  Store,
-  LayoutDashboard,
-  Truck,
-  LineChart,
-  Mail,
-  Users,
-  PieChart,
-  SwatchBook,
-  ShoppingCart,
-  DollarSign,
-  CheckCircle,
-  Target,
-  Brain,
-  BookMarked,
-  Files,
-  Gauge,
-  Smartphone,
-  SearchCheck,
-  MonitorCheck,
-  Rocket,
-  Handshake,
-  Calendar,
-  Hourglass,
-} from 'lucide-react';
-
-
 const allServicesData = [
   {
     title: "Shopify / Woo / Magento + Custom",
@@ -36,7 +9,7 @@ const allServicesData = [
       "Store health checks (speed, SEO, UX)",
       "Product catalog setup & testing",
     ],
-    icon: <Store size={16} />,
+    icon: "Store",
     slug: "store-setup-management",
     detailPageData: {
       hero: {
@@ -52,55 +25,55 @@ const allServicesData = [
           points: [
             {
               text: "AI copywriting that speaks your customers’ language.",
-              icon: Brain,
+              icon: "Brain",
             },
             {
               text: "High-quality product images, automatically cleaned and optimized.",
-              icon: BookMarked,
+              icon: "BookMarked",
             },
             {
               text: "Smart product tagging & collections for effortless browsing.",
-              icon: Files,
+              icon: "Files",
             },
             {
               text: "UX-tested layouts that eliminate drop-offs and abandoned carts.",
-              icon: LayoutDashboard,
+              icon: "LayoutDashboard",
             },
           ],
-          icon: Target,
+          icon: "Target",
         },
         {
           title: "Seamless Catalog Import & Tagging",
           description:
             "If you’re migrating from another platform or adding hundreds of products, manual uploads can eat up time and cause errors. We handle bulk catalog imports, product tagging, and SEO-friendly categorization to make sure your products are properly organized and easy to find. Customers should never get lost searching — and with our systems, they won’t.",
-          icon: Store,
+          icon:" Store",
         },
         {
           title: "AI-Powered Testing & Continuous Improvement",
           description:
             "A successful online store is never static. Markets change, customer behavior evolves, and competition gets tougher. That’s why we build a testing roadmap (A/B testing, CRO optimization, funnel testing) to keep improving your store’s performance. With AI heatmaps and user behavior analysis, we detect what’s working, what isn’t, and how to maximize conversions. Instead of guessing, we let data guide every improvement.",
-          icon: LineChart,
+          icon: "LineChart",
         },
         {
           title: "Comprehensive Store Health Checks",
           description:
             "A store that loads slowly or ranks poorly on search engines loses customers instantly. Our store health checks cover: Speed & performance optimization. Mobile responsiveness to ensure a flawless mobile experience. SEO audits to improve visibility on Google and marketplaces. User experience insights based on heatmaps and analytics. These checks ensure your store runs smoothly, attracts more traffic, and keeps customers engaged.",
           points: [
-            { text: "Speed & performance optimization.", icon: Gauge },
+            { text: "Speed & performance optimization.", icon: "Gauge" },
             {
               text: "Mobile responsiveness to ensure a flawless mobile experience.",
-              icon: Smartphone,
+              icon: "Smartphone",
             },
             {
               text: "SEO audits to improve visibility on Google and marketplaces.",
-              icon: SearchCheck,
+              icon: "SearchCheck",
             },
             {
               text: "User experience insights based on heatmaps and analytics.",
-              icon: MonitorCheck,
+              icon: "MonitorCheck",
             },
           ],
-          icon: CheckCircle,
+          icon: "CheckCircle",
         },
       ],
       whyChoose: {
@@ -108,19 +81,19 @@ const allServicesData = [
         points: [
           {
             text: "Multi-platform expertise: Whether you’re on Shopify, WooCommerce, or Magento, we’ve mastered it.",
-            icon: Store,
+            icon: "Store",
           },
           {
             text: "AI-powered tools: From copywriting to analytics, we integrate smart solutions.",
-            icon: Brain,
+            icon: "Brain",
           },
           {
             text: "Future-ready approach: Your store won’t just work today; it will be scalable for tomorrow.",
-            icon: Rocket,
+            icon: "Rocket",
           },
           {
             text: "Hands-on management: We don’t disappear after setup — we provide ongoing management, updates, and optimizations.",
-            icon: Handshake,
+            icon: "Handshake",
           },
         ],
       },
@@ -135,28 +108,28 @@ const allServicesData = [
           {
             text: "Consultation & Planning",
             description: "Understanding your business, goals, and customers.",
-            icon: Calendar,
+            icon: "Calendar",
           },
           {
             text: "Store Setup & Design",
             description:
               "Building a clean, professional, and conversion-focused storefront.",
-            icon: Store,
+            icon: "Store",
           },
           {
             text: "Product Catalog Integration",
             description: "Bulk uploads, smart tagging, and SEO optimization.",
-            icon: Files,
+            icon: "Files",
           },
           {
             text: "AI Health Check",
             description: "Testing for speed, SEO, and UX issues.",
-            icon: Brain,
+            icon: "Brain",
           },
           {
             text: "Ongoing Management",
             description: "Monitoring, updating, and scaling your store.",
-            icon: Hourglass,
+            icon: "Hourglass",
           },
         ],
       },
@@ -186,7 +159,7 @@ const allServicesData = [
       "Auto-repricing & buy-box tactics",
       "Inventory sync across platforms",
     ],
-    icon: <ShoppingCart size={16} />,
+    icon: "ShoppingCart",
     slug: "marketplace-management",
     detailPageData: {
       hero: {
@@ -200,37 +173,37 @@ const allServicesData = [
           title: "Amazon Management",
           description:
             "Amazon is one of the largest and most competitive marketplaces in the world. Our Amazon management services include: AI-powered listing SEO to improve search rankings and visibility. Buy-box optimization to increase the likelihood of winning sales. Automated repricing to stay competitive without manual adjustments. Review mining and response automation to maintain credibility and boost customer trust. We also monitor inventory levels to prevent stockouts and reduce lost sales, ensuring your Amazon store runs efficiently and profitably.",
-          icon: DollarSign,
+          icon: "DollarSign",
         },
         {
           title: "eBay Management",
           description:
             "eBay’s auction-style and fixed-price listings require a different approach. We provide: Optimized product titles, descriptions, and keywords for better discoverability. Automated pricing adjustments to remain competitive in the marketplace. Inventory syncing across eBay and other platforms to prevent overselling. Review monitoring and response management to maintain high seller ratings. Our goal is to increase visibility, conversions, and customer satisfaction while minimizing operational overhead.",
-          icon: ShoppingCart,
+          icon: "ShoppingCart",
         },
         {
           title: "Etsy Management",
           description:
             "Etsy is ideal for handmade, custom, and unique products. Our Etsy management services include: SEO-friendly product listings and tags for maximum exposure. Listing scheduling and inventory tracking for multiple products. AI-assisted keyword research to target high-traffic search terms. Review management and automated customer engagement to strengthen brand reputation. We help your Etsy shop stand out and attract buyers who value your creativity and craftsmanship.",
-          icon: SwatchBook,
+          icon: "SwatchBook",
         },
         {
           title: "TikTok Shop Management",
           description:
             "TikTok Shop is a growing marketplace that blends e-commerce with social media. Our services include: Creating SEO-optimized listings for TikTok’s algorithm. Tracking trends to align product offerings with popular content. Managing inventory and pricing to ensure competitive performance. Engaging with customers via automated review responses and promotions. By leveraging TikTok’s unique platform, we help your products gain visibility and drive conversions through social-driven commerce.",
-          icon: Users,
+          icon: "Users",
         },
         {
           title: "Vinted Management",
           description:
             "Vinted focuses on second-hand and vintage items, appealing to environmentally conscious shoppers. Our Vinted management services include: Optimizing listings with keywords and images to attract buyers. Syncing inventory to prevent overselling across multiple platforms. Managing customer interactions and review responses to build trust. Pricing strategies to remain competitive in the second-hand marketplace. We ensure your Vinted shop operates smoothly, enhancing sales while maintaining a professional and trustworthy presence.",
-          icon: Truck,
+          icon: "Truck",
         },
         {
           title: "AI-Driven Automation Across Platforms",
           description:
             "Across all marketplaces, we leverage AI tools to: Optimize listings for search and conversions. Auto-reprice products based on demand, competition, and stock levels. Manage inventory to ensure synchronization and prevent overselling. Monitor reviews and automate responses to maintain a strong reputation. This automation reduces manual workload, increases efficiency, and helps you focus on scaling your business.",
-          icon: Brain,
+          icon: "Brain",
         },
       ],
       whyChoose: {
@@ -303,7 +276,7 @@ const allServicesData = [
       "Demand forecasting & auto-reorder alerts",
       "Dropshipping & wholesale workflows",
     ],
-    icon: <Truck size={16} />,
+    icon: "Truck",
     slug: "sourcing-fulfillment",
     detailPageData: {
       hero: {
@@ -317,25 +290,25 @@ const allServicesData = [
           title: "Supplier Vetting, MOQs & 3PL Partnerships",
           description:
             "Choosing the right supplier can make or break your business. That’s why we start with detailed supplier vetting. We evaluate suppliers based on product quality, reliability, certifications, and past performance. This ensures you don’t risk working with unreliable partners. Managing Minimum Order Quantities (MOQs) is another key part of our service. We help you balance supplier requirements with your budget and forecasted sales so you don’t over-commit or understock. For brands scaling quickly, we also connect you with 3PL (third-party logistics) partners for professional warehousing and fulfillment solutions. The result? A supply chain that is stable, cost-effective, and ready to grow with your business.",
-          icon: Handshake,
+          icon:" Handshake",
         },
         {
           title: "AI-Assisted Supplier Scoring & Forecasting",
           description:
             "Traditional sourcing often relies on guesswork. We eliminate that risk by using AI-assisted supplier scoring systems. These systems evaluate suppliers based on delivery times, defect rates, responsiveness, and pricing competitiveness. This allows us to recommend the best partners for your specific business needs. We also use demand forecasting models to predict inventory needs. By analyzing past sales data, seasonal trends, and customer behavior, we ensure you order the right products at the right time. Our system also generates auto-reorder alerts so you never face stockouts, which means no lost sales and happier customers. We don’t just manage suppliers — we turn sourcing into a growth strategy.",
-          icon: Brain,
+          icon: "Brain",
         },
         {
           title: "Dropshipping & Wholesale Workflows",
           description:
             "Every business model has different fulfillment needs. That’s why we design custom workflows for both dropshipping and wholesale operations. Dropshipping: We integrate with suppliers who ship directly to your customers, cutting down your overhead costs. Our systems ensure fast routing, branded packaging options, and inventory visibility. Wholesale: For brands selling in bulk, we set up workflows that streamline purchase orders, manage bulk inventory, and ensure timely deliveries to distributors and retailers. No matter your model, we create a fulfillment system that supports efficiency and scalability.",
-          icon: Store,
+          icon: "Store",
         },
         {
           title: "PO Automation & Quality Control Plans",
           description:
             "Managing purchase orders manually is time-consuming and prone to errors. That’s why we implement PO automation to simplify the process. With automated systems, orders are placed with suppliers as soon as stock reaches a defined threshold. This minimizes delays, prevents human error, and keeps your supply chain moving smoothly. We also put in place quality control (QC) plans to protect your brand reputation. These include inspection checklists, random product checks, and supplier accountability measures. This ensures your customers receive products that meet your standards every single time.",
-          icon: Files,
+          icon: "Files",
         },
       ],
       whyChoose: {
@@ -403,7 +376,7 @@ const allServicesData = [
       "Automated returns processing.",
       "Fraud detection & prevention",
     ],
-    icon: <Truck size={16} />,
+    icon: "Truck",
     slug: "order-processing-logistics",
     detailPageData: {
       hero: {
@@ -417,7 +390,7 @@ const allServicesData = [
           title: "Smart Routing & Tracking",
           description:
             "A major challenge in logistics is ensuring products are shipped quickly and cost-effectively. With our smart routing system, every order is automatically directed to the nearest warehouse or fulfillment center. This reduces shipping times, lowers delivery costs, and helps you meet the growing demand for same-day or next-day delivery. But speed alone isn’t enough — customers want visibility. That’s why we provide branded tracking portals with proactive updates. Instead of relying on generic courier updates, your customers get a professional, branded experience that keeps them informed every step of the way. We also use predictive systems to forecast ETAs (Estimated Time of Arrival) and identify potential exceptions (like weather delays or high traffic periods) before they cause dissatisfaction. The result? Faster shipping, lower costs, and happier customers.",
-          icon: Rocket,
+          icon: "Rocket",
         },
         {
           title: "Returns Automation That Works for You",
@@ -434,13 +407,13 @@ const allServicesData = [
               text: "Inventory is updated in real time once items are processed.",
             },
           ],
-          icon: Store,
+          icon: "Store",
         },
         {
           title: "Fraud Prevention & Security Flags",
           description:
             "Fraudulent orders can drain profits and harm your brand reputation. Our logistics systems are equipped with AI-powered fraud detection tools that flag suspicious activity before it becomes a problem. From mismatched addresses and unusual order patterns to payment irregularities, our system automatically detects and holds risky transactions for review. This proactive approach significantly reduces chargebacks, fraudulent returns, and revenue loss — giving you peace of mind while ensuring legitimate customers get smooth service.",
-          icon: SearchCheck,
+          icon: "SearchCheck",
         },
       ],
       whyThisMatters: {
@@ -517,7 +490,7 @@ const allServicesData = [
       "Audience modeling & smart budget.",
       "Conversion optimization to maximize ROI",
     ],
-    icon: <LineChart size={16} />,
+    icon: "LineChart",
     slug: "digital-marketing-ads",
     detailPageData: {
       hero: {
@@ -542,7 +515,7 @@ const allServicesData = [
               text: "Content strategy & optimization — creating and updating high-performing pages based on user intent and search trends.",
             },
           ],
-          icon: SearchCheck,
+          icon: "SearchCheck",
         },
         {
           title: "Paid Social: Reach the Right Audience",
@@ -559,13 +532,13 @@ const allServicesData = [
               text: "Audience segmentation & retargeting — reach potential buyers at every stage of the funnel.",
             },
           ],
-          icon: DollarSign,
+          icon: "DollarSign",
         },
         {
           title: "Conversion Rate Optimization (CRO): Turn Traffic Into Sales",
           description:
             "Attracting visitors is only half the battle — converting them is where growth happens. Our CRO strategies use AI insights, heatmaps, and user behavior tracking to identify friction points in your funnel. We then run impact-ranked test ideas (A/B tests, landing page experiments, CTA optimizations) to continuously improve conversion rates. From improving checkout processes to optimizing landing pages, we ensure every interaction maximizes the chance of conversion.",
-          icon: LineChart,
+          icon: "LineChart",
         },
         {
           title: "Impact-Ranked Test Ideas: Continuous Improvement",
@@ -580,7 +553,7 @@ const allServicesData = [
               text: "Adjust audience segments based on real-time performance data.",
             },
           ],
-          icon: CheckCircle,
+          icon: "CheckCircle",
         },
       ],
       whyChoose: {
@@ -654,7 +627,7 @@ const allServicesData = [
       "Cart recovery & win-back",
       "Seamless CRM integration",
     ],
-    icon: <Mail size={16} />,
+    icon: "Mail",
     slug: "email-sms-crm",
     detailPageData: {
       hero: {
@@ -678,13 +651,13 @@ const allServicesData = [
             },
             { text: "Customize promotions and content for specific groups." },
           ],
-          icon: Brain,
+          icon: "Brain",
         },
         {
           title: "Persona-Based Copywriting & Replenishment Triggers",
           description:
             "Generic messages rarely convert. We create persona-based copy tailored to different customer types, ensuring communications resonate personally. From playful, lifestyle-oriented messaging to professional, product-focused content, each message speaks directly to your audience. In addition, we implement replenishment triggers, automatically notifying customers when it’s time to restock or reorder a product. This not only increases sales but also enhances convenience, keeping your brand top-of-mind.",
-          icon: BookMarked,
+          icon: "BookMarked",
         },
         {
           title: "Predictive Lifetime Value & CRM Syncing",
@@ -701,13 +674,13 @@ const allServicesData = [
               text: "Centralized data for all your marketing and sales channels.",
             },
           ],
-          icon: PieChart,
+          icon: "PieChart",
         },
         {
           title: "Abandoned Cart & Win-Back Flows",
           description:
             "A significant portion of potential revenue is lost when customers abandon their carts or stop engaging. We implement automated abandoned cart sequences that gently remind customers to complete their purchase, often with personalized incentives. For customers who haven’t purchased in a while, win-back flows re-engage them with tailored offers, reminders of products they viewed, or updates on new arrivals. These automated flows reduce revenue leakage and strengthen long-term customer loyalty.",
-          icon: ShoppingCart,
+          icon: "ShoppingCart",
         },
       ],
       whyChoose: {
@@ -777,7 +750,7 @@ const allServicesData = [
       "Sentiment-based routing for priority cases",
       "Guided selling with AI recommendations",
     ],
-    icon: <Users size={16} />,
+    icon: "Users",
     slug: "support-personalization",
     detailPageData: {
       hero: {
@@ -800,7 +773,7 @@ const allServicesData = [
               text: "Consistency: Customers receive clear, helpful responses every time.",
             },
           ],
-          icon: Users,
+          icon: "Users",
         },
         {
           title: "Sentiment Routing & Intelligent Prioritization",
@@ -817,7 +790,7 @@ const allServicesData = [
               text: "High-value customers receive personalized attention based on their purchase history.",
             },
           ],
-          icon: Brain,
+          icon: "Brain",
         },
         {
           title: "Macros for Refunds, Reships, and Common Requests",
@@ -832,7 +805,7 @@ const allServicesData = [
               text: "Maintain accurate records in your CRM for accountability and reporting.",
             },
           ],
-          icon: Files,
+          icon: "Files",
         },
         {
           title: "Quiz-Driven Guided Selling & Personalization",
@@ -847,7 +820,7 @@ const allServicesData = [
               text: "Reduced decision fatigue for customers, making the buying process easier and more enjoyable.",
             },
           ],
-          icon: LayoutDashboard,
+          icon: "LayoutDashboard",
         },
       ],
       whyChoose: {
@@ -917,7 +890,7 @@ const allServicesData = [
       "AI anomaly detection & fraud prevention",
       "Chargeback reduction strategies",
     ],
-    icon: <PieChart size={16} />,
+    icon: "PieChart",
     slug: "analytics-security",
     detailPageData: {
       hero: {
@@ -942,7 +915,7 @@ const allServicesData = [
               text: "Customizable KPIs: Track metrics that matter most to your business, including revenue, conversions, CAC, and ROAS.",
             },
           ],
-          icon: LayoutDashboard,
+          icon: "LayoutDashboard",
         },
         {
           title: "Anomaly Detection & Performance Alerts",
@@ -959,7 +932,7 @@ const allServicesData = [
               text: "Receive alerts in real time, allowing you to respond quickly and prevent revenue loss.",
             },
           ],
-          icon: Brain,
+          icon: "Brain",
         },
         {
           title: "Fraud Prevention & AI Risk Scoring",
@@ -970,7 +943,7 @@ const allServicesData = [
             { text: "Flagging high-risk transactions before fulfillment." },
             { text: "Reducing chargebacks and protecting profit margins." },
           ],
-          icon: SearchCheck,
+          icon: "SearchCheck",
         },
       ],
       whyChoose: {
@@ -1042,7 +1015,7 @@ const allServicesData = [
       "Packaging design with reflects quality",
       "AI concept boards & mockups",
     ],
-    icon: <SwatchBook size={16} />,
+    icon: "SwatchBook",
     slug: "branding-creative",
     detailPageData: {
       hero: {
@@ -1067,7 +1040,7 @@ const allServicesData = [
               text: "Designing versatile logos that work across digital, print, and packaging applications.",
             },
           ],
-          icon: SwatchBook,
+          icon: "SwatchBook",
         },
         {
           title: "Packaging Design That Sells",
@@ -1084,13 +1057,13 @@ const allServicesData = [
               text: "Lifestyle mockups to demonstrate how packaging interacts in real-world settings.",
             },
           ],
-          icon: Files,
+          icon: "Files",
         },
         {
           title: "Comprehensive Style Guides",
           description:
             "Consistency across all brand touchpoints is essential for trust and professionalism. We develop comprehensive style guides that document your visual and verbal identity, including: Logo usage rules and variations. Brand color palettes and typography. Imagery style, tone of voice, and messaging guidelines. These guides ensure that every piece of content, from social media posts to product packaging, maintains the integrity of your brand and reinforces recognition across channels.",
-          icon: BookMarked,
+          icon: "BookMarked",
         },
         {
           title: "Content Creation With AI Assistance",
@@ -1107,7 +1080,7 @@ const allServicesData = [
               text: "Campaign-ready designs: Integrate branding, packaging, and messaging into cohesive marketing campaigns.",
             },
           ],
-          icon: Brain,
+          icon: "Brain",
         },
       ],
       whyChoose: {
