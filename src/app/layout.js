@@ -25,6 +25,19 @@ export default function RootLayout({ children }) {
       </head>
       <body className={outfit.className}>
         <CustomLayout>{children}</CustomLayout>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SF7B745CLW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SF7B745CLW');
+          `}
+        </Script>
       </body>
     </html>
   );
