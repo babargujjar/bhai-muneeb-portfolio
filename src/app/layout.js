@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Outfit } from "next/font/google";
 import Footer from "./components/Footer";
 import CustomLayout from "./components/CustomLayout";
+import Script from "next/script";
 
 
 
