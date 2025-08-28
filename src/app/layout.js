@@ -17,6 +17,12 @@ const outfit = Outfit({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="-utS8nJGj2qM6X7DbLzshlGhBMPtOsJdxRvhb0DA2ik"
+        />
+      </head>
       <body className={outfit.className}>
         <CustomLayout>{children}</CustomLayout>
       </body>
