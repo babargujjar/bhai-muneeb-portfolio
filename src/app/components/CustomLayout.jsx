@@ -12,7 +12,7 @@ const CustomLayout = ({ children }) => {
             <Navbar />
             {children}
             <Footer />
-            <Preloader />
+            {/* <Preloader /> */}
         </GlobalContextProvider>
     )
 }
